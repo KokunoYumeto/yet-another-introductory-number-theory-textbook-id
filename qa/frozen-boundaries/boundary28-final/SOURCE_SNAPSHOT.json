@@ -1,0 +1,45 @@
+{
+  "schema": "r014.frozen_source_snapshot",
+  "schema_version": "1.1.0",
+  "snapshot_id": "r014.complete-edition.final.source.20260822",
+  "created_at_utc": "2026-08-22T01:52:20Z",
+  "purpose": "Canonical complete Indonesian-edition source witness after independent full-corpus translation audit, deterministic full-book build replay, and all-page visual/reflow QA.",
+  "supersedes_snapshot": "qa/frozen-boundaries/boundary28/SOURCE_SNAPSHOT.json",
+  "source_working_path_at_freeze": "qa/review-candidates/boundary28-r2/yaintt-id.tex",
+  "snapshot_path": "qa/frozen-boundaries/boundary28-final/yaintt-id.tex",
+  "bytes": 269464,
+  "sha256": "b1dd2926dc8bfdb84c6a3b4605490a8d96b14c44d89653867160d701fa0f17db",
+  "adverse_ledger_path": "qa/frozen-boundaries/boundary28-final/ADVERSE_LEDGER.md",
+  "adverse_ledger_bytes": 51058,
+  "adverse_ledger_sha256": "dd4de4ca603dc1bf67b635bce3199fcdbf6bcacbc3b8d3736350b5a825a00f57",
+  "terminology_path": "qa/frozen-boundaries/boundary28-final/TERMINOLOGY.md",
+  "terminology_bytes": 29316,
+  "terminology_sha256": "3e3fe31baa8565bbc54cd6d789570cac18ed469f68cf683f08dd639ef92d9bd1",
+  "translated_closure": [
+    "complete title and front matter",
+    "Chapters 1 through 5 in full",
+    "all exercises, bibliography, and index"
+  ],
+  "translation_qa_receipt": "qa/BOUNDARY28_TRANSLATION_REVIEW.json",
+  "full_corpus_qa_receipt": "qa/FULL_CORPUS_AUDIT.json",
+  "build_receipt": {
+    "path": "qa/FINAL_BUILD.json",
+    "bytes": 7395,
+    "sha256": "d112b48de7032c2eda809419eadaaafdec089c8b6c5886db8501ab226c8123e2"
+  },
+  "visual_qa_receipt": {
+    "path": "qa/FINAL_VISUAL.json",
+    "bytes": 5729,
+    "sha256": "4d69b0335cb59477117209ba2c62347afc758c73d9bde9a19c6b25df10851292"
+  },
+  "artifact": {
+    "path": "output/YAINTT_ID.pdf",
+    "bytes": 962527,
+    "sha256": "1ded3c6844b656347259b464bf21526fdc32dc2246c73ac58ab76ed28688eefc",
+    "pages": 138,
+    "media_box_points": [612, 792],
+    "catalog_language": "id-ID",
+    "tagged": false
+  },
+  "status": "passed_canonical_complete_edition"
+}

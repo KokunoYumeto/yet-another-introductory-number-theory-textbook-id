@@ -1,0 +1,152 @@
+# Adverse Ledger
+
+## R014-ADV-0001 — Later in-flux PDF unavailable
+
+The authority landing page advertises a better in-flux PDF through
+`../../numth/yaintt.pdf`, but the resolved target is unavailable and no matching
+source closure is public. The source-bearing 7 May 2014 snapshot is selected.
+
+## R014-ADV-0002 — `by-sa.eps` provenance incomplete
+
+The official license badge EPS identifies an Illustrator creator string and
+contains Adobe procsets with copyright notices, but the book and landing page
+do not give a component-specific origin/license for this byte set. Do not ship
+it publicly without a documented disposition. A clean independently sourced
+CC BY-SA badge or a text-only notice is the preferred replacement. The exact
+official byte remains only under `authority/downloads/by-sa.eps`; it is absent
+from `source/assets/` and the derivative uses a textual CC BY-SA 4.0 notice.
+
+## R014-ADV-0003 — Untagged authority PDF
+
+The official PDF is untagged and has blank title/author PDF metadata. This is a
+baseline fact, not an inherited requirement for the derivative.
+
+## R014-ADV-0004 — Incorrect index-suppression switch
+
+The source documents `suppressallIndex` near its configuration switches but
+tests `suppressIndex` in the back matter, so the advertised option cannot work.
+The target normalizes the documented switch to `suppressIndex`; this is a
+build-control correction, not a translation.
+
+## R014-ADV-0005 — Multiplication typeset as punctuation
+
+In the second induction example, the authority has `(n+1).n^n`, which renders
+an ASCII full stop where multiplication is intended. The target uses
+`(n+1)\cdot n^n`. The inequality and proof are otherwise unchanged.
+
+## R014-ADV-0006 — Duplicate word in source prose
+
+The authority's first induction proof says `the the well-ordering principle`.
+The Indonesian translation naturally contains a single grammatical phrase;
+no mathematical content changed.
+
+## R014-ADV-0007 — Mutable HTTP reader links
+
+The front matter names the correct official resources through `http://` URLs,
+which currently redirect to HTTPS. The derivative writes the final HTTPS URLs
+directly while the authority manifest retains the exact original locator text.
+
+## R014-ADV-0008 — Target build path
+
+The authority expects EPS files beside `yaintt.tex`. The derivative keeps them
+under `source/assets/` and adds `\graphicspath{{assets/}}`; filenames and asset
+bytes are unchanged. The unresolved `by-sa.eps` is not referenced by the target.
+
+## R014-ADV-0009 — First-boundary layout repairs
+
+The authority's long third exercise overruns its line, and its cover is wider
+than the current text block under the modern toolchain. The target adds a line
+break before the unchanged exercise formula and expresses the cover width as
+`.85\textwidth`. Long literal URLs become short descriptive `\href` links;
+their exact destinations remain embedded and backend-recorded.
+
+## R014-ADV-0010 — Boundary-only forward references
+
+The translated release notes refer to later cryptology units. A bounded reader
+ending after Section 1.1 cannot resolve those labels, so its conditional branch
+prints their stable chapter/section numbers as plain text. The full-book branch
+retains the original `\ref` targets.
+
+## R014-ADV-0011 — Missing source space in institutional name
+
+The authority writes `Colorado State University --Pueblo` without the space
+after the dash. The target uses the correctly spaced institutional name.
+
+## R014-ADV-0012 — Recursive `\pmod` wrapper on modern LaTeX
+
+The authority saves `\pmod` with `\let\@@pmod\pmod` and then redeclares a robust
+wrapper. Under LaTeX 2025, that alias follows the redeclaration and recurses at
+the first unstarred `\pmod`, so a full build does not progress. The target uses
+`\NewCommandCopy` when available and retains the historical `\let` fallback.
+Both ordinary and the book's 14 starred `\pmod*` uses keep their intended
+typesetting.
+
+## R014-ADV-0013 — Missing unit among multiplicatively invertible integers
+
+Section 1.2 of the authority says that only the integer `1` has a
+multiplicative inverse in `Z`. In fact both units, `1` and `-1`, have
+multiplicative inverses in `Z`, and each is its own inverse. The Indonesian
+edition states both integers explicitly; the surrounding definition and
+equation are unchanged.
+
+## R014-ADV-0014 — Divisibility statements exceed the local domain
+
+The authority defines `a divides b` only for a nonzero divisor `a`, but then
+states `forall a in ZZ, a divides 0` and later quantifies the absolute-value
+equivalence over all `a`. The target explicitly restricts the first proposition
+to `a in ZZ setminus {0}` and adds `a != 0` to the equivalence. It also binds
+both variables in the intervening size proposition. These changes make the
+statements well-formed under the book's own definition; they do not change the
+definition itself.
+
+## R014-ADV-0015 — Division Algorithm existence set and zero remainder
+
+The authority writes `A={a-bk >= 0 | k in ZZ}`, whose apparent elements are
+truth-valued inequalities rather than integers. The target uses the intended
+set-builder `A={a-bk | k in ZZ, a-bk >= 0}`. Later, the source calls `r` the
+least positive integer even though the theorem permits `r=0`; the target calls
+it the least element of `A`, thereby including the zero-remainder case.
+
+## R014-ADV-0016 — Vacuous lower bound in the uniqueness proof
+
+The source bounds an absolute value below by `-max(r_1,r_2)`, which is true but
+vacuous. The target uses the informative chain
+`0 <= |r_2-r_1| <= max(r_1,r_2) < b`, which is the bound required together
+with divisibility to conclude that the difference is zero.
+
+## R014-ADV-0017 — Unbound integer parameter in two exercises
+
+Two authority exercises say that a square is “of the form” `8m+1`, `3m`, or
+`3m+1` without binding `m`. The target states explicitly that the parameter is
+an integer, and separates the nonexistence claim for `3m+2`. The mathematical
+tasks and expressions are otherwise preserved.
+
+## R014-ADV-0018 — Base-expansion theorem omits a digit, zero length, and uniqueness
+
+The authority quantifies `a_1,...,a_l` although its displayed expansion also
+uses `a_0`. It places `l` in the book's positive-natural-number domain, which
+cannot represent any `1 <= m < b` because those cases require highest exponent
+zero. Finally, the theorem statement asserts only existence even though the
+section lead and the second half of its proof assert uniqueness. The target
+quantifies every digit from `a_0` through `a_l`, permits
+`l in Z_{>=0}`, states the unique-existence claim proved below, writes the
+expansion as a sum valid when `l=0`, and handles that terminal case explicitly
+before continuing with an indexed quotient recurrence.
+
+## R014-ADV-0019 — Invalid factorization step in the uniqueness proof
+
+The authority chooses an unspecified differing digit index `j` and then factors
+`b^j` out of the entire difference. That factorization is valid only when `j`
+is the smallest differing index, so all lower digit differences vanish. It also
+drops the minus sign when isolating `a_j-c_j`. The target selects the smallest
+such `j` and restores the sign. The sign does not affect the subsequent
+divisibility claim, but the displayed equality should still be correct.
+
+## R014-ADV-0020 — Base-representation definition has missing and malformed digits
+
+The authority definition again omits `a_0` from its quantified list and from the
+digit string, writes `m_b` despite introducing the notation `(m)_b`, typesets
+`0\le aj<2` without the subscript, and says that coefficients `a_0,...,a_l`
+use only `l` wires rather than `l+1`. The target restores `a_0`, the final digit,
+the parenthesized notation, the subscript, and the correct wire count; it also
+uses the nonnegative index domain inherited from the corrected theorem.

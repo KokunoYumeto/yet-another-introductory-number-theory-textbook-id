@@ -1,0 +1,46 @@
+{
+  "schema": "r014.component_rights",
+  "schema_version": "1.0.0",
+  "snapshot_id": "yaintt-source-2014-05-07-freeze-20260820",
+  "components": [
+    {
+      "rights_id": "rights.yaintt.text_and_author_assets",
+      "paths": ["yaintt.tex","refs.bib","cover_art.eps","dbend.eps","eng_freq_hist.eps","hamhip_freqs.eps","samp_Cct_hist.eps","seadk_Cct.eps","seadk_hamhip.eps","seadk_rkkrt.eps"],
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attribution": ["Jonathan A. Poritz","Wissam Raji"],
+      "source_note": "Book comments and preface state Poritz's version is CC BY-SA 4.0 and initially adapted from Raji's CC BY 3.0 work.",
+      "derivative_obligations": ["attribution","indicate_changes","share_alike","no_additional_restrictions"],
+      "status": "admissible_with_exact_notice"
+    },
+    {
+      "rights_id": "rights.yaintt.scytale",
+      "paths": ["Scytale.eps"],
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "attribution": ["DMGualtieri"],
+      "source_url": "https://commons.wikimedia.org/wiki/File:Scytale.png",
+      "status": "admissible_with_separate_attribution"
+    },
+    {
+      "rights_id": "rights.yaintt.license_badge",
+      "paths": ["by-sa.eps"],
+      "license": null,
+      "attribution": null,
+      "evidence": "Official directory supplies the badge; EPS creator metadata names Alex Roberts and embeds Adobe copyrighted procsets, but no component-specific license is stated.",
+      "status": "blocked_pending_replacement_or_documented_exception"
+    },
+    {
+      "rights_id": "rights.yaintt.official_pdf",
+      "paths": ["yaintt.pdf"],
+      "license": "composite of source components",
+      "status": "authority_witness_not_derivative_input"
+    },
+    {
+      "rights_id": "rights.yaintt.landing_page",
+      "paths": ["index.html"],
+      "license": "CC BY-SA 4.0 except software GPLv3 unless otherwise specified",
+      "status": "authority_evidence_not_reader_payload"
+    }
+  ]
+}

@@ -1,0 +1,237 @@
+{
+  "admission_evidence": {
+    "refreeze_promoted_to_canonical": true,
+    "critical_tables_reviewed_at_300_dpi": true,
+    "elgamal_encryption_table_physical_page": 129,
+    "elgamal_signature_table_physical_page": 130,
+    "inherited_target_pages_raster_identical_to_boundary27_r3": [
+      94,
+      96,
+      99,
+      111,
+      112,
+      118,
+      119,
+      122,
+      123,
+      124,
+      125,
+      126
+    ],
+    "new_instructional_pages_reviewed_full_size": [
+      127,
+      128,
+      129,
+      130,
+      131
+    ]
+  },
+  "boundary": "boundary28",
+  "artifact": {
+    "bytes": 962527,
+    "pages": 138,
+    "path": "output/YAINTT_ID.pdf",
+    "sha256": "1ded3c6844b656347259b464bf21526fdc32dc2246c73ac58ab76ed28688eefc"
+  },
+  "source_version": "r2",
+  "checks": {
+    "all_fonts_embedded": true,
+    "bibtex_warning_count": 1,
+    "blank_page_set_matches": true,
+    "consumed_assets": [
+      "cover_art.eps",
+      "dbend.eps",
+      "Scytale.eps",
+      "eng_freq_hist.eps",
+      "samp_Cct_hist.eps",
+      "seadk_Cct.eps",
+      "seadk_rkkrt.eps",
+      "hamhip_freqs.eps",
+      "seadk_hamhip.eps"
+    ],
+    "crop_boxes": [
+      [
+        0.0,
+        0.0,
+        612.0,
+        792.0
+      ]
+    ],
+    "expected_blank_pages": [
+      2,
+      6,
+      28,
+      62,
+      102,
+      132
+    ],
+    "font_rows": 22,
+    "font_table_sha256": "212c8808a3e94420ebbd065a7ef52339fdd9158db4ec0f6b8f7026dd024bf321",
+    "hyperref_pdf_string_warning_count": 3,
+    "latex_error_count": 0,
+    "log_bytes": 34548,
+    "log_sha256": "e457ffdf855d7729e34f5dfcccd1444f1ee46c4b79842e9d03f62dd927c68fe7",
+    "makeindex_entries_accepted": 407,
+    "makeindex_entries_rejected": 0,
+    "makeindex_warning_count": 0,
+    "maximum_overfull_points": 71.33899,
+    "media_boxes": [
+      [
+        0.0,
+        0.0,
+        612.0,
+        792.0
+      ]
+    ],
+    "observed_blank_pages": [
+      2,
+      6,
+      28,
+      62,
+      102,
+      132
+    ],
+    "overfull_hbox_count": 46,
+    "placeholder_double_question_mark_count": 0,
+    "prohibited_untranslated_text_hits": {
+      "Does that signature verify?": 0,
+      "ElGamal Cryptosystem": 0,
+      "ElGamal Digital Signature": 0,
+      "Make an ElGamal public key": 0
+    },
+    "required_indonesian_text_hits": {
+      "Kriptosistem ElGamal": 3,
+      "Kunci privat [dekripsi] ElGamal": 1,
+      "Tanda tangan digital ElGamal": 1,
+      "kunci publik ElGamal": 2
+    },
+    "rerun_warning_count": 0,
+    "rotations": [
+      0
+    ],
+    "suppressed_empty_link_warning_count": 0,
+    "undefined_reference_or_citation_count": 0,
+    "underfull_hbox_count": 2,
+    "underfull_vbox_count": 15
+  },
+  "excluded_attempts": [
+    {
+      "healthy_postscript": {
+        "bytes": 2198350,
+        "path": "build/boundary28-r2-candidate-20260822-0060/YAINTT_ID_BOUNDARY28_R2.ps",
+        "sha256": "5e1e0cd181a024248308a3a60dc7c92b4ea75ee9272e136204245cff1bdba11f"
+      },
+      "manual_ps2pdf_retry": {
+        "bytes": 956263,
+        "pages": 138,
+        "path": "build/boundary28-r2-candidate-20260822-0060/YAINTT_ID_BOUNDARY28_R2.retry-stage.pdf",
+        "sha256": "2d34fe21ae5ed4d268098c98c20a47b4bd928ea6f8a46070147334ae315f8da9",
+        "valid_pdf": true
+      },
+      "path": "build/boundary28-r2-candidate-20260822-0060",
+      "reason": "transient_ps2pdf_truncation_missing_trailer",
+      "status": "excluded_from_admissible_pair",
+      "truncated_pdf": {
+        "bytes": 533687,
+        "path": "build/boundary28-r2-candidate-20260822-0060/YAINTT_ID_BOUNDARY28_R2.pdf",
+        "sha256": "46f941fec5f01b7e30f12b96ba8b5eea91cd0a21aead20edadb0744ab80a4ae6"
+      }
+    }
+  ],
+  "metadata": {
+    "author": "Jonathan A. Poritz; berdasarkan karya Wissam Raji",
+    "catalog_language": "id-ID",
+    "keywords": "teori bilangan, kriptologi, induksi matematika",
+    "mark_info_present": false,
+    "pdf_version": "1.4",
+    "subject": "Edisi bahasa Indonesia dengan penekanan pada kriptologi",
+    "tagged": false,
+    "title": "Satu Lagi Buku Teks Pengantar Teori Bilangan"
+  },
+  "render_closure": {
+    "bytes": 29962282,
+    "canonical_manifest_bytes": 11777,
+    "canonical_manifest_sha256": "0fc667fa7217bab762a97c5fa1227b70a0515631d080631c762b78dfb1e17f6b",
+    "contact_sheet_bytes": 8950357,
+    "contact_sheet_sha256": "c424ed3e21219530ea46a86f0e6fbc037d96bd786e3e3276d460080286de6c8d",
+    "directory": "qa/boundary28-r2-renders",
+    "files": 139,
+    "minimum_nonblank_noncover_content_margin_pixels": 42,
+    "noncover_pages_touching_outer_two_pixels": [],
+    "render_dimensions_pixels": [
+      [
+        935,
+        1210
+      ]
+    ]
+  },
+  "reproducibility": {
+    "candidate_and_repro_warning_profiles_match": true,
+    "candidate_directory": "build/boundary28-r2-candidate-20260822-0062",
+    "candidate_raw_bytes": 956263,
+    "candidate_raw_sha256": "9898335ea2371c980c79bd428685f20b75d89f1faa8a5d4ddfc34098c1c0b94b",
+    "candidate_stage_logs": {
+      "bytes": 122555,
+      "canonical_manifest_bytes": 919,
+      "canonical_manifest_sha256": "fe88f126710a6c2464191c03b879da8ccb523f5cb11337afe80f78fbd1faa95c",
+      "directory": "build/boundary28-r2-candidate-20260822-0062",
+      "files": 10
+    },
+    "four_normalized_surfaces_byte_identical": true,
+    "repro_directory": "build/boundary28-r2-repro-20260822-0063",
+    "repro_raw_bytes": 956263,
+    "repro_raw_sha256": "a9a5502f561b99226e102775490584b33b1656b0bb87ce2b4a9f892412a90964",
+    "repro_stage_logs": {
+      "bytes": 122551,
+      "canonical_manifest_bytes": 919,
+      "canonical_manifest_sha256": "b4310f4fd492ebe8df83b1e0786b3918441690ecc7fa922906d392a643cc4c62",
+      "directory": "build/boundary28-r2-repro-20260822-0063",
+      "files": 10
+    }
+  },
+  "reproduction_witness": {
+    "bytes": 962527,
+    "path": "qa/YAINTT_ID_REPRO.pdf",
+    "sha256": "1ded3c6844b656347259b464bf21526fdc32dc2246c73ac58ab76ed28688eefc"
+  },
+  "schema": "r014.boundary22_24_candidate_build_qa",
+  "schema_version": "1.0.0",
+  "source": {
+    "bytes": 269464,
+    "path": "qa/frozen-boundaries/boundary28-final/yaintt-id.tex",
+    "sha256": "b1dd2926dc8bfdb84c6a3b4605490a8d96b14c44d89653867160d701fa0f17db"
+  },
+  "status": "passed_canonical_final",
+  "structural_gate": {
+    "canonical_admission_complete": true,
+    "canonical_admission": true,
+    "passed": true,
+    "visual_disposition_recorded_separately": "qa/BOUNDARY28_R2_VISUAL.json"
+  },
+  "target_page_rasters": {
+    "94": {
+      "bytes": 223564,
+      "path": "qa/boundary28-r2-renders/page-094.png",
+      "sha256": "8644ba7a0b9191097c802bc705856258abe5f8cd2a17d4be7c719114aa3e758e"
+    },
+    "96": {
+      "bytes": 142160,
+      "path": "qa/boundary28-r2-renders/page-096.png",
+      "sha256": "d76abba38645dbd060cfe750dc2cba5c4c52d34bbb09d1509ef3ab3eb11dcf30"
+    },
+    "99": {
+      "bytes": 203919,
+      "path": "qa/boundary28-r2-renders/page-099.png",
+      "sha256": "3f083266b6c8cf601571ff2b245efa9ba503e2c4e472215dfb35846dc1f88cba"
+    }
+  },
+  "warning_classification": {
+    "accepted_nonfatal": [
+      "overfull_hboxes_visually_checked_no_page_edge_clipping",
+      "underfull_boxes_visually_checked_no_text_overlap",
+      "hyperref_pdf_string_math_removed_from_bookmark_only",
+      "bibtex_missing_publisher_in_inherited_hardy_entry"
+    ],
+    "accessibility_limitation": "PDF is untagged; fonts are embedded and catalog language is id-ID."
+  }
+}

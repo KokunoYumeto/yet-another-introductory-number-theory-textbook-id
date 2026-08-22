@@ -1,0 +1,54 @@
+{
+  "schema": "r014.translation_review_receipt",
+  "schema_version": "1.0.0",
+  "boundary": 28,
+  "unit": "Chapter 5, Section 5.6 — The ElGamal Cryptosystem / Kriptosistem ElGamal",
+  "status": "passed",
+  "reviewed_at_utc": "2026-08-22T00:48:00Z",
+  "authority": {
+    "path": "authority/downloads/yaintt.tex",
+    "start_line": 5767,
+    "end_line": 5992,
+    "bytes": 8513,
+    "sha256": "492c31fa752e375d854862171cc215e1b6e74993fe9183110355a968abcf678f"
+  },
+  "target": {
+    "path": "qa/frozen-boundaries/boundary28/yaintt-id.tex",
+    "start_line": 6428,
+    "end_line": 6670,
+    "bytes": 9562,
+    "sha256": "5ce7f3d703e960e84fcb5e389251ed7ea5397a3e15dc03ced85a0b412ac9cd75"
+  },
+  "topology": {
+    "environment_events": 42,
+    "labels": 6,
+    "authority_refs": 5,
+    "target_refs": 6,
+    "documented_added_refs": ["thm:powersinmodordna"],
+    "cites": 0,
+    "indexes": 8,
+    "exercises": 3,
+    "display_blocks": 3,
+    "align_star": 2,
+    "tabulars": 2
+  },
+  "corrections_verified": ["R014-ADV-0134", "R014-ADV-0135", "R014-ADV-0136", "R014-ADV-0137", "R014-ADV-0138", "R014-ADV-0139", "R014-ADV-0140", "R014-ADV-0141"],
+  "numerical_replay": {
+    "parameters": "p=11717, r=103, alpha=666, gamma=23, m=97",
+    "a": 1020,
+    "x": 6220,
+    "gamma_inverse_mod_11716": 2547,
+    "corrected_y": 10407,
+    "authority_unreduced_formula_y": 5601,
+    "verification_lhs_rhs": 4519
+  },
+  "findings": {"p1": 0, "p2": 0, "p3": 0},
+  "checks": {
+    "mathematics": "pass",
+    "security_scope": "pass",
+    "structure": "pass",
+    "natural_id_id": "pass",
+    "table_horizontal_fit": "pass",
+    "unintended_english_residue": 0
+  }
+}

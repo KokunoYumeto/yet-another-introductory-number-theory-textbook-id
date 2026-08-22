@@ -1,0 +1,55 @@
+{
+  "schema": "r014.full_corpus_translation_audit",
+  "schema_version": "1.0.0",
+  "status": "passed_after_two_p3_terminology_corrections",
+  "audited_at_utc": "2026-08-22T01:02:00Z",
+  "authority": {
+    "path": "authority/downloads/yaintt.tex",
+    "bytes": 241340,
+    "sha256": "d2967870a0d43de60c590a2bb40cee6915e7b6d68a0dd3ad574f64c7b6430829"
+  },
+  "target": {
+    "path": "qa/frozen-boundaries/boundary28/yaintt-id.tex",
+    "bytes": 269464,
+    "sha256": "b1dd2926dc8bfdb84c6a3b4605490a8d96b14c44d89653867160d701fa0f17db"
+  },
+  "documented_exceptions": [
+    "the authority's by-sa.eps badge wrapfigure/center is excluded under R014-ADV-0002",
+    "28 target boundary harnesses are inert in the ordinary full-book branch"
+  ],
+  "inventory": {
+    "top_level_structural_tokens": 1541,
+    "environment_pairs": 589,
+    "headings": 63,
+    "exercises": 101,
+    "items": 112,
+    "labels": 157,
+    "references": 129,
+    "citations": 22,
+    "citation_keys": 21,
+    "index_commands": 407,
+    "captions": 12,
+    "table_environments": 5,
+    "tabular_environments": 16,
+    "figure_environments": 7
+  },
+  "invariants": {
+    "structural_signature_sequence_equal": true,
+    "duplicate_labels": 0,
+    "unresolved_references": 0,
+    "balanced_environments": true,
+    "balanced_braces": true,
+    "balanced_conditionals": true,
+    "balanced_math_delimiters": true,
+    "unintended_english_reader_prose": 0,
+    "stale_english_titles_or_captions": 0,
+    "canonical_one_way_function_term_consistent": true,
+    "diffie_hellman_en_dash_consistent": true
+  },
+  "runhead_verification": {
+    "short_title": "Teorema Gauss tentang Jumlah Phi",
+    "full_body_and_toc_title_preserved": true,
+    "amsbook_semantics": "@sect prints and writes mandatory argument #8; optional argument #7 is sent only to sectionmark/runhead"
+  },
+  "findings_after_revision": {"p1": 0, "p2": 0, "p3": 0}
+}

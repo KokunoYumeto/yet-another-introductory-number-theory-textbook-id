@@ -1,0 +1,46 @@
+{
+  "schema": "r014.source_authority",
+  "schema_version": "1.0.0",
+  "snapshot_id": "yaintt-source-2014-05-07-freeze-20260820",
+  "work_id": "ttp.r014.yaintt",
+  "declared_source_timestamp": "2014-05-07T11:04:00-06:00",
+  "landing_page": "https://poritz.net/jonathan/share/yaintt/",
+  "build_closure_file_count": 12,
+  "build_closure_bytes": 1137577,
+  "selected_pdf_pages": 128,
+  "files": [
+    {"path":"authority/downloads/index.html","url":"https://poritz.net/jonathan/share/yaintt/","role":"landing_and_license_authority","bytes":13255,"sha256":"0a80bd3f3b835a04a4bad8639b0ac83678faa91e669d3d7dc7acc53cd02e73aa","retrieved_utc":"2026-08-20T19:16:16.1732766Z","server_last_modified":null},
+    {"path":"authority/downloads/yaintt.tex","url":"https://poritz.net/jonathan/share/yaintt/yaintt.tex","role":"main_latex_source","bytes":241340,"sha256":"d2967870a0d43de60c590a2bb40cee6915e7b6d68a0dd3ad574f64c7b6430829","retrieved_utc":"2026-08-20T19:17:38.6646756Z","server_last_modified":"2014-07-20T23:32:34Z"},
+    {"path":"authority/downloads/refs.bib","url":"https://poritz.net/jonathan/share/yaintt/refs.bib","role":"bibtex_database","bytes":4406,"sha256":"115c8a3b51dec2ce3dd1595953127beeed02dd30698fa1f91c8d4fa580ec1d8a","retrieved_utc":"2026-08-20T19:17:38.9601816Z","server_last_modified":"2014-07-20T23:32:03Z"},
+    {"path":"authority/downloads/by-sa.eps","url":"https://poritz.net/jonathan/share/yaintt/by-sa.eps","role":"license_badge_asset","bytes":65771,"sha256":"df101009fda227f5b7e550d2c9dc04d5abf60174ef94732a346fdea090d23e29","retrieved_utc":"2026-08-20T19:17:39.1294189Z","server_last_modified":"2014-07-20T23:31:24Z"},
+    {"path":"authority/downloads/cover_art.eps","url":"https://poritz.net/jonathan/share/yaintt/cover_art.eps","role":"cover_asset","bytes":48828,"sha256":"076b45fffb0031e9cf35883c4123de72c9d302dc963975a88c64a81f7c8c78d1","retrieved_utc":"2026-08-20T19:17:39.3060706Z","server_last_modified":"2014-07-20T23:31:29Z"},
+    {"path":"authority/downloads/dbend.eps","url":"https://poritz.net/jonathan/share/yaintt/dbend.eps","role":"caution_symbol_asset","bytes":13704,"sha256":"bddd8601f3e402ed262b19332b77cb45442a82c4895e80c1c368686e05f6c2a4","retrieved_utc":"2026-08-20T19:17:39.4929184Z","server_last_modified":"2014-07-20T23:31:39Z"},
+    {"path":"authority/downloads/eng_freq_hist.eps","url":"https://poritz.net/jonathan/share/yaintt/eng_freq_hist.eps","role":"figure_asset","bytes":301732,"sha256":"d06715934780939e1631f5743f35dfeb6b9c327d056c7f79f77c26c22b9b9199","retrieved_utc":"2026-08-20T19:17:40.3723393Z","server_last_modified":"2014-07-20T23:31:49Z"},
+    {"path":"authority/downloads/hamhip_freqs.eps","url":"https://poritz.net/jonathan/share/yaintt/hamhip_freqs.eps","role":"figure_asset","bytes":101596,"sha256":"dce37ecc01cd9d445b24ccd7e464063e59a2b3bc270ba1385e821968207d9c01","retrieved_utc":"2026-08-20T19:17:40.7127547Z","server_last_modified":"2014-07-20T23:31:53Z"},
+    {"path":"authority/downloads/samp_Cct_hist.eps","url":"https://poritz.net/jonathan/share/yaintt/samp_Cct_hist.eps","role":"figure_asset","bytes":92360,"sha256":"2960ad2f0d3ee99be8e10352821ad5b72c9e5fa6ee976571a33df9f1d4e9c5d7","retrieved_utc":"2026-08-20T19:17:41.0576302Z","server_last_modified":"2014-07-20T23:32:07Z"},
+    {"path":"authority/downloads/Scytale.eps","url":"https://poritz.net/jonathan/share/yaintt/Scytale.eps","role":"third_party_figure_asset","bytes":85548,"sha256":"e34c6fae11957f5ffde765fe73546c84e71fc81c8c3a0db6b39d4b681c3af780","retrieved_utc":"2026-08-20T19:17:41.5641073Z","server_last_modified":"2014-07-20T23:32:13Z"},
+    {"path":"authority/downloads/seadk_Cct.eps","url":"https://poritz.net/jonathan/share/yaintt/seadk_Cct.eps","role":"figure_asset","bytes":61214,"sha256":"5819fa5143ba305eb2f7f9c41964739061ae762cbb6e2c5b092361053eddea7e","retrieved_utc":"2026-08-20T19:17:41.9067865Z","server_last_modified":"2014-07-20T23:32:18Z"},
+    {"path":"authority/downloads/seadk_hamhip.eps","url":"https://poritz.net/jonathan/share/yaintt/seadk_hamhip.eps","role":"figure_asset","bytes":51160,"sha256":"e8e958d437d431451095d24eebbdd97f1b1f84579792678bdedb6588eeab1f82","retrieved_utc":"2026-08-20T19:17:43.3272269Z","server_last_modified":"2014-07-20T23:32:22Z"},
+    {"path":"authority/downloads/seadk_rkkrt.eps","url":"https://poritz.net/jonathan/share/yaintt/seadk_rkkrt.eps","role":"figure_asset","bytes":69918,"sha256":"1bc7e601b694bb1d736cbd3275434005e1654d2639e0e36d0ea858a9bd7c7d1e","retrieved_utc":"2026-08-20T19:17:43.6744897Z","server_last_modified":"2014-07-20T23:32:27Z"},
+    {"path":"authority/downloads/yaintt.pdf","url":"https://www.poritz.net/jonathan/share/yaintt.pdf","role":"official_source_corresponding_pdf","bytes":881013,"sha256":"44ae6b2b3dd3c44ee4a6c59c57b623861cabae2a33d1d057df99a1e5c6dcb09f","retrieved_utc":"2026-08-20T19:17:46.6120018Z","server_last_modified":"2014-07-20T23:31:08Z"}
+  ],
+  "dependency_edges": [
+    {"from":"yaintt.tex","to":"refs.bib","relation":"bibliography"},
+    {"from":"yaintt.tex","to":"by-sa.eps","relation":"includegraphics"},
+    {"from":"yaintt.tex","to":"cover_art.eps","relation":"includegraphics"},
+    {"from":"yaintt.tex","to":"dbend.eps","relation":"includegraphics"},
+    {"from":"yaintt.tex","to":"eng_freq_hist.eps","relation":"includegraphics"},
+    {"from":"yaintt.tex","to":"hamhip_freqs.eps","relation":"includegraphics"},
+    {"from":"yaintt.tex","to":"samp_Cct_hist.eps","relation":"includegraphics"},
+    {"from":"yaintt.tex","to":"Scytale.eps","relation":"includegraphics"},
+    {"from":"yaintt.tex","to":"seadk_Cct.eps","relation":"includegraphics"},
+    {"from":"yaintt.tex","to":"seadk_hamhip.eps","relation":"includegraphics"},
+    {"from":"yaintt.tex","to":"seadk_rkkrt.eps","relation":"includegraphics"}
+  ],
+  "upstream_build_recipe": ["latex yaintt","bibtex yaintt","latex yaintt","latex yaintt","makeindex yaintt","latex yaintt","dvips -o yaintt.ps yaintt","ps2pdf yaintt.ps"],
+  "excluded_locator": {
+    "url": "https://poritz.net/jonathan/numth/yaintt.pdf",
+    "reason": "landing page calls it newer/in flux, but it is unavailable and has no matching public source closure"
+  }
+}
+

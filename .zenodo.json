@@ -1,0 +1,49 @@
+{
+  "title": "Satu Lagi Buku Teks Pengantar Teori Bilangan (Versi dengan Penekanan pada Kriptologi) — Edisi Bahasa Indonesia",
+  "upload_type": "publication",
+  "publication_type": "book",
+  "publication_date": "2026-08-22",
+  "description": "<p>Edisi lengkap bahasa Indonesia (<code>id-ID</code>) dari <em>Yet Another Introductory Number Theory Textbook (Cryptology Emphasis Version)</em> karya Jonathan A. Poritz, yang pada mulanya didasarkan pada karya Wissam Raji. Paket rilis mencakup pembaca PDF yang telah direflow, sumber LaTeX yang dapat diedit, provenance dan hak komponen, serta backend modular JSON/JSONL/CSV untuk pemakaian ulang per unit. Terjemahan dan integrasi teknis dibuat dengan OpenAI Codex atas permintaan Floris.</p><p>Ini adalah edisi turunan dan bukan terbitan resmi Jonathan A. Poritz, Wissam Raji, atau Colorado State University—Pueblo. Karya turunan tersedia dengan CC BY-SA 4.0; <code>Scytale.eps</code> tetap CC BY-SA 3.0 dengan atribusi DMGualtieri.</p>",
+  "creators": [
+    {
+      "name": "Poritz, Jonathan A."
+    }
+  ],
+  "contributors": [
+    {
+      "name": "Raji, Wissam",
+      "type": "Other"
+    },
+    {
+      "name": "OpenAI Codex",
+      "type": "Other"
+    }
+  ],
+  "access_right": "open",
+  "license": "cc-by-sa-4.0",
+  "language": "ind",
+  "keywords": [
+    "Bahasa Indonesia",
+    "Indonesian",
+    "number theory",
+    "cryptology",
+    "modular arithmetic",
+    "open textbook",
+    "LaTeX",
+    "machine-readable curriculum"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/KokunoYumeto/yet-another-introductory-number-theory-textbook-id",
+      "relation": "isSupplementedBy",
+      "resource_type": "software"
+    },
+    {
+      "identifier": "https://poritz.net/jonathan/share/yaintt/",
+      "relation": "isDerivedFrom",
+      "resource_type": "publication-book"
+    }
+  ],
+  "notes": "Frozen authority: yaintt-source-2014-05-07-freeze-20260820. Final filenames, byte counts, SHA-256 identities, DOI, and public URLs are authoritative only in the verified release manifest and publication receipt. Work identity: ttp.r014.yaintt.",
+  "version": "1.0.0"
+}

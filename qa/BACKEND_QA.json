@@ -1,0 +1,211 @@
+{
+  "backend": "backend",
+  "boundary11_preservation": {
+    "object_hashes": "pass",
+    "record_count": 2417,
+    "records_bytes": 2247534,
+    "records_sha256": "3fe63938cec0aaeb8cc31ec4590af077377c758b3585cea4049b433542086a7c"
+  },
+  "boundary28_r2_preservation": {
+    "object_hashes": "pass",
+    "record_count": 5180,
+    "records_bytes": 5584334,
+    "records_sha256": "18764193b4579196c2b02549ff592da0f04e4c0c4194cf6da5294ff11bbb6fa7"
+  },
+  "canonical_final_reader": {
+    "bytes": 962527,
+    "pages": 138,
+    "path": "output/YAINTT_ID.pdf",
+    "sha256": "1ded3c6844b656347259b464bf21526fdc32dc2246c73ac58ab76ed28688eefc"
+  },
+  "catalog": {
+    "bytes": 6999934,
+    "sha256": "36e256c25051ebc154f3dbb3cd1ed06f1cc51ce31a659b0acec49ebf3d6685a8"
+  },
+  "csv_projection_count": 15,
+  "csv_rows": {
+    "artifact": 105,
+    "assessments": 101,
+    "asset": 14,
+    "concept": 223,
+    "correction": 141,
+    "course": 1,
+    "edition": 12,
+    "program": 1,
+    "qa_event": 131,
+    "relation": 3297,
+    "resource": 1,
+    "rights": 15,
+    "segment": 1087,
+    "term": 239,
+    "unit": 548
+  },
+  "determinism_receipt": {
+    "path": "qa/BACKEND_DETERMINISM.json",
+    "sha256": "a7665f0af3bd8bee1891df5fc696991fb8894e2432bd543ad60b8c1607c11752"
+  },
+  "failures": [],
+  "generated_at": "2026-08-22T02:12:09.959993Z",
+  "manifest": {
+    "bytes": 6979,
+    "listed_files": 33,
+    "sha256": "142f9711e29236afb87c3aa337e91dfb661122e10c87bb3d979f93c0168d8e74"
+  },
+  "method": "independent schema, referential, locator, rights, terminology, correction, exercise, evidence-state and CSV-XLSX validation",
+  "pinned_sidecars": {
+    "qa/review-candidates/boundary28-r2/ADVERSE_LEDGER.md": "dd4de4ca603dc1bf67b635bce3199fcdbf6bcacbc3b8d3736350b5a825a00f57",
+    "qa/review-candidates/boundary28-r2/TERMINOLOGY.md": "3e3fe31baa8565bbc54cd6d789570cac18ed469f68cf683f08dd639ef92d9bd1"
+  },
+  "pinned_target": {
+    "bytes": 269464,
+    "path": "qa/frozen-boundaries/boundary28-final/yaintt-id.tex",
+    "sha256": "b1dd2926dc8bfdb84c6a3b4605490a8d96b14c44d89653867160d701fa0f17db"
+  },
+  "preview_dimensions": {
+    "artifact-final-tail.png": [
+      1832,
+      614
+    ],
+    "artifact.png": [
+      1832,
+      716
+    ],
+    "assessments-final-tail.png": [
+      1832,
+      1950
+    ],
+    "assessments.png": [
+      1832,
+      706
+    ],
+    "asset.png": [
+      1832,
+      393
+    ],
+    "concept-final-tail.png": [
+      1832,
+      500
+    ],
+    "concept.png": [
+      1832,
+      549
+    ],
+    "correction-final-tail.png": [
+      1832,
+      500
+    ],
+    "correction.png": [
+      1832,
+      540
+    ],
+    "course.png": [
+      1832,
+      80
+    ],
+    "edition-final-tail.png": [
+      1832,
+      269
+    ],
+    "edition.png": [
+      1832,
+      309
+    ],
+    "program.png": [
+      1832,
+      80
+    ],
+    "qa_event-final-tail.png": [
+      1832,
+      500
+    ],
+    "qa_event.png": [
+      1832,
+      637
+    ],
+    "relation-final-tail.png": [
+      1832,
+      500
+    ],
+    "relation.png": [
+      1832,
+      540
+    ],
+    "resource.png": [
+      1832,
+      80
+    ],
+    "rights.png": [
+      1832,
+      439
+    ],
+    "segment-final-tail.png": [
+      1832,
+      500
+    ],
+    "segment.png": [
+      1832,
+      540
+    ],
+    "term-final-tail.png": [
+      1832,
+      500
+    ],
+    "term.png": [
+      1832,
+      540
+    ],
+    "unit-final-tail.png": [
+      1832,
+      623
+    ],
+    "unit.png": [
+      1832,
+      619
+    ]
+  },
+  "records": {
+    "bytes": 5656786,
+    "count": 5272,
+    "record_counts": {
+      "artifact": 105,
+      "asset": 14,
+      "concept": 223,
+      "correction": 141,
+      "course": 1,
+      "edition": 12,
+      "program": 1,
+      "qa_event": 131,
+      "relation": 3297,
+      "resource": 1,
+      "rights": 15,
+      "segment": 544,
+      "term": 239,
+      "unit": 548
+    },
+    "sha256": "e2c4374c37fbc0d45c2d029b7b734b7774a78f5a66caeb66d19d1a7bb97509d0"
+  },
+  "result": "pass",
+  "schema": "r014.backend.qa",
+  "schema_validated_records": 5272,
+  "schema_version": "2.0.0",
+  "semantic_closure": {
+    "canonical_build_events": 9,
+    "canonical_visual_events": 9,
+    "corrections": 141,
+    "exercises": 101,
+    "final_segments": 298,
+    "final_units": 298,
+    "relation_predicates": 16,
+    "terminology_rows": 216
+  },
+  "validated_artifacts_and_assets": 119,
+  "validated_locators": 2174,
+  "xlsx": {
+    "bytes": 915789,
+    "csv_cell_matrices_equal": true,
+    "formula_errors": 0,
+    "path": "backend/exports/R014_MODULAR_BACKEND.xlsx",
+    "sha256": "a26622eeb2a1dd6742f8a3591622a04d1d37a9a58d74c94fd9e13da35051f314",
+    "sheet_count": 15
+  }
+}

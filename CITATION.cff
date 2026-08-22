@@ -1,0 +1,37 @@
+cff-version: 1.2.0
+message: "Jika Anda menggunakan edisi ini, kutiplah buku dan cantumkan atribusi karya sumber."
+title: "Satu Lagi Buku Teks Pengantar Teori Bilangan (Versi dengan Penekanan pada Kriptologi) — Edisi Bahasa Indonesia"
+type: dataset
+authors:
+  - family-names: Poritz
+    given-names: "Jonathan A."
+abstract: >-
+  Edisi lengkap bahasa Indonesia dari Yet Another Introductory Number Theory
+  Textbook (Cryptology Emphasis Version) karya Jonathan A. Poritz, yang pada
+  mulanya didasarkan pada karya Wissam Raji. Paket ini mencakup pembaca PDF,
+  sumber LaTeX yang dapat diedit, provenance terhash, dan backend modular yang
+  dapat dibaca mesin. Terjemahan serta integrasi teknis dibuat dengan OpenAI
+  Codex atas permintaan Floris.
+license: CC-BY-SA-4.0
+keywords:
+  - Bahasa Indonesia
+  - Indonesian
+  - number theory
+  - cryptology
+  - modular arithmetic
+  - open textbook
+  - LaTeX
+preferred-citation:
+  type: book
+  title: "Satu Lagi Buku Teks Pengantar Teori Bilangan (Versi dengan Penekanan pada Kriptologi) — Edisi Bahasa Indonesia"
+  authors:
+    - family-names: Poritz
+      given-names: "Jonathan A."
+  year: 2026
+
+# BEGIN R014-PUBLICATION
+version: 1.0.0
+doi: "10.5281/zenodo.22052196"
+repository-code: "https://github.com/KokunoYumeto/yet-another-introductory-number-theory-textbook-id"
+url: "https://doi.org/10.5281/zenodo.22052196"
+# END R014-PUBLICATION

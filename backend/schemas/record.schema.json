@@ -1,0 +1,120 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:ttp:r014:backend:record:1.0.0",
+  "title": "R014 modular translation backend record",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "schema",
+    "schema_version",
+    "record_id",
+    "entity_class",
+    "status",
+    "work_id",
+    "created_at",
+    "responsible_workflow",
+    "supersedes"
+  ],
+  "properties": {
+    "schema": {"const": "r014.backend.record"},
+    "schema_version": {"const": "1.0.0"},
+    "record_id": {"type": "string", "pattern": "^[a-z0-9][a-z0-9._:-]+$"},
+    "entity_class": {
+      "enum": [
+        "program", "course", "resource", "edition", "unit", "concept",
+        "segment", "term", "asset", "relation", "rights", "qa_event",
+        "artifact", "correction"
+      ]
+    },
+    "status": {"type": "string", "minLength": 1},
+    "work_id": {"const": "ttp.r014.yaintt"},
+    "resource_id": {"type": ["string", "null"]},
+    "edition_id": {"type": ["string", "null"]},
+    "locale": {"type": ["string", "null"]},
+    "created_at": {"type": "string", "format": "date-time"},
+    "responsible_workflow": {"const": "codex.r014.id-ID"},
+    "supersedes": {"type": ["string", "null"]},
+    "source_locator": {"$ref": "#/$defs/locator"},
+    "target_locator": {"$ref": "#/$defs/locator"},
+    "source_content_sha256": {"$ref": "#/$defs/sha256"},
+    "target_content_sha256": {"$ref": "#/$defs/sha256"},
+    "translation_state": {
+      "enum": [
+        "source_frozen", "queued", "draft", "translated",
+        "structurally_verified", "mathematically_reviewed", "language_reviewed",
+        "built", "visually_checked", "published", "superseded", "blocked"
+      ]
+    }
+  },
+  "$defs": {
+    "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "locator": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["path", "start_line", "end_line"],
+      "properties": {
+        "path": {"type": "string", "minLength": 1},
+        "start_line": {"type": "integer", "minimum": 1},
+        "end_line": {"type": "integer", "minimum": 1}
+      }
+    }
+  },
+  "allOf": [
+    {
+      "if": {"properties": {"entity_class": {"const": "program"}}},
+      "then": {"required": ["program_code", "title", "locale", "curriculum_authority"]}
+    },
+    {
+      "if": {"properties": {"entity_class": {"const": "course"}}},
+      "then": {"required": ["course_code", "title", "stage", "prerequisite_course_ids", "scope", "outcome"]}
+    },
+    {
+      "if": {"properties": {"entity_class": {"const": "resource"}}},
+      "then": {"required": ["title", "authors", "authority_url", "source_format", "rights_id"]}
+    },
+    {
+      "if": {"properties": {"entity_class": {"const": "edition"}}},
+      "then": {"required": ["edition_kind", "locale", "source_snapshot_id", "file_ids", "translation_state"]}
+    },
+    {
+      "if": {"properties": {"entity_class": {"const": "unit"}}},
+      "then": {"required": ["unit_type", "parent_unit_id", "order", "source_local_id", "source_locator", "source_content_sha256", "translation_state", "rights_id"]}
+    },
+    {
+      "if": {"properties": {"entity_class": {"const": "concept"}}},
+      "then": {"required": ["name_en", "prerequisite_concept_ids"]}
+    },
+    {
+      "if": {"properties": {"entity_class": {"const": "segment"}}},
+      "then": {"required": ["unit_id", "order", "source_text", "target_text", "source_content_sha256", "target_content_sha256", "translation_state", "rights_id"]}
+    },
+    {
+      "if": {"properties": {"entity_class": {"const": "term"}}},
+      "then": {"required": ["concept_id", "source_term", "target_term", "variants", "rejected_forms", "scope", "register", "evidence", "examples"]}
+    },
+    {
+      "if": {"properties": {"entity_class": {"const": "asset"}}},
+      "then": {"required": ["path", "url", "role", "bytes", "sha256", "rights_id", "dependency_ids"]}
+    },
+    {
+      "if": {"properties": {"entity_class": {"const": "relation"}}},
+      "then": {"required": ["subject_id", "predicate", "object_id"]}
+    },
+    {
+      "if": {"properties": {"entity_class": {"const": "rights"}}},
+      "then": {"required": ["component_paths", "license", "attribution", "obligations", "rights_status"]}
+    },
+    {
+      "if": {"properties": {"entity_class": {"const": "qa_event"}}},
+      "then": {"required": ["qa_type", "result", "witness_ids", "evidence"]}
+    },
+    {
+      "if": {"properties": {"entity_class": {"const": "artifact"}}},
+      "then": {"required": ["path", "media_type", "bytes", "sha256", "toolchain", "build_receipt_id"]}
+    },
+    {
+      "if": {"properties": {"entity_class": {"const": "correction"}}},
+      "then": {"required": ["correction_type", "authority_locator", "source_text", "target_text", "rationale", "evidence", "upstream_report_disposition", "affected_unit_ids"]}
+    }
+  ]
+}

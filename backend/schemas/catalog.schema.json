@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:ttp:r014:backend:catalog:1.0.0",
+  "title": "R014 modular translation backend catalog",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema", "schema_version", "export_id", "generated_at", "work_id",
+    "authority_snapshot_id", "authority_sha256", "target_sha256",
+    "record_counts", "records"
+  ],
+  "properties": {
+    "schema": {"const": "r014.backend.catalog"},
+    "schema_version": {"const": "1.0.0"},
+    "export_id": {"type": "string"},
+    "generated_at": {"type": "string", "format": "date-time"},
+    "work_id": {"const": "ttp.r014.yaintt"},
+    "authority_snapshot_id": {"type": "string"},
+    "authority_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "target_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "record_counts": {
+      "type": "object",
+      "minProperties": 14,
+      "additionalProperties": {"type": "integer", "minimum": 1}
+    },
+    "records": {
+      "type": "array",
+      "minItems": 14,
+      "items": {"$ref": "urn:ttp:r014:backend:record:1.0.0"}
+    }
+  }
+}
