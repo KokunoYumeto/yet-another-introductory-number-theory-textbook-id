@@ -242,3 +242,135 @@ exercises, three enumerated items, and nine displays replay. Corrections
 `R014-ADV-0113`–`0115` repair order notation, equality/congruence, and an
 exercise type error. Independent review/freeze remains required; the next
 translation cursor is authority line 4783, §5.2 `sec:aNDGToSoEF`.
+
+## R014-DEC-0029 — Full Indonesian corpus frozen at Boundary 28
+
+The complete contiguous target is frozen at
+`qa/frozen-boundaries/boundary28-final/yaintt-id.tex`, identical to
+`source/yaintt-id.tex`: 269,464 bytes, SHA-256
+`b1dd2926dc8bfdb84c6a3b4605490a8d96b14c44d89653867160d701fa0f17db`.
+The full-corpus and independent translation reviews pass with no unresolved
+reference, English instructional residue, or open finding. The structural
+signature exactly preserves 1,541 tokens, 589 environments, 63 headings, 101
+exercises, 112 list items, 157 labels, 129 references, 22 citations, 407 index
+entries, and 12 captions. All 141 source corrections remain individually
+recorded; no author contact or upstream report was made.
+
+## R014-DEC-0030 — Final reflowed reader and backend admitted
+
+The canonical reader is `output/YAINTT_ID.pdf`: 138 Letter pages, 962,527
+bytes, SHA-256
+`1ded3c6844b656347259b464bf21526fdc32dc2246c73ac58ab76ed28688eefc`.
+Its second deterministic build is byte-identical and all 138 pages pass visual
+inspection after reflowing tables and non-centered material. Fonts are embedded
+and `/Lang` is `id-ID`; lack of full PDF tagging is retained as the sole known
+accessibility limitation. The complete backend is admitted with 5,272 records;
+two isolated rebuilds and the canonical replay have zero differences.
+
+## R014-DEC-0031 — Version 1.0.0 published and public bytes verified
+
+Version 1.0.0 is public at GitHub commit
+`11e27180632af3b90202ad38c063807c0d057766` and Zenodo record `22052196`.
+The version DOI is `10.5281/zenodo.22052196`; the concept DOI is
+`10.5281/zenodo.22052195`. GitHub's release API normalizes leading-dot asset
+names, so root `.zenodo.json` remains canonical in the repository/source ZIP
+while the cross-destination release filename is `zenodo.json`. Zenodo requires
+octet-stream bucket uploads and neutral `Accept` on content reads. Anonymous
+GitHub API blob reads exhausted the unauthenticated quota, so final public proof
+used commit/tag/main codeload archives plus direct release-asset downloads; all
+repository files and all twelve release assets matched. The same twelve Zenodo
+files matched by filename, byte count, SHA-256, and MD5. The sanitized receipt
+is `publication/PUBLICATION_RECEIPT.json`, 28,618 bytes, SHA-256
+`326dc18e3341676957ba0624c3cd50e59668b2b1551d804228ffef274cabc397`.
+
+## R014-DEC-0032 — Zenodo landing page fronts the PDF
+
+Post-publication presentation QA found that Zenodo selected `ATTRIBUTION.md`
+for the landing-page preview even though the complete reader PDF was present.
+The existing record was edited in place to set `YAINTT_ID.pdf` as
+`default_preview`; no new version or DOI was created and none of the twelve
+release files changed. Anonymous API readback reports the PDF as the default,
+the public embedded viewer loads all 138 pages, and a fresh direct download is
+962,527 bytes with SHA-256
+`1ded3c6844b656347259b464bf21526fdc32dc2246c73ac58ab76ed28688eefc`,
+matching the original publication receipt. The sanitized presentation receipt
+is `publication/ZENODO_PRESENTATION_RECEIPT.json`, 1,371 bytes, SHA-256
+`66a463964ecda86fd75e517fc709e8e9a01c2a22e9f33bb0e5e2dbb8c9b8a308`.
+
+## R014-DEC-0033 — License-safe Figshare fallback published
+
+The existing Zenodo concept remained current at version DOI
+`10.5281/zenodo.22052196` and concept DOI `10.5281/zenodo.22052195`; no
+competing Zenodo concept or duplicate version was created. Because Figshare's
+public and authenticated license catalogs do not include the release's exact
+CC BY-SA 4.0 license, no release bytes were uploaded or falsely relicensed.
+Instead, a fileless CC0 metadata-and-link record was published under project
+`280296` at article DOI `10.6084/m9.figshare.33314736.v1`. Its description
+states the complete quality level, the CC BY-SA 4.0 / `Scytale.eps` CC BY-SA
+3.0 boundary, both Zenodo DOIs, and every one of the twelve canonical
+filenames, byte counts, and SHA-256 identities.
+
+Article `33314736` was added additively to the existing Indonesian collection
+`8668413` and anonymously verified in the collection's latest version at the
+time, `10.6084/m9.figshare.c.8668413.v9`. Anonymous Figshare API and HTML
+readback confirmed project membership, collection membership, CC0
+metadata-only scope, and zero files. A new anonymous Zenodo readback downloaded
+all twelve public files (4,086,426 bytes total) and reproduced every expected
+SHA-256. The sanitized receipt is
+`publication/FIGSHARE_PUBLICATION_RECEIPT.json`, 4,517 bytes, SHA-256
+`d1d089e3054e8470aac0bfd458110b7284d68618793aecc6268459b61c8affb8`.
+
+## R014-DEC-0034 — Reader-first Figshare version 2 published and verified
+
+The same work-level Figshare article `33314736` was corrected in place; no
+duplicate item was created. Version 2 is a public book at DOI
+`10.6084/m9.figshare.33314736.v2`. Its first and preview-bearing file is the
+complete 138-page `YAINTT_ID.pdf`, followed by compact source and backend ZIPs,
+`LICENSE.md`, a payload manifest, and SHA-256 checksums. The six-file payload is
+3,576,688 bytes, below its 500,000,000-byte cap. Immediately before publication,
+the 22-article project inventory totaled 141,478,856 file bytes including this
+draft, below the 20,000,000,000-byte project cap.
+
+Figshare's structured license catalog still lacks CC BY-SA 4.0 and retains a
+CC0 platform label. This label is not asserted for the work files. The public
+description and included `LICENSE.md` explicitly control the real boundary:
+the edition is CC BY-SA 4.0, `Scytale.eps` remains CC BY-SA 3.0, and no CC0 or
+CC BY-only license is asserted for the uploaded work files. Anonymous API and
+HTML readback confirmed version 2, book type, six files, and the PDF-first
+presentation. Each public file was freshly downloaded and matched its local
+byte count and SHA-256. Project `280296` and collection `8668413` both contain
+the item; the collection was at version 21 during verification. The sanitized
+receipt is `publication/FIGSHARE_PUBLICATION_RECEIPT.json`, 5,647 bytes,
+SHA-256
+`1946b42e65c10ba723cec91fbce747800c4bd4f7b1918f814d48b0ce479ed12b`.
+
+After GitHub reinstatement, bounded anonymous checks returned HTTP 200 for the
+repository and release, and the public `main` SHA still exactly matched
+`11e27180632af3b90202ad38c063807c0d057766`; no GitHub mutation was required.
+
+## R014-DEC-0035 — Indonesian field-usage terminology QA
+
+A bounded arXiv search found no qualifying Indonesian-language number-theory
+or cryptology TeX source. The closest genuine Indonesian TeX source,
+arXiv:2001.05854, is a fluid-dynamics thesis and was rejected as field-mismatched.
+The documented fallback is Rinaldi Munir's current 2026 three-part *Teori
+Bilangan* lecture series for IF1220 Matematika Diskrit, Program Studi Teknik
+Informatika, STEI--ITB: 153 Indonesian pages spanning divisibility, Euclidean
+algorithms, congruences, primes, RSA, cryptography, and hash functions.
+
+All three PDFs were downloaded, frozen by URL/byte count/SHA-256, text-inspected
+in full for bounded terminology counts, and visually checked on representative
+identity and terminology pages. They expose no explicit reuse license and are
+therefore retained only as ignored local QA witnesses, never as release assets.
+The comparison confirms the target's `plainteks`, `cipherteks`, `enkripsi`,
+`dekripsi`, `kunci publik`, and `kunci privat`. Differences such as PBB/FPB,
+`kekongruenan`/`kongruensi`, `balikan modulo`/`invers modular`, and
+`Algoritma Euclidean`/`Algoritma Euklides` are legitimate register or naming
+variants. They were added as glossary aliases with explicit rationale; no
+preferred term or translated passage required replacement, so the admitted
+source and 138-page reader remain byte-identical.
+
+The durable audit is `qa/INDONESIAN_TERMINOLOGY_QA.json`. Repository and release
+metadata now carry the exact provenance identification **OpenAI Codex
+gpt-5.6-sol, Ultra.** while preserving Jonathan A. Poritz, Wissam Raji, Floris,
+and all component credits.

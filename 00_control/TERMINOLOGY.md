@@ -20,7 +20,7 @@
 | algebra.multiplicative_inverse | multiplicative inverse | invers multiplikatif | In `ZZ`, the units are `1` and `-1`. |
 | algebra.subtraction | subtraction | pengurangan | |
 | algebra.division | division | pembagian | Not a binary operation on all of `ZZ`. |
-| nt.divisibility | divisibility | keterbagian | Use `a membagi b`; retain `a\mid b`. |
+| nt.divisibility | divisibility | keterbagian | Use `a membagi b`; retain `a\mid b`. ITB 2026 attests `a habis membagi b` as a relational variant, not a replacement for the noun. |
 | nt.factor | factor | faktor | Paired with `pembagi` where the source gives both factor/divisor. |
 | nt.divisor | divisor | pembagi | Do not confuse with the positive divisor `b` in the Division Algorithm. |
 | nt.multiple | multiple | kelipatan | |
@@ -29,7 +29,7 @@
 | nt.division_algorithm | Division Algorithm | Algoritma Pembagian | Capitalize when naming the theorem/algorithm. |
 | nt.quotient | quotient | hasil bagi | |
 | nt.remainder | remainder | sisa pembagian | Short form `sisa` after definition. |
-| nt.greatest_common_divisor | greatest common divisor (gcd) | faktor persekutuan terbesar (FPB) | Preserve the operator `\gcd`; use `FPB` only in reader prose. |
+| nt.greatest_common_divisor | greatest common divisor (gcd) | faktor persekutuan terbesar (FPB) | Preserve the operator `\gcd`; use `FPB` only in reader prose. ITB 2026 uses `pembagi bersama terbesar (PBB)` but explicitly identifies `faktor persekutuan terbesar (FPB)` as the school term; record PBB as an academic alias and retain FPB for broad reader familiarity. |
 | nt.common_divisor | common divisor | pembagi bersama | Distinguish the relation from the conventional name `faktor persekutuan terbesar`. |
 | nt.relatively_prime | relatively prime | relatif prima | For two integers whose gcd is `1`. |
 | nt.mutually_relatively_prime | mutually relatively prime | relatif prima secara bersama-sama | Means the gcd of the whole finite family is `1`; weaker than pairwise relative primality. |
@@ -44,16 +44,16 @@
 | nt.hex | hex | heks | Scoped short form for hexadecimal. |
 | nt.sexagesimal | sexagesimal | seksagesimal | Base 60 notation. |
 | computing.bit | bit / binary digit | bit / digit biner | Retain the established loanword `bit`; expand it on first use. |
-| nt.euclidean_algorithm | Euclidean Algorithm | Algoritma Euklides | Capitalize when naming the algorithm. |
+| nt.euclidean_algorithm | Euclidean Algorithm | Algoritma Euklides | Capitalize when naming the algorithm. `Algoritma Euclidean` and `Algoritma Euclid` are attested aliases; retain `Euklides` consistently with `Lemma Euklides`. |
 | nt.extended_euclidean_algorithm | extended Euclidean Algorithm | Algoritma Euklides diperluas | Includes Bézout coefficients alongside the remainder sequence. |
-| nt.congruence | congruence / congruent | kongruensi / kongruen | Use “$a$ kongruen dengan $b$ modulo $n$” for $a\equiv b\pmod n$. |
+| nt.congruence | congruence / congruent | kongruensi / kongruen | Use “$a$ kongruen dengan $b$ modulo $n$” for $a\equiv b\pmod n$. ITB 2026 repeatedly uses the noun `kekongruenan`; retain it as a searchable alias while keeping the concise, widely attested `kongruensi` in running text. |
 | nt.modulo | modulo | modulo | Retain the established mathematical loanword and the notation `\pmod n`. |
 | nt.congruence_class | congruence class | kelas kongruensi | Values congruent modulo the stated modulus represent the same class. |
-| nt.chinese_remainder_theorem | Chinese Remainder Theorem | Teorema Sisa Cina | Established Indonesian theorem name; retain the source's later label and references. |
+| nt.chinese_remainder_theorem | Chinese Remainder Theorem | Teorema Sisa Cina | Established Indonesian theorem name; retain the source's later label and references. ITB 2026 leaves the theorem name in English, which is treated as an alias rather than grounds to undo the established Indonesian form. |
 | nt.euclids_lemma | Euclid's Lemma | Lemma Euklides | If $x\mid yz$ and $\gcd(x,y)=1$, then $x\mid z$. |
-| nt.linear_congruence | linear congruence | kongruensi linear | Use “kongruensi linear dalam satu peubah” for $ax\equiv b\pmod n$. |
+| nt.linear_congruence | linear congruence | kongruensi linear | Use “kongruensi linear dalam satu peubah” for $ax\equiv b\pmod n$. `Kekongruenan linier` is an attested ITB variant; retain standard `linear` and the established headword `kongruensi`. |
 | nt.diophantine_equation | Diophantine equation | persamaan Diofantin | Polynomial equation with integer coefficients whose solutions are sought in integers. |
-| nt.modular_inverse | modular inverse | invers modular | A solution of $ax\equiv1\pmod n$ when $\gcd(a,n)=1$. |
+| nt.modular_inverse | modular inverse | invers modular | A solution of $ax\equiv1\pmod n$ when $\gcd(a,n)=1$. ITB 2026 attests `balikan modulo (modulo invers)`; record both as aliases while retaining `invers modular` for consistency with the edition's algebraic inverse terminology. |
 | nt.system_of_congruences | system of congruences | sistem kongruensi | A simultaneous family, potentially with different moduli. |
 | set.equivalence_relation | equivalence relation | relasi ekuivalensi | A relation that is reflexive, symmetric, and transitive. |
 | set.reflexivity | reflexivity | refleksivitas | Use `refleksif` for the corresponding adjective. |
@@ -99,9 +99,9 @@
 | security.integrity | integrity | integritas | The recipient can verify that the message was not altered. |
 | security.authentication | authentication | autentikasi | Here, verification of the sender's identity. |
 | security.non_repudiation | non-repudiation | nirpenyangkalan | Preferred compact Indonesian legal/technical term; retain the source's sender scope. |
-| crypto.plaintext | plaintext / cleartext | plainteks / teks terang | Introduce both attested forms together; `plainteks` is the compact running-text form. |
+| crypto.plaintext | plaintext / cleartext | plainteks / teks terang | Introduce both attested forms together; `plainteks` is the compact running-text form and is independently confirmed by ITB 2026. |
 | crypto.cipher | cipher | cipher / algoritme sandi | Retain `cipher` as the technical headword and gloss it on first use. |
-| crypto.ciphertext | ciphertext | cipherteks / teks sandi | Introduce both attested forms together; `cipherteks` is the compact running-text form. |
+| crypto.ciphertext | ciphertext | cipherteks / teks sandi | Introduce both attested forms together; `cipherteks` is the compact running-text form and is independently confirmed by ITB 2026. |
 | crypto.encryption | encryption | enkripsi | Verb: `mengenkripsi`. |
 | crypto.decryption | decryption | dekripsi | Verb: `mendekripsi`. |
 | crypto.key | key | kunci | Additional information required for successful decryption. |
@@ -136,8 +136,8 @@
 | crypto.key_generation_algorithm | key-generation algorithm | algoritme pembangkitan kunci | Efficiently emits an associated public/private key pair; written `\mathsf{Gen}`. |
 | crypto.encryption_keyspace | encryption keyspace | ruang kunci enkripsi | Written `\Kk_e`. |
 | crypto.decryption_keyspace | decryption keyspace | ruang kunci dekripsi | Written `\Kk_d`. |
-| crypto.public_key | public key | kunci publik | Publicly distributed encryption key. |
-| crypto.private_key | private key | kunci privat | Secret decryption key; do not translate as `kunci pribadi`. |
+| crypto.public_key | public key | kunci publik | Publicly distributed encryption key; independently confirmed by ITB 2026. |
+| crypto.private_key | private key | kunci privat | Secret decryption key; do not translate as `kunci pribadi`. Independently confirmed by ITB 2026 and kept distinct from a symmetric `kunci rahasia`. |
 | crypto.public_key_cryptosystem | public-key cryptosystem | kriptosistem kunci publik | |
 | crypto.cryptographic_salt | cryptographic salt | salt kriptografis | Retain the established technical loan `salt` and explain its random-data role. |
 | crypto.traffic_analysis | traffic analysis | analisis lalu lintas | Here, correlation of repeated ciphertexts with observable actions. |
@@ -221,6 +221,18 @@
 
 The notation `\ZZ_{\ge0}` denotes the nonnegative integers; this is distinct
 from the book's positive-natural-number convention for `\NN`.
+
+## External field-usage QA
+
+No qualifying Indonesian-language number-theory or cryptology TeX source was
+found in a bounded arXiv search. The fallback witness is Rinaldi Munir's
+three-part 2026 *Teori Bilangan* lecture series for IF1220 Matematika Diskrit,
+Program Studi Teknik Informatika, STEI--ITB (153 pages total). The exact PDF
+identities, URLs, term counts, visual checks, rights caveat, comparisons, and
+decisions are recorded in `qa/INDONESIAN_TERMINOLOGY_QA.json`. The PDFs expose
+no explicit reuse license and are retained only as local QA witnesses, not as
+release assets. No preferred reader term or translated passage required
+replacement; only the attested aliases above were added.
 
 Rejected first-boundary forms are explicit backend data: `pengurutan baik` and
 `prinsip terurut baik` are rejected for the well-ordering principle;

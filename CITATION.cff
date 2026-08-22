@@ -11,7 +11,9 @@ abstract: >-
   mulanya didasarkan pada karya Wissam Raji. Paket ini mencakup pembaca PDF,
   sumber LaTeX yang dapat diedit, provenance terhash, dan backend modular yang
   dapat dibaca mesin. Terjemahan serta integrasi teknis dibuat dengan OpenAI
-  Codex atas permintaan Floris.
+  Codex atas permintaan Floris. Identifikasi model:
+  OpenAI Codex gpt-5.6-sol, Ultra. Seluruh kredit penulis sumber dan
+  kontributor manusia dipertahankan.
 license: CC-BY-SA-4.0
 keywords:
   - Bahasa Indonesia

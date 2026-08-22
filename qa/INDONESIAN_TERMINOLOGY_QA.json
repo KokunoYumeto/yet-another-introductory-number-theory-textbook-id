@@ -1,0 +1,182 @@
+{
+  "schema": "r014.indonesian_terminology_qa",
+  "schema_version": "1.0.0",
+  "work_id": "ttp.r014.yaintt",
+  "locale": "id-ID",
+  "status": "passed_with_alias_refinements_no_reader_replacements",
+  "performed_at": "2026-08-22T21:57:38.1329148+02:00",
+  "arxiv_search": {
+    "result": "no_qualifying_indonesian_number_theory_or_cryptology_tex_source_found",
+    "scope_note": "Bounded serious search, not an exhaustive proof of absence; arXiv search/API also returned HTTP 429 during part of the audit.",
+    "queries": [
+      "teori bilangan",
+      "kriptografi",
+      "keterbagian",
+      "kekongruenan",
+      "bilangan prima",
+      "aritmetika modulo",
+      "algoritma Euclid",
+      "Teorema Sisa Cina",
+      "Abstrak",
+      "Kata kunci",
+      "Pada makalah ini"
+    ],
+    "closest_indonesian_tex_candidate": {
+      "arxiv_id": "2001.05854",
+      "title": "A theoretical study on a two-dimensional flap-type wavemaker",
+      "author": "N. Karjanto",
+      "url": "https://arxiv.org/abs/2001.05854",
+      "source_url": "https://arxiv.org/src/2001.05854",
+      "language_note": "Indonesian original plus English translation",
+      "field": "fluid dynamics",
+      "decision": "rejected_as_not_number_theory_or_cryptology"
+    }
+  },
+  "fallback_source": {
+    "metadata_path": "qa/terminology-sources/itb-rinaldi-munir-number-theory-2026/SOURCE_METADATA.json",
+    "title": "Teori Bilangan (Bagian 1-3)",
+    "author": "Rinaldi Munir",
+    "institution": "Program Studi Teknik Informatika, STEI-ITB",
+    "edition": "Update 2026",
+    "pages": 153,
+    "why_representative": "Current Indonesian university material spanning divisibility, Euclidean algorithms, modular arithmetic, congruences, primes, RSA, cryptography, and hash functions; the author's official STEI profile identifies discrete mathematics and cryptography as teaching and research fields.",
+    "license_note": "No explicit reuse license was found; downloaded PDFs are local QA witnesses only and are excluded from public release payloads.",
+    "inspection": {
+      "all_three_pdfs_downloaded_and_magic_checked": true,
+      "all_pages_text_extracted_for_bounded_term_counting": true,
+      "visual_pages_checked": [
+        "Bagian 1 physical page 1",
+        "Bagian 1 physical page 6",
+        "Bagian 1 physical page 41",
+        "Bagian 1 physical page 53",
+        "Bagian 3 physical page 1",
+        "Bagian 3 physical page 27",
+        "Bagian 3 physical page 45"
+      ]
+    }
+  },
+  "target_snapshot": {
+    "terminology_path": "00_control/TERMINOLOGY.md",
+    "source_path": "source/yaintt-id.tex",
+    "source_bytes": 269464,
+    "source_sha256": "b1dd2926dc8bfdb84c6a3b4605490a8d96b14c44d89653867160d701fa0f17db"
+  },
+  "comparisons": [
+    {
+      "concept": "divisibility",
+      "target_preferred": "keterbagian; a membagi b",
+      "external_attested": "a habis membagi b",
+      "external_count": 14,
+      "decision": "retain_target_add_alias_note",
+      "reason": "The external wording is a relational paraphrase; keterbagian remains an established concise noun and a membagi b preserves the exact divisibility relation."
+    },
+    {
+      "concept": "greatest common divisor",
+      "target_preferred": "faktor persekutuan terbesar (FPB)",
+      "external_attested": "pembagi bersama terbesar (PBB)",
+      "external_count": 58,
+      "decision": "retain_target_add_alias_note",
+      "reason": "The ITB source itself explicitly notes faktor persekutuan terbesar/FPB as the school term; FPB is better for broad reader recognition while PBB is a valid academic alias."
+    },
+    {
+      "concept": "Euclidean Algorithm",
+      "target_preferred": "Algoritma Euklides",
+      "external_attested": "Algoritma Euclidean",
+      "external_count": 5,
+      "decision": "retain_target_add_alias_note",
+      "reason": "Both forms identify the same proper-name algorithm; Euklides remains consistent with Lemma Euklides in the edition."
+    },
+    {
+      "concept": "congruence",
+      "target_preferred": "kongruensi; kongruen",
+      "external_attested": "kekongruenan; kongruen",
+      "external_counts": {
+        "kekongruenan": 25,
+        "kongruen": 39
+      },
+      "decision": "retain_target_add_alias_note",
+      "reason": "Both nouns are used in Indonesian mathematical writing; the adjective/relational form agrees, and kongruensi is concise and widely attested."
+    },
+    {
+      "concept": "linear congruence",
+      "target_preferred": "kongruensi linear",
+      "external_attested": "kekongruenan linier",
+      "external_count": 8,
+      "decision": "retain_target_add_alias_note",
+      "reason": "This is noun and orthographic variation, not a mathematical distinction; the target's linear spelling and congruence headword remain internally consistent."
+    },
+    {
+      "concept": "modular inverse",
+      "target_preferred": "invers modular",
+      "external_attested": "balikan modulo (modulo invers)",
+      "external_counts": {
+        "balikan modulo": 4,
+        "modulo invers": 1
+      },
+      "decision": "retain_target_add_alias_note",
+      "reason": "The variants are semantically equivalent; invers modular aligns with the edition's invers aditif and invers multiplikatif system."
+    },
+    {
+      "concept": "Chinese Remainder Theorem",
+      "target_preferred": "Teorema Sisa Cina",
+      "external_attested": "Chinese Remainder Theorem",
+      "external_count": 2,
+      "decision": "retain_target_english_as_alias",
+      "reason": "The fallback source leaves the established theorem name untranslated; this does not justify replacing a clear and independently attested Indonesian name."
+    },
+    {
+      "concept": "plaintext and ciphertext",
+      "target_preferred": "plainteks; cipherteks",
+      "external_attested": "plainteks; cipherteks",
+      "external_counts": {
+        "plainteks": 17,
+        "cipherteks": 13,
+        "isolated_typo_chiperteks": 2
+      },
+      "decision": "confirmed_no_change",
+      "reason": "The repeated ITB forms exactly confirm the target; isolated chiperteks tokens are treated as source typos."
+    },
+    {
+      "concept": "public and private keys",
+      "target_preferred": "kunci publik; kunci privat",
+      "external_attested": "kunci publik; kunci privat",
+      "external_counts": {
+        "kunci publik": 6,
+        "kunci privat": 4,
+        "symmetric_key_variant_kunci_rahasia": 1
+      },
+      "decision": "confirmed_no_change",
+      "reason": "The source confirms the target's public/private distinction and separately uses kunci rahasia for a symmetric secret key."
+    },
+    {
+      "concept": "cryptographic operations",
+      "target_preferred": "enkripsi; dekripsi; fungsi hash",
+      "external_attested": "enkripsi; dekripsi; fungsi hash",
+      "external_counts": {
+        "enkripsi": 24,
+        "dekripsi": 21,
+        "fungsi hash": 14
+      },
+      "decision": "confirmed_no_change",
+      "reason": "High-frequency exact agreement."
+    }
+  ],
+  "result": {
+    "preferred_terms_changed": 0,
+    "reader_passages_changed": 0,
+    "glossary_alias_notes_added": 7,
+    "glossary_confirmation_notes_added": 4,
+    "glossary_rows_refined": 11,
+    "reader_rebuild_required": false,
+    "reason_no_rebuild": "No source/yaintt-id.tex content changed; the admitted PDF and mathematical structure remain byte-identical.",
+    "provenance_model_identification": "OpenAI Codex gpt-5.6-sol, Ultra.",
+    "provenance_surfaces_updated": [
+      "README.md",
+      "ATTRIBUTION.md",
+      "CITATION.cff",
+      ".zenodo.json",
+      "publication/RELEASE_NOTES.md"
+    ],
+    "human_and_source_credits_preserved": true
+  }
+}

@@ -11,6 +11,10 @@ atau Colorado State University—Pueblo, dan tidak menyiratkan dukungan mereka.
 Terjemahan serta integrasi teknisnya dibuat dengan OpenAI Codex atas permintaan
 Floris.
 
+Identifikasi model untuk provenance edisi ini: **OpenAI Codex gpt-5.6-sol, Ultra.**
+Seluruh kredit penulis sumber dan kontributor manusia tetap berlaku
+sebagaimana dinyatakan dalam `ATTRIBUTION.md`.
+
 ## Isi repositori
 
 - `source/yaintt-id.tex` — sumber LaTeX bahasa Indonesia yang dapat diedit.

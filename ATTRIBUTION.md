@@ -21,6 +21,10 @@ Floris. Edisi ini bukan edisi resmi dan tidak menyiratkan persetujuan atau
 dukungan Jonathan A. Poritz, Wissam Raji, maupun institusi yang disebutkan dalam
 karya sumber.
 
+Identifikasi model: **OpenAI Codex gpt-5.6-sol, Ultra.** Identifikasi ini
+melengkapi, dan tidak menggantikan, seluruh kredit penulis sumber dan
+kontributor manusia di atas.
+
 Perubahan terhadap sumber meliputi:
 
 - terjemahan lengkap ke bahasa Indonesia (`id-ID`);
@@ -47,4 +51,3 @@ sebagai pengganti. Disposisi lengkap semua komponen terdapat di
 > (Cryptology Emphasis Version)*, berdasarkan karya Wissam Raji; edisi bahasa
 > Indonesia dan adaptasi teknis dibuat dengan OpenAI Codex atas permintaan
 > Floris, dari sumber bertanda waktu 7 Mei 2014 11:04 MDT. CC BY-SA 4.0.
-

@@ -25,6 +25,8 @@ Terjemahan dan integrasi teknis dibuat dengan OpenAI Codex atas permintaan
 Floris. Ini adalah edisi turunan dan bukan terbitan resmi para penulis sumber
 atau institusi mereka.
 
+Identifikasi model untuk provenance: **OpenAI Codex gpt-5.6-sol, Ultra.**
+Seluruh kredit penulis sumber dan kontributor manusia dipertahankan.
+
 Nama berkas, ukuran byte, SHA-256, DOI, dan URL publik dinyatakan kanonik hanya
 setelah tercatat dalam `RELEASE_MANIFEST.json` serta receipt verifikasi publik.
-

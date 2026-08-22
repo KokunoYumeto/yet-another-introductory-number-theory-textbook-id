@@ -1,0 +1,48 @@
+{
+  "schema": "r014.external_terminology_source",
+  "schema_version": "1.0.0",
+  "work_id": "ttp.r014.yaintt",
+  "source_kind": "fallback_indonesian_university_lecture_series",
+  "title": "Teori Bilangan (Bagian 1-3)",
+  "author": "Rinaldi Munir",
+  "displayed_author": "Rinaldi M",
+  "institution": "Program Studi Teknik Informatika, STEI-ITB",
+  "course": "IF1220 Matematika Diskrit, Semester II 2025/2026",
+  "edition_label": "Update 2026",
+  "language": "Indonesian",
+  "course_index_url": "https://informatika.stei.itb.ac.id/~rinaldi.munir/Matdis/2025-2026/matdis25-26.htm",
+  "author_profile_url": "https://stei.itb.ac.id/dosen/rinaldi/",
+  "retrieved_at": "2026-08-22T21:57:38.1329148+02:00",
+  "rights": {
+    "explicit_reuse_license_found": false,
+    "disposition": "Local terminology QA witness only; do not redistribute or include in release assets."
+  },
+  "files": [
+    {
+      "path": "qa/terminology-sources/itb-rinaldi-munir-number-theory-2026/15-Teori-Bilangan-Bagian1-2026.pdf",
+      "url": "https://informatika.stei.itb.ac.id/~rinaldi.munir/Matdis/2025-2026/15-Teori-Bilangan-Bagian1-2026.pdf",
+      "pages": 68,
+      "bytes": 1160724,
+      "sha256": "cd05a1dcbdf2a618bfdc08115a0786717d0eb672badec39ae4b8359c89dcb865"
+    },
+    {
+      "path": "qa/terminology-sources/itb-rinaldi-munir-number-theory-2026/16-Teori-Bilangan-Bagian2-2026.pdf",
+      "url": "https://informatika.stei.itb.ac.id/~rinaldi.munir/Matdis/2025-2026/16-Teori-Bilangan-Bagian2-2026.pdf",
+      "pages": 29,
+      "bytes": 430526,
+      "sha256": "a5da7e852e42f8db51b21afdef8867d9e313da5a7972e66048e4755c2182d990"
+    },
+    {
+      "path": "qa/terminology-sources/itb-rinaldi-munir-number-theory-2026/17-Teori-Bilangan-Bagian3-2026.pdf",
+      "url": "https://informatika.stei.itb.ac.id/~rinaldi.munir/Matdis/2025-2026/17-Teori-Bilangan-Bagian3-2026.pdf",
+      "pages": 56,
+      "bytes": 1358605,
+      "sha256": "27fa255557e5e5b72a810018f8dab2dda04d36c6157a92e113163de221eb8f98"
+    }
+  ],
+  "totals": {
+    "files": 3,
+    "pages": 153,
+    "bytes": 2949855
+  }
+}
