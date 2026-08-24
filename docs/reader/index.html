@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="id-ID" xml:lang="id-ID">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Jonathan A. Poritz; berdasarkan karya Wissam Raji" />
+  <title>Satu Lagi Buku Teks Pengantar Teori Bilangan</title>
+  <style>
+    div.sitenav { display: flex; flex-direction: row; flex-wrap: wrap; }
+    span.navlink { flex: 1; }
+    span.navlink-label { display: inline-block; min-width: 4em; }
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+  <link rel="stylesheet" href="../site.css" />
+  <meta name="description" content="Edisi lengkap bahasa Indonesia yang dapat di-reflow dari buku pengantar teori bilangan dan kriptologi." />
+  <link rel="canonical" href="https://kokunoyumeto.github.io/yet-another-introductory-number-theory-textbook-id/reader/index.html" />
+  <meta property="og:title" content="Satu Lagi Buku Teks Pengantar Teori Bilangan" />
+  <meta property="og:type" content="book" />
+</head>
+<body>
+<nav id="sitenav" aria-label="Navigasi bab">
+<div class="sitenav">
+<span class="navlink">
+</span>
+<span class="navlink">
+</span>
+</div>
+<div class="sitenav">
+<span class="navlink">
+<span class="navlink-label">Berikutnya:</span> <a href="-prakata.html" accesskey="n" rel="next">Prakata</a>
+</span>
+<span class="navlink">
+</span>
+</div>
+</nav>
+
+<main id="reader-content" tabindex="-1">
+<header id="title-block-header">
+<h1 class="title">Satu Lagi Buku Teks Pengantar Teori Bilangan</h1>
+<p class="subtitle">Versi dengan Penekanan pada Kriptologi — Edisi
+Bahasa Indonesia</p>
+<p class="author">Jonathan A. Poritz; berdasarkan karya Wissam Raji</p>
+</header>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="-prakata.html#prakata" id="toc-prakata">Prakata</a></li>
+<li><a href="-catatan-rilis.html#catatan-rilis"
+id="toc-catatan-rilis">Catatan Rilis</a></li>
+<li><a href="1-chap-WOaD.html#chap-WOaD" id="toc-chap-WOaD"><span
+class="toc-section-number">1</span> Keterurutan Baik dan Pembagian</a>
+<ul>
+<li><a href="1-chap-WOaD.html#sec-WOPaMI" id="toc-sec-WOPaMI"><span
+class="toc-section-number">1.1</span> Prinsip Keterurutan Baik dan
+Induksi Matematika</a>
+<ul>
+<li><a href="1-chap-WOaD.html#prinsip-keterurutan-baik"
+id="toc-prinsip-keterurutan-baik"><span
+class="toc-section-number">1.1.1</span> <strong>Prinsip Keterurutan
+Baik</strong></a></li>
+<li><a href="1-chap-WOaD.html#prinsip-sarang-merpati"
+id="toc-prinsip-sarang-merpati"><span
+class="toc-section-number">1.1.2</span> <strong>Prinsip Sarang
+Merpati</strong></a></li>
+<li><a href="1-chap-WOaD.html#prinsip-induksi-matematika"
+id="toc-prinsip-induksi-matematika"><span
+class="toc-section-number">1.1.3</span> <strong>Prinsip Induksi
+Matematika</strong></a></li>
+<li><a href="1-chap-WOaD.html#latihan-untuk-sec-wopami"
+id="toc-latihan-untuk-sec-wopami">Latihan untuk §1.1</a></li>
+</ul></li>
+<li><a href="1-chap-WOaD.html#sec-AOwI" id="toc-sec-AOwI"><span
+class="toc-section-number">1.2</span> Operasi Aljabar pada Bilangan
+Bulat</a></li>
+<li><a href="1-chap-WOaD.html#sec-DaDA" id="toc-sec-DaDA"><span
+class="toc-section-number">1.3</span> Keterbagian dan Algoritma
+Pembagian</a>
+<ul>
+<li><a href="1-chap-WOaD.html#keterbagian-bilangan-bulat"
+id="toc-keterbagian-bilangan-bulat"><span
+class="toc-section-number">1.3.1</span> Keterbagian Bilangan
+Bulat</a></li>
+<li><a href="1-chap-WOaD.html#algoritma-pembagian"
+id="toc-algoritma-pembagian"><span
+class="toc-section-number">1.3.2</span> Algoritma Pembagian</a></li>
+<li><a href="1-chap-WOaD.html#latihan-untuk-sec-dada"
+id="toc-latihan-untuk-sec-dada">Latihan untuk §1.3</a></li>
+</ul></li>
+<li><a href="1-chap-WOaD.html#sec-RoIiDB" id="toc-sec-RoIiDB"><span
+class="toc-section-number">1.4</span> Representasi Bilangan Bulat dalam
+Berbagai Basis</a>
+<ul>
+<li><a href="1-chap-WOaD.html#latihan-untuk-sec-roiidb"
+id="toc-latihan-untuk-sec-roiidb"><span
+class="toc-section-number">1.4.1</span> Latihan untuk §1.4</a></li>
+</ul></li>
+<li><a href="1-chap-WOaD.html#gcd" id="toc-gcd"><span
+class="toc-section-number">1.5</span> Faktor Persekutuan Terbesar</a>
+<ul>
+<li><a href="1-chap-WOaD.html#latihan-untuk-gcd"
+id="toc-latihan-untuk-gcd">Latihan untuk §1.5</a></li>
+</ul></li>
+<li><a href="1-chap-WOaD.html#sec-EA" id="toc-sec-EA"><span
+class="toc-section-number">1.6</span> Algoritma Euklides</a>
+<ul>
+<li><a href="1-chap-WOaD.html#latihan-untuk-sec-ea"
+id="toc-latihan-untuk-sec-ea">Latihan untuk §1.6</a></li>
+</ul></li>
+</ul></li>
+<li><a href="2-chap-Cs.html#chap-Cs" id="toc-chap-Cs"><span
+class="toc-section-number">2</span> Kongruensi</a>
+<ul>
+<li><a href="2-chap-Cs.html#sec-ItC" id="toc-sec-ItC"><span
+class="toc-section-number">2.1</span> Pengantar Kongruensi</a>
+<ul>
+<li><a href="2-chap-Cs.html#latihan-untuk-sec-itc"
+id="toc-latihan-untuk-sec-itc">Latihan untuk §2.1</a></li>
+</ul></li>
+<li><a href="2-chap-Cs.html#sec-LC" id="toc-sec-LC"><span
+class="toc-section-number">2.2</span> Kongruensi Linear</a>
+<ul>
+<li><a href="2-chap-Cs.html#latihan-untuk-sec-lc"
+id="toc-latihan-untuk-sec-lc">Latihan untuk §2.2</a></li>
+</ul></li>
+<li><a href="2-chap-Cs.html#sec-CRT" id="toc-sec-CRT"><span
+class="toc-section-number">2.3</span> Teorema Sisa Cina</a>
+<ul>
+<li><a href="2-chap-Cs.html#latihan-untuk-sec-crt"
+id="toc-latihan-untuk-sec-crt">Latihan untuk §2.3</a></li>
+</ul></li>
+<li><a href="2-chap-Cs.html#sec-AWtWwC" id="toc-sec-AWtWwC"><span
+class="toc-section-number">2.4</span> Cara Lain Menangani Kongruensi:
+Kelas Ekuivalensi</a>
+<ul>
+<li><a href="2-chap-Cs.html#latihan-untuk-sec-awtwwc"
+id="toc-latihan-untuk-sec-awtwwc">Latihan untuk §2.4</a></li>
+</ul></li>
+<li><a href="2-chap-Cs.html#sec-EphiF" id="toc-sec-EphiF"><span
+class="toc-section-number">2.5</span> Fungsi
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ϕ</mi><annotation encoding="application/x-tex">\phi</annotation></semantics></math>
+Euler</a>
+<ul>
+<li><a href="2-chap-Cs.html#latihan-untuk-sec-ephif"
+id="toc-latihan-untuk-sec-ephif">Latihan untuk §2.5</a></li>
+</ul></li>
+</ul></li>
+<li><a href="3-chap-PNs.html#chap-PNs" id="toc-chap-PNs"><span
+class="toc-section-number">3</span> Bilangan Prima</a>
+<ul>
+<li><a href="3-chap-PNs.html#sec-BatFTA" id="toc-sec-BatFTA"><span
+class="toc-section-number">3.1</span> Dasar-dasar dan Teorema Dasar
+Aritmetika</a>
+<ul>
+<li><a href="3-chap-PNs.html#latihan-untuk-sec-batfta"
+id="toc-latihan-untuk-sec-batfta">Latihan untuk §3.1</a></li>
+</ul></li>
+<li><a href="3-chap-PNs.html#sec-WT" id="toc-sec-WT"><span
+class="toc-section-number">3.2</span> Teorema Wilson</a></li>
+<li><a href="3-chap-PNs.html#sec-MOaA" id="toc-sec-MOaA"><span
+class="toc-section-number">3.3</span> Orde Multiplikatif dan
+Penerapannya</a>
+<ul>
+<li><a href="3-chap-PNs.html#latihan-untuk-sec-moaa"
+id="toc-latihan-untuk-sec-moaa">Latihan untuk §3.3</a></li>
+</ul></li>
+<li><a href="3-chap-PNs.html#sec-AAtFLaET" id="toc-sec-AAtFLaET"><span
+class="toc-section-number">3.4</span> Pendekatan Lain terhadap Teorema
+Kecil Fermat dan Teorema Euler</a>
+<ul>
+<li><a href="3-chap-PNs.html#latihan-untuk-sec-aatflaet"
+id="toc-latihan-untuk-sec-aatflaet">Latihan untuk §3.4</a></li>
+</ul></li>
+</ul></li>
+<li><a href="4-chap-Crypto.html#chap-Crypto" id="toc-chap-Crypto"><span
+class="toc-section-number">4</span> Kriptologi</a>
+<ul>
+<li><a href="4-chap-Crypto.html#sec-SSH" id="toc-sec-SSH"><span
+class="toc-section-number">4.1</span> Sedikit Sejarah Spekulatif</a>
+<ul>
+<li><a href="4-chap-Crypto.html#latihan-untuk-sec-ssh"
+id="toc-latihan-untuk-sec-ssh">Latihan untuk §4.1</a></li>
+</ul></li>
+<li><a href="4-chap-Crypto.html#sec-CCaIV" id="toc-sec-CCaIV"><span
+class="toc-section-number">4.2</span> Cipher Caesar dan
+Varian-Variannya</a>
+<ul>
+<li><a href="4-chap-Crypto.html#latihan-untuk-sec-ccaiv"
+id="toc-latihan-untuk-sec-ccaiv">Latihan untuk §4.2</a></li>
+</ul></li>
+<li><a href="4-chap-Crypto.html#sec-FSiCFA" id="toc-sec-FSiCFA"><span
+class="toc-section-number">4.3</span> Langkah Awal dalam Kriptanalisis:
+Analisis Frekuensi</a>
+<ul>
+<li><a href="4-chap-Crypto.html#latihan-untuk-sec-fsicfa"
+id="toc-latihan-untuk-sec-fsicfa">Latihan untuk §4.3</a></li>
+</ul></li>
+<li><a href="4-chap-Crypto.html#sec-tRSAC" id="toc-sec-tRSAC"><span
+class="toc-section-number">4.4</span> Kripto Kunci Publik: Kriptosistem
+RSA</a>
+<ul>
+<li><a href="4-chap-Crypto.html#latihan-untuk-sec-trsac"
+id="toc-latihan-untuk-sec-trsac">Latihan untuk §4.4</a></li>
+</ul></li>
+<li><a href="4-chap-Crypto.html#sec-DSs" id="toc-sec-DSs"><span
+class="toc-section-number">4.5</span> Tanda Tangan Digital</a>
+<ul>
+<li><a href="4-chap-Crypto.html#latihan-untuk-sec-dss"
+id="toc-latihan-untuk-sec-dss">Latihan untuk §4.5</a></li>
+</ul></li>
+<li><a href="4-chap-Crypto.html#sec-MitMAaPKI"
+id="toc-sec-MitMAaPKI"><span class="toc-section-number">4.6</span>
+Serangan Man-in-the-Middle, Sertifikat, dan Kepercayaan</a></li>
+</ul></li>
+<li><a href="5-chap-IeqDL.html#chap-IeqDL" id="toc-chap-IeqDL"><span
+class="toc-section-number">5</span> Indeks = Logaritma Diskret</a>
+<ul>
+<li><a href="5-chap-IeqDL.html#sec-MPoMO" id="toc-sec-MPoMO"><span
+class="toc-section-number">5.1</span> Sifat-Sifat Lain Orde
+Multiplikatif</a>
+<ul>
+<li><a href="5-chap-IeqDL.html#latihan-untuk-sec-mpomo"
+id="toc-latihan-untuk-sec-mpomo">Latihan untuk §5.1</a></li>
+</ul></li>
+<li><a href="5-chap-IeqDL.html#sec-aNDGToSoEF"
+id="toc-sec-aNDGToSoEF"><span class="toc-section-number">5.2</span>
+Selingan yang Diperlukan: Teorema Gauss tentang Jumlah Nilai Fungsi Phi
+Euler</a>
+<ul>
+<li><a href="5-chap-IeqDL.html#latihan-untuk-sec-andgtosoef"
+id="toc-latihan-untuk-sec-andgtosoef">Latihan untuk §5.2</a></li>
+</ul></li>
+<li><a href="5-chap-IeqDL.html#sec-PR" id="toc-sec-PR"><span
+class="toc-section-number">5.3</span> Akar Primitif</a>
+<ul>
+<li><a href="5-chap-IeqDL.html#latihan-untuk-sec-pr"
+id="toc-latihan-untuk-sec-pr">Latihan untuk §5.3</a></li>
+</ul></li>
+<li><a href="5-chap-IeqDL.html#sec-I" id="toc-sec-I"><span
+class="toc-section-number">5.4</span> Indeks</a>
+<ul>
+<li><a href="5-chap-IeqDL.html#latihan-untuk-sec-i"
+id="toc-latihan-untuk-sec-i">Latihan untuk §5.4</a></li>
+</ul></li>
+<li><a href="5-chap-IeqDL.html#sec-DHKE" id="toc-sec-DHKE"><span
+class="toc-section-number">5.5</span> Pertukaran Kunci
+Diffie–Hellman</a>
+<ul>
+<li><a href="5-chap-IeqDL.html#latihan-untuk-sec-dhke"
+id="toc-latihan-untuk-sec-dhke">Latihan untuk §5.5</a></li>
+</ul></li>
+<li><a href="5-chap-IeqDL.html#sec-tEGC" id="toc-sec-tEGC"><span
+class="toc-section-number">5.6</span> Kriptosistem ElGamal</a>
+<ul>
+<li><a href="5-chap-IeqDL.html#latihan-untuk-sec-tegc"
+id="toc-latihan-untuk-sec-tegc">Latihan untuk §5.6</a></li>
+</ul></li>
+</ul></li>
+<li><a href="-indeks-web.html#indeks-web"
+id="toc-indeks-web">Indeks</a></li>
+<li><a href="-bibliography.html#bibliography"
+id="toc-bibliography">Daftar Pustaka</a></li>
+</ul>
+</nav>
+</main>
+
+<script src="../reader.js"></script>
+</body>
+</html>

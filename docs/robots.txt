@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://kokunoyumeto.github.io/yet-another-introductory-number-theory-textbook-id/sitemap.xml

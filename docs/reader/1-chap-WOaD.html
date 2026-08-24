@@ -1,0 +1,1740 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="id-ID" xml:lang="id-ID">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Jonathan A. Poritz; berdasarkan karya Wissam Raji" />
+  <title>Keterurutan Baik dan Pembagian</title>
+  <style>
+    div.sitenav { display: flex; flex-direction: row; flex-wrap: wrap; }
+    span.navlink { flex: 1; }
+    span.navlink-label { display: inline-block; min-width: 4em; }
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+  <link rel="stylesheet" href="../site.css" />
+  <meta name="description" content="Edisi lengkap bahasa Indonesia yang dapat di-reflow dari buku pengantar teori bilangan dan kriptologi." />
+  <link rel="canonical" href="https://kokunoyumeto.github.io/yet-another-introductory-number-theory-textbook-id/reader/1-chap-WOaD.html" />
+  <meta property="og:title" content="Keterurutan Baik dan Pembagian" />
+  <meta property="og:type" content="book" />
+</head>
+<body>
+<nav id="sitenav" aria-label="Navigasi bab">
+<div class="sitenav">
+<span class="navlink">
+<span class="navlink-label">Induk:</span> <a href="index.html" accesskey="u" rel="up">Satu Lagi Buku Teks Pengantar Teori Bilangan</a>
+</span>
+<span class="navlink">
+<span class="navlink-label">Awal:</span> <a href="index.html" accesskey="t" rel="top">Satu Lagi Buku Teks Pengantar Teori Bilangan</a>
+</span>
+</div>
+<div class="sitenav">
+<span class="navlink">
+<span class="navlink-label">Berikutnya:</span> <a href="2-chap-Cs.html" accesskey="n" rel="next">Kongruensi</a>
+</span>
+<span class="navlink">
+<span class="navlink-label">Sebelumnya:</span> <a href="-catatan-rilis.html" accesskey="p" rel="previous">Catatan Rilis</a>
+</span>
+</div>
+</nav>
+
+<main id="reader-content" tabindex="-1">
+<section id="chap-WOaD" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span>
+Keterurutan Baik dan Pembagian</h1>
+<section id="sec-WOPaMI" class="level2" data-number="1.1">
+<h2 data-number="1.1"><span class="header-section-number">1.1</span>
+Prinsip Keterurutan Baik dan Induksi Matematika</h2>
+<div class="discussion">
+<p>Dalam bab ini, kita menyajikan tiga alat dasar yang akan sering
+digunakan untuk membuktikan sifat-sifat bilangan bulat. Kita mulai
+dengan sebuah sifat bilangan bulat yang sangat penting, yaitu prinsip
+keterurutan baik. Selanjutnya, kita menyatakan apa yang dikenal sebagai
+prinsip sarang merpati, lalu memperkenalkan metode penting yang disebut
+induksi matematika.</p>
+</div>
+<section id="prinsip-keterurutan-baik" class="level3"
+data-number="1.1.1">
+<h3 data-number="1.1.1"><span class="header-section-number">1.1.1</span>
+<strong>Prinsip Keterurutan Baik</strong></h3>
+<div class="definition">
+<p><strong>Definisi 1.1</strong>. <em>Diberikan suatu himpunan bilangan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>S</mi><annotation encoding="application/x-tex">S</annotation></semantics></math>
+(dari jenis apa pun), kita mengatakan bahwa
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ℓ</mi><mo>∈</mo><mi>S</mi></mrow><annotation encoding="application/x-tex">\ell\in S</annotation></semantics></math>
+adalah <span><strong>elemen terkecil dari
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>S</mi><annotation encoding="application/x-tex">S</annotation></semantics></math></strong></span>
+jika
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>∀</mo><mi>x</mi><mo>∈</mo><mi>S</mi></mrow><annotation encoding="application/x-tex">\forall x\in S</annotation></semantics></math>,
+berlaku
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>=</mo><mi>ℓ</mi></mrow><annotation encoding="application/x-tex">x=\ell</annotation></semantics></math>
+atau
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ℓ</mi><mo>&lt;</mo><mi>x</mi></mrow><annotation encoding="application/x-tex">\ell&lt;x</annotation></semantics></math>.</em></p>
+</div>
+<div class="WOprinciple">
+<p><strong>Prinsip Keterurutan Baik 1.1</strong>. <em>Setiap himpunan
+bilangan asli yang tidak kosong memiliki elemen terkecil.</em></p>
+</div>
+<div class="discussion">
+<p>Prinsip ini sering diambil sebagai sebuah aksioma.</p>
+</div>
+</section>
+<section id="prinsip-sarang-merpati" class="level3" data-number="1.1.2">
+<h3 data-number="1.1.2"><span class="header-section-number">1.1.2</span>
+<strong>Prinsip Sarang Merpati</strong></h3>
+<div id="thm-pigeonhole" class="theorem">
+<p><strong>Teorema 1.2</strong>. <em><strong>Prinsip Sarang
+Merpati:</strong> Misalkan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi><mo>,</mo><mi>k</mi><mo>∈</mo><mi mathvariant="double-struck">ℕ</mi></mrow><annotation encoding="application/x-tex">s,k\in{\mathbb N}</annotation></semantics></math>
+memenuhi
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi><mo>&gt;</mo><mi>k</mi></mrow><annotation encoding="application/x-tex">s&gt;k</annotation></semantics></math>.
+Jika
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>s</mi><annotation encoding="application/x-tex">s</annotation></semantics></math>
+objek ditempatkan ke dalam
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>k</mi><annotation encoding="application/x-tex">k</annotation></semantics></math>
+kotak, maka sekurang-kurangnya satu kotak memuat lebih dari satu
+objek.</em></p>
+</div>
+<div class="proof">
+<p><em>Bukti.</em> Andaikan setiap kotak memuat paling banyak satu
+objek. Maka terdapat paling banyak
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>k</mi><annotation encoding="application/x-tex">k</annotation></semantics></math>
+objek, padahal terdapat
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>s</mi><annotation encoding="application/x-tex">s</annotation></semantics></math>
+objek dengan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi><mo>&gt;</mo><mi>k</mi></mrow><annotation encoding="application/x-tex">s&gt;k</annotation></semantics></math>. ◻</p>
+</div>
+</section>
+<section id="prinsip-induksi-matematika" class="level3"
+data-number="1.1.3">
+<h3 data-number="1.1.3"><span class="header-section-number">1.1.3</span>
+<strong>Prinsip Induksi Matematika</strong></h3>
+<div class="discussion">
+<p>Sekarang kita menyajikan sebuah alat berharga untuk membuktikan
+hasil-hasil mengenai bilangan bulat. Alat ini adalah prinsip induksi
+matematika.</p>
+</div>
+<div class="theorem">
+<p><strong>Teorema 1.3</strong>. <em><strong>Prinsip Pertama Induksi
+Matematika:</strong> Misalkan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>S</mi><mo>⊂</mo><mi mathvariant="double-struck">ℕ</mi></mrow><annotation encoding="application/x-tex">S\subset{\mathbb N}</annotation></semantics></math>
+adalah himpunan yang memenuhi kedua sifat berikut:</em></p>
+<ol>
+<li><p><em><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mo>∈</mo><mi>S</mi></mrow><annotation encoding="application/x-tex">1\in S</annotation></semantics></math>;
+dan</em></p></li>
+<li><p><em><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>∀</mo><mi>k</mi><mo>∈</mo><mi mathvariant="double-struck">ℕ</mi><mo>,</mo><mspace width="0.222em"></mspace><mi>k</mi><mo>∈</mo><mi>S</mi><mo>⇒</mo><mi>k</mi><mo>+</mo><mn>1</mn><mo>∈</mo><mi>S</mi></mrow><annotation encoding="application/x-tex">\forall k\in{\mathbb N},\ k\in S\Rightarrow k+1\in S</annotation></semantics></math>.</em></p></li>
+</ol>
+<p><em>Maka
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>S</mi><mo>=</mo><mi mathvariant="double-struck">ℕ</mi></mrow><annotation encoding="application/x-tex">S={\mathbb N}</annotation></semantics></math>.<br />
+Secara lebih umum, misalkan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="script">𝒫</mi><mo stretchy="false" form="prefix">(</mo><mi>n</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">{\mathcal P}(n)</annotation></semantics></math>
+adalah suatu sifat bilangan asli yang mungkin benar atau mungkin tidak
+benar untuk suatu
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>∈</mo><mi mathvariant="double-struck">ℕ</mi></mrow><annotation encoding="application/x-tex">n\in{\mathbb N}</annotation></semantics></math>
+tertentu, dan memenuhi</em></p>
+<ol>
+<li><p><em><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="script">𝒫</mi><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">{\mathcal P}(1)</annotation></semantics></math>
+benar; dan</em></p></li>
+<li><p><em><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>∀</mo><mi>k</mi><mo>∈</mo><mi mathvariant="double-struck">ℕ</mi><mo>,</mo><mspace width="0.222em"></mspace><mi mathvariant="script">𝒫</mi><mo stretchy="false" form="prefix">(</mo><mi>k</mi><mo stretchy="false" form="postfix">)</mo><mo>⇒</mo><mi mathvariant="script">𝒫</mi><mo stretchy="false" form="prefix">(</mo><mi>k</mi><mo>+</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\forall k\in{\mathbb N},\ {\mathcal P}(k)\Rightarrow{\mathcal P}(k+1)</annotation></semantics></math></em></p></li>
+</ol>
+<p><em>maka
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>∀</mo><mi>n</mi><mo>∈</mo><mi mathvariant="double-struck">ℕ</mi><mo>,</mo><mi mathvariant="script">𝒫</mi><mo stretchy="false" form="prefix">(</mo><mi>n</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\forall n\in{\mathbb N}, {\mathcal P}(n)</annotation></semantics></math>
+benar.</em></p>
+</div>
+<div class="proof">
+<p><em>Bukti.</em> Kita menggunakan prinsip keterurutan baik untuk
+membuktikan prinsip pertama induksi matematika ini.</p>
+<p>Misalkan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>S</mi><annotation encoding="application/x-tex">S</annotation></semantics></math>
+adalah himpunan pada bagian pertama teorema dan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>T</mi><annotation encoding="application/x-tex">T</annotation></semantics></math>
+adalah himpunan bilangan asli yang tidak termasuk dalam
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>S</mi><annotation encoding="application/x-tex">S</annotation></semantics></math>.
+Kita akan menggunakan bukti dengan kontradiksi, jadi andaikan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>T</mi><annotation encoding="application/x-tex">T</annotation></semantics></math>
+tidak kosong.</p>
+<p>Menurut prinsip keterurutan baik,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>T</mi><annotation encoding="application/x-tex">T</annotation></semantics></math>
+memiliki elemen terkecil
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ℓ</mi><annotation encoding="application/x-tex">\ell</annotation></semantics></math>.</p>
+<p>Perhatikan bahwa
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mo>∈</mo><mi>S</mi></mrow><annotation encoding="application/x-tex">1\in S</annotation></semantics></math>,
+sehingga
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mo>∉</mo><mi>T</mi></mrow><annotation encoding="application/x-tex">1\notin T</annotation></semantics></math>
+dan akibatnya
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ℓ</mi><mo>&gt;</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">\ell&gt;1</annotation></semantics></math>.
+Jadi,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ℓ</mi><mo>−</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">\ell-1</annotation></semantics></math>
+adalah bilangan asli. Karena
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ℓ</mi><annotation encoding="application/x-tex">\ell</annotation></semantics></math>
+merupakan elemen terkecil dari
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>T</mi><annotation encoding="application/x-tex">T</annotation></semantics></math>,
+maka
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ℓ</mi><mo>−</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">\ell-1</annotation></semantics></math>
+tidak berada di
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>T</mi><annotation encoding="application/x-tex">T</annotation></semantics></math>;
+oleh karena itu, bilangan tersebut berada di
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>S</mi><annotation encoding="application/x-tex">S</annotation></semantics></math>.</p>
+<p>Namun, berdasarkan sifat yang mendefinisikan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>S</mi><annotation encoding="application/x-tex">S</annotation></semantics></math>,
+karena
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ℓ</mi><mo>−</mo><mn>1</mn><mo>∈</mo><mi>S</mi></mrow><annotation encoding="application/x-tex">\ell-1\in S</annotation></semantics></math>,
+kita memperoleh
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ℓ</mi><mo>=</mo><mi>ℓ</mi><mo>−</mo><mn>1</mn><mo>+</mo><mn>1</mn><mo>∈</mo><mi>S</mi></mrow><annotation encoding="application/x-tex">\ell=\ell-1+1\in S</annotation></semantics></math>.
+Hal ini bertentangan dengan fakta bahwa
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ℓ</mi><annotation encoding="application/x-tex">\ell</annotation></semantics></math>
+adalah elemen terkecil dari
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>T</mi><annotation encoding="application/x-tex">T</annotation></semantics></math>,
+sehingga berada di
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>T</mi><annotation encoding="application/x-tex">T</annotation></semantics></math>
+dan tidak berada di
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>S</mi><annotation encoding="application/x-tex">S</annotation></semantics></math>.</p>
+<p>Kontradiksi ini menunjukkan bahwa anggapan bahwa
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>T</mi><annotation encoding="application/x-tex">T</annotation></semantics></math>
+tidak kosong adalah salah; dengan demikian,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>S</mi><mo>=</mo><mi mathvariant="double-struck">ℕ</mi></mrow><annotation encoding="application/x-tex">S={\mathbb N}</annotation></semantics></math>.</p>
+<p>Untuk bagian kedua teorema, ambil
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>S</mi><mo>=</mo><mo stretchy="false" form="prefix">{</mo><mi>n</mi><mo>∈</mo><mi mathvariant="double-struck">ℕ</mi><mo>∣</mo><mi mathvariant="script">𝒫</mi><mo stretchy="false" form="prefix">(</mo><mi>n</mi><mo stretchy="false" form="postfix">)</mo><mrow><mspace width="0.333em"></mspace><mtext mathvariant="normal"> benar</mtext></mrow><mo stretchy="false" form="postfix">}</mo></mrow><annotation encoding="application/x-tex">S=\{n\in{\mathbb N}\mid{\mathcal P}(n)\text{ benar}\}</annotation></semantics></math>,
+lalu terapkan bagian pertama. ◻</p>
+</div>
+<div id="eg-inductionv1a" class="example">
+<p><strong>Contoh 1.4</strong>. <em>Kita menggunakan induksi matematika
+untuk menunjukkan bahwa
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>∀</mo><mi>n</mi><mo>∈</mo><mi mathvariant="double-struck">ℕ</mi></mrow><annotation encoding="application/x-tex">\forall n\in \mathbb{N}</annotation></semantics></math>,
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><munderover><mo>∑</mo><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><mi>j</mi><mo>=</mo><mfrac><mrow><mi>n</mi><mo stretchy="false" form="prefix">(</mo><mi>n</mi><mo>+</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo></mrow><mn>2</mn></mfrac><mi>.</mi></mrow><annotation encoding="application/x-tex">\begin{equation}
+\sum_{j=1}^nj=\frac{n(n+1)}{2}.
+\end{equation}</annotation></semantics></math> Pertama, perhatikan bahwa
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><munderover><mo>∑</mo><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow><mn>1</mn></munderover><mi>j</mi><mo>=</mo><mn>1</mn><mo>=</mo><mfrac><mrow><mn>1</mn><mo>⋅</mo><mn>2</mn></mrow><mn>2</mn></mfrac></mrow><annotation encoding="application/x-tex">\begin{equation*}
+\sum_{j=1}^1j=1=\frac{1\cdot 2}{2}
+\end{equation*}</annotation></semantics></math> sehingga pernyataan
+tersebut benar untuk
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">n=1</annotation></semantics></math>.
+Untuk langkah induksi selanjutnya, andaikan rumus itu berlaku bagi suatu
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>∈</mo><mi mathvariant="double-struck">ℕ</mi></mrow><annotation encoding="application/x-tex">n\in{\mathbb N}</annotation></semantics></math>
+tertentu, yaitu
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mo>∑</mo><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></msubsup><mi>j</mi><mo>=</mo><mfrac><mrow><mi>n</mi><mo stretchy="false" form="prefix">(</mo><mi>n</mi><mo>+</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo></mrow><mn>2</mn></mfrac></mrow><annotation encoding="application/x-tex">\sum_{j=1}^nj=\frac{n(n+1)}{2}</annotation></semantics></math>.
+Kita tunjukkan bahwa
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><munderover><mo>∑</mo><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></munderover><mi>j</mi><mo>=</mo><mfrac><mrow><mo stretchy="false" form="prefix">(</mo><mi>n</mi><mo>+</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="prefix">(</mo><mi>n</mi><mo>+</mo><mn>2</mn><mo stretchy="false" form="postfix">)</mo></mrow><mn>2</mn></mfrac><mi>.</mi></mrow><annotation encoding="application/x-tex">\begin{equation*}
+\sum_{j=1}^{n+1}j=\frac{(n+1)(n+2)}{2}.
+\end{equation*}</annotation></semantics></math> Dengan demikian, bukti
+induksi akan lengkap. Memang,
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><munderover><mo>∑</mo><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></munderover><mi>j</mi><mo>=</mo><munderover><mo>∑</mo><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><mi>j</mi><mo>+</mo><mo stretchy="false" form="prefix">(</mo><mi>n</mi><mo>+</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mfrac><mrow><mi>n</mi><mo stretchy="false" form="prefix">(</mo><mi>n</mi><mo>+</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo></mrow><mn>2</mn></mfrac><mo>+</mo><mo stretchy="false" form="prefix">(</mo><mi>n</mi><mo>+</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mfrac><mrow><mo stretchy="false" form="prefix">(</mo><mi>n</mi><mo>+</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="prefix">(</mo><mi>n</mi><mo>+</mo><mn>2</mn><mo stretchy="false" form="postfix">)</mo></mrow><mn>2</mn></mfrac><mo>,</mo></mrow><annotation encoding="application/x-tex">\begin{equation*}
+\sum_{j=1}^{n+1}j=\sum_{j=1}^nj+(n+1)=\frac{n(n+1)}{2}+(n+1)=\frac{(n+1)(n+2)}{2},
+\end{equation*}</annotation></semantics></math> dan hasil yang
+diinginkan pun diperoleh.</em></p>
+</div>
+<div id="eg-inductionv1b" class="example">
+<p><strong>Contoh 1.5</strong>. <em>Sekarang kita menggunakan induksi
+matematika untuk membuktikan bahwa
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mi>!</mi><mo>≤</mo><msup><mi>n</mi><mi>n</mi></msup></mrow><annotation encoding="application/x-tex">n!\leq n^n</annotation></semantics></math>
+untuk setiap
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>∈</mo><mi mathvariant="double-struck">ℕ</mi></mrow><annotation encoding="application/x-tex">n\in{\mathbb N}</annotation></semantics></math>.</em></p>
+<p><em>Perhatikan bahwa
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mi>!</mi><mo>=</mo><mn>1</mn><mo>≤</mo><msup><mn>1</mn><mn>1</mn></msup><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">1!=1\leq 1^1=1</annotation></semantics></math>.
+Selanjutnya, kita menyajikan langkah induksi. Andaikan
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mi>!</mi><mo>≤</mo><msup><mi>n</mi><mi>n</mi></msup></mrow><annotation encoding="application/x-tex">\begin{equation*}
+n!\leq n^n
+\end{equation*}</annotation></semantics></math> untuk suatu
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>∈</mo><mi mathvariant="double-struck">ℕ</mi></mrow><annotation encoding="application/x-tex">n\in{\mathbb N}</annotation></semantics></math>.
+Kita buktikan bahwa
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>n</mi><mo>+</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo><mi>!</mi><mo>≤</mo><mo stretchy="false" form="prefix">(</mo><mi>n</mi><mo>+</mo><mn>1</mn><msup><mo stretchy="false" form="postfix">)</mo><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msup></mrow><annotation encoding="application/x-tex">(n+1)!\leq (n+1)^{n+1}</annotation></semantics></math>.
+Perhatikan bahwa
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>n</mi><mo>+</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo><mi>!</mi><mo>=</mo><mo stretchy="false" form="prefix">(</mo><mi>n</mi><mo>+</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo><mi>n</mi><mi>!</mi><mo>≤</mo><mo stretchy="false" form="prefix">(</mo><mi>n</mi><mo>+</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo><mo>⋅</mo><msup><mi>n</mi><mi>n</mi></msup><mo>&lt;</mo><mo stretchy="false" form="prefix">(</mo><mi>n</mi><mo>+</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="prefix">(</mo><mi>n</mi><mo>+</mo><mn>1</mn><msup><mo stretchy="false" form="postfix">)</mo><mi>n</mi></msup><mo>=</mo><mo stretchy="false" form="prefix">(</mo><mi>n</mi><mo>+</mo><mn>1</mn><msup><mo stretchy="false" form="postfix">)</mo><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msup><mi>.</mi></mrow><annotation encoding="application/x-tex">\begin{equation*}
+(n+1)!=(n+1)n!\leq (n+1)\cdot n^n&lt;(n+1)(n+1)^{n}=(n+1)^{n+1}.
+\end{equation*}</annotation></semantics></math> Ini melengkapi
+bukti.</em></p>
+</div>
+<div class="theorem">
+<p><strong>Teorema 1.6</strong>. <em><strong>Prinsip Kedua Induksi
+Matematika:</strong></em></p>
+<p><em>Misalkan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>S</mi><mo>⊂</mo><mi mathvariant="double-struck">ℕ</mi></mrow><annotation encoding="application/x-tex">S\subset{\mathbb N}</annotation></semantics></math>
+adalah himpunan yang memenuhi kedua sifat berikut:</em></p>
+<ol>
+<li><p><em><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mo>∈</mo><mi>S</mi></mrow><annotation encoding="application/x-tex">1\in S</annotation></semantics></math>;
+dan</em></p></li>
+<li><p><em><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>∀</mo><mi>k</mi><mo>∈</mo><mi mathvariant="double-struck">ℕ</mi><mo>,</mo><mspace width="0.222em"></mspace><mn>1</mn><mo>,</mo><mi>…</mi><mo>,</mo><mi>k</mi><mo>∈</mo><mi>S</mi><mo>⇒</mo><mi>k</mi><mo>+</mo><mn>1</mn><mo>∈</mo><mi>S</mi></mrow><annotation encoding="application/x-tex">\forall k\in{\mathbb N},\ 1,\dots,k\in S\Rightarrow k+1\in S</annotation></semantics></math>.</em></p></li>
+</ol>
+<p><em>Maka
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>S</mi><mo>=</mo><mi mathvariant="double-struck">ℕ</mi></mrow><annotation encoding="application/x-tex">S={\mathbb N}</annotation></semantics></math>.<br />
+Secara lebih umum, misalkan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="script">𝒫</mi><mo stretchy="false" form="prefix">(</mo><mi>n</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">{\mathcal P}(n)</annotation></semantics></math>
+adalah suatu sifat bilangan asli yang mungkin benar atau mungkin tidak
+benar untuk suatu
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>∈</mo><mi mathvariant="double-struck">ℕ</mi></mrow><annotation encoding="application/x-tex">n\in{\mathbb N}</annotation></semantics></math>
+tertentu, dan memenuhi</em></p>
+<ol>
+<li><p><em><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="script">𝒫</mi><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">{\mathcal P}(1)</annotation></semantics></math>
+benar; dan</em></p></li>
+<li><p><em><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>∀</mo><mi>k</mi><mo>∈</mo><mi mathvariant="double-struck">ℕ</mi><mo>,</mo></mrow><annotation encoding="application/x-tex">\forall k\in{\mathbb N},</annotation></semantics></math>
+jika
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="script">𝒫</mi><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo><mo>,</mo><mi>…</mi><mo>,</mo><mi mathvariant="script">𝒫</mi><mo stretchy="false" form="prefix">(</mo><mi>k</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">{\mathcal P}(1),\dots,{\mathcal P}(k)</annotation></semantics></math>
+semuanya benar, maka
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="script">𝒫</mi><mo stretchy="false" form="prefix">(</mo><mi>k</mi><mo>+</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">{\mathcal P}(k+1)</annotation></semantics></math>
+juga benar,</em></p></li>
+</ol>
+<p><em>maka
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>∀</mo><mi>n</mi><mo>∈</mo><mi mathvariant="double-struck">ℕ</mi><mo>,</mo><mi mathvariant="script">𝒫</mi><mo stretchy="false" form="prefix">(</mo><mi>n</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\forall n\in{\mathbb N}, {\mathcal P}(n)</annotation></semantics></math>
+benar.</em></p>
+</div>
+<div class="proof">
+<p><em>Bukti.</em> Untuk membuktikan prinsip kedua induksi, kita
+menggunakan prinsip pertama induksi.</p>
+<p>Misalkan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>S</mi><annotation encoding="application/x-tex">S</annotation></semantics></math>
+adalah himpunan bilangan bulat seperti pada bagian pertama teorema.
+Untuk
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>∈</mo><mi mathvariant="double-struck">ℕ</mi></mrow><annotation encoding="application/x-tex">n\in{\mathbb N}</annotation></semantics></math>,
+misalkan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="script">𝒫</mi><mo stretchy="false" form="prefix">(</mo><mi>n</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">{\mathcal P}(n)</annotation></semantics></math>
+adalah sifat matematika
+“<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mo>,</mo><mi>…</mi><mo>,</mo><mi>n</mi><mo>∈</mo><mi>S</mi></mrow><annotation encoding="application/x-tex">1,\dots,n\in S</annotation></semantics></math>”.
+Kita dapat menerapkan Prinsip Pertama Induksi Matematika untuk
+membuktikan bahwa
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>∀</mo><mi>n</mi><mo>∈</mo><mi mathvariant="double-struck">ℕ</mi><mspace width="0.222em"></mspace><mi mathvariant="script">𝒫</mi><mo stretchy="false" form="prefix">(</mo><mi>n</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\forall n\in{\mathbb N}\ {\mathcal P}(n)</annotation></semantics></math>
+benar, yang berarti
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>S</mi><mo>=</mo><mi mathvariant="double-struck">ℕ</mi></mrow><annotation encoding="application/x-tex">S={\mathbb N}</annotation></semantics></math>.
+<span><em>[Rinciannya diserahkan kepada pembaca.]</em></span></p>
+<p>Bagian kedua teorema mengikuti bagian pertama dengan cara yang persis
+sama seperti bagian kedua Prinsip Pertama Induksi Matematika mengikuti
+bagian pertamanya. ◻</p>
+</div>
+</section>
+<section id="latihan-untuk-sec-wopami" class="level3 unnumbered">
+<h3 class="unnumbered">Latihan untuk §<a
+href="1-chap-WOaD.html#sec-WOPaMI" data-reference-type="ref"
+data-reference="sec-WOPaMI">1.1</a></h3>
+<div class="exercise">
+<p><strong>Latihan 1.1</strong>. <em>Buktikan dengan induksi matematika
+bahwa
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>&lt;</mo><msup><mn>3</mn><mi>n</mi></msup></mrow><annotation encoding="application/x-tex">n&lt;3^n</annotation></semantics></math>
+untuk setiap bilangan bulat positif
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math>.</em></p>
+</div>
+<div class="exercise">
+<p><strong>Latihan 1.2</strong>. <em>Tunjukkan bahwa
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mo>∑</mo><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></msubsup><msup><mi>j</mi><mn>2</mn></msup><mo>=</mo><mfrac><mrow><mi>n</mi><mo stretchy="false" form="prefix">(</mo><mi>n</mi><mo>+</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="prefix">(</mo><mn>2</mn><mi>n</mi><mo>+</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo></mrow><mn>6</mn></mfrac></mrow><annotation encoding="application/x-tex">\sum_{j=1}^nj^2=\frac{n(n+1)(2n+1)}{6}</annotation></semantics></math>.</em></p>
+</div>
+<div class="exercise">
+<p><strong>Latihan 1.3</strong>. <em>Gunakan induksi matematika untuk
+membuktikan bahwa<br />
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mo>∑</mo><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></msubsup><mo stretchy="false" form="prefix">(</mo><mi>−</mi><mn>1</mn><msup><mo stretchy="false" form="postfix">)</mo><mrow><mi>j</mi><mo>−</mo><mn>1</mn></mrow></msup><msup><mi>j</mi><mn>2</mn></msup><mo>=</mo><mo stretchy="false" form="prefix">(</mo><mi>−</mi><mn>1</mn><msup><mo stretchy="false" form="postfix">)</mo><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow></msup><mi>n</mi><mo stretchy="false" form="prefix">(</mo><mi>n</mi><mo>+</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo><mi>/</mi><mn>2</mn></mrow><annotation encoding="application/x-tex">\sum_{j=1}^n(-1)^{j-1}j^2=(-1)^{n-1}n(n+1)/2</annotation></semantics></math>.</em></p>
+</div>
+<div class="exercise">
+<p><strong>Latihan 1.4</strong>. <em>Gunakan induksi matematika untuk
+membuktikan bahwa
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mo>∑</mo><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></msubsup><msup><mi>j</mi><mn>3</mn></msup><mo>=</mo><mo stretchy="false" form="prefix">[</mo><mi>n</mi><mo stretchy="false" form="prefix">(</mo><mi>n</mi><mo>+</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo><mi>/</mi><mn>2</mn><msup><mo stretchy="false" form="postfix">]</mo><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">\sum_{j=1}^nj^3=[n(n+1)/2]^2</annotation></semantics></math>
+untuk setiap bilangan bulat positif
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math>.</em></p>
+</div>
+<div class="exercise">
+<p><strong>Latihan 1.5</strong>. <em>Gunakan induksi matematika untuk
+membuktikan bahwa
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mo>∑</mo><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></msubsup><mo stretchy="false" form="prefix">(</mo><mn>2</mn><mi>j</mi><mo>−</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><msup><mi>n</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">\sum_{j=1}^n(2j-1)=n^2</annotation></semantics></math>.</em></p>
+</div>
+<div class="exercise">
+<p><strong>Latihan 1.6</strong>. <em>Gunakan induksi matematika untuk
+membuktikan bahwa
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mn>2</mn><mi>n</mi></msup><mo>&lt;</mo><mi>n</mi><mi>!</mi></mrow><annotation encoding="application/x-tex">2^n&lt;n!</annotation></semantics></math>
+untuk
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>≥</mo><mn>4</mn></mrow><annotation encoding="application/x-tex">n\geq 4</annotation></semantics></math>.</em></p>
+</div>
+<div class="exercise">
+<p><strong>Latihan 1.7</strong>. <em>Gunakan induksi matematika untuk
+membuktikan bahwa
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>n</mi><mn>2</mn></msup><mo>&lt;</mo><mi>n</mi><mi>!</mi></mrow><annotation encoding="application/x-tex">n^2&lt;n!</annotation></semantics></math>
+untuk
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>≥</mo><mn>4</mn></mrow><annotation encoding="application/x-tex">n\geq 4</annotation></semantics></math>.</em></p>
+</div>
+</section>
+</section>
+<section id="sec-AOwI" class="level2" data-number="1.2">
+<h2 data-number="1.2"><span class="header-section-number">1.2</span>
+Operasi Aljabar pada Bilangan Bulat</h2>
+<p>Pada
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="double-struck">ℤ</mi><annotation encoding="application/x-tex">{\mathbb Z}</annotation></semantics></math>,
+himpunan bilangan bulat, terdapat dua operasi biner dasar, yaitu
+<span><strong>penjumlahan</strong></span> (dinotasikan dengan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>+</mi><annotation encoding="application/x-tex">+</annotation></semantics></math>)
+dan <span><strong>perkalian</strong></span> (dinotasikan dengan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>⋅</mi><annotation encoding="application/x-tex">\cdot</annotation></semantics></math>).
+Kedua operasi ini memenuhi sifat-sifat yang sudah dikenal berikut:</p>
+<ol>
+<li><p><strong>Komutativitas penjumlahan dan perkalian</strong>
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mtable><mtr><mtd columnalign="right" style="text-align: right; padding-right: 0"><mo>∀</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo>∈</mo><mi mathvariant="double-struck">ℤ</mi><mo>:</mo><mspace width="1.0em"></mspace><mi>a</mi><mo>+</mo><mi>b</mi></mtd><mtd columnalign="left" style="text-align: left; padding-left: 0"><mo>=</mo><mi>b</mi><mo>+</mo><mi>a</mi></mtd></mtr><mtr><mtd columnalign="right" style="text-align: right; padding-right: 0"><mi>a</mi><mo>⋅</mo><mi>b</mi></mtd><mtd columnalign="left" style="text-align: left; padding-left: 0"><mo>=</mo><mi>b</mi><mo>⋅</mo><mi>a</mi></mtd></mtr></mtable><annotation encoding="application/x-tex">\begin{align*}
+\forall a,b\in{\mathbb Z}:\quad a+b&amp;=b+a\\
+a\cdot b&amp;=b\cdot a
+\end{align*}</annotation></semantics></math></p></li>
+<li><p><strong>Asosiativitas penjumlahan dan perkalian</strong>
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mtable><mtr><mtd columnalign="right" style="text-align: right; padding-right: 0"><mo>∀</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo>,</mo><mi>c</mi><mo>∈</mo><mi mathvariant="double-struck">ℤ</mi><mo>:</mo><mspace width="1.0em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>a</mi><mo>+</mo><mi>b</mi><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mi>c</mi></mtd><mtd columnalign="left" style="text-align: left; padding-left: 0"><mo>=</mo><mi>a</mi><mo>+</mo><mo stretchy="false" form="prefix">(</mo><mi>b</mi><mo>+</mo><mi>c</mi><mo stretchy="false" form="postfix">)</mo></mtd></mtr><mtr><mtd columnalign="right" style="text-align: right; padding-right: 0"><mo stretchy="false" form="prefix">(</mo><mi>a</mi><mo>⋅</mo><mi>b</mi><mo stretchy="false" form="postfix">)</mo><mo>⋅</mo><mi>c</mi></mtd><mtd columnalign="left" style="text-align: left; padding-left: 0"><mo>=</mo><mi>a</mi><mo>⋅</mo><mo stretchy="false" form="prefix">(</mo><mi>b</mi><mo>⋅</mo><mi>c</mi><mo stretchy="false" form="postfix">)</mo></mtd></mtr></mtable><annotation encoding="application/x-tex">\begin{align*}
+\forall a,b,c\in{\mathbb Z}:\quad (a+b)+c&amp;=a+(b+c)\\
+(a\cdot b)\cdot c&amp;= a\cdot (b\cdot c)
+\end{align*}</annotation></semantics></math></p></li>
+<li><p><strong>Distributivitas perkalian terhadap penjumlahan</strong>
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>∀</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo>,</mo><mi>c</mi><mo>∈</mo><mi mathvariant="double-struck">ℤ</mi><mo>:</mo><mspace width="1.0em"></mspace><mi>a</mi><mo>⋅</mo><mo stretchy="false" form="prefix">(</mo><mi>b</mi><mo>+</mo><mi>c</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>a</mi><mo>⋅</mo><mi>b</mi><mo>+</mo><mi>a</mi><mo>⋅</mo><mi>c</mi><mi>.</mi><mspace width="0.222em"></mspace></mrow><annotation encoding="application/x-tex">\forall a,b,c\in{\mathbb Z}:\quad a\cdot (b+c)=a\cdot b+a\cdot c.\ </annotation></semantics></math></p></li>
+</ol>
+<p>Di dalam himpunan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="double-struck">ℤ</mi><annotation encoding="application/x-tex">{\mathbb Z}</annotation></semantics></math>
+terdapat <span><em>elemen identitas</em></span> untuk kedua operasi
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>+</mi><annotation encoding="application/x-tex">+</annotation></semantics></math>
+dan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>⋅</mi><annotation encoding="application/x-tex">\cdot</annotation></semantics></math>,
+masing-masing yaitu elemen
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>0</mn><annotation encoding="application/x-tex">0</annotation></semantics></math>
+dan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>1</mn><annotation encoding="application/x-tex">1</annotation></semantics></math>.
+Elemen-elemen ini memenuhi sifat dasar
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mtable><mtr><mtd columnalign="right" style="text-align: right; padding-right: 0"><mo>∀</mo><mi>a</mi><mo>∈</mo><mi mathvariant="double-struck">ℤ</mi><mo>:</mo><mspace width="1.0em"></mspace><mi>a</mi><mo>+</mo><mn>0</mn></mtd><mtd columnalign="left" style="text-align: left; padding-left: 0"><mo>=</mo><mn>0</mn><mo>+</mo><mi>a</mi><mo>=</mo><mi>a</mi></mtd></mtr><mtr><mtd columnalign="right" style="text-align: right; padding-right: 0"><mi>a</mi><mo>⋅</mo><mn>1</mn></mtd><mtd columnalign="left" style="text-align: left; padding-left: 0"><mo>=</mo><mn>1</mn><mo>⋅</mo><mi>a</mi><mo>=</mo><mi>a</mi><mspace width="0.222em"></mspace><mi>.</mi></mtd></mtr></mtable><annotation encoding="application/x-tex">\begin{align*}
+\forall a\in{\mathbb Z}:\quad a + 0 &amp;= 0+a = a\\
+a\cdot 1 &amp;= 1\cdot a = a\ .
+\end{align*}</annotation></semantics></math></p>
+<p>Setiap elemen dalam himpunan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="double-struck">ℤ</mi><annotation encoding="application/x-tex">{\mathbb Z}</annotation></semantics></math>
+mempunyai <span><strong>invers aditif</strong></span>. Artinya, untuk
+setiap
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>∈</mo><mi mathvariant="double-struck">ℤ</mi></mrow><annotation encoding="application/x-tex">a\in{\mathbb Z}</annotation></semantics></math>
+terdapat bilangan bulat lain dalam
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="double-struck">ℤ</mi><annotation encoding="application/x-tex">{\mathbb Z}</annotation></semantics></math>,
+yang dinotasikan dengan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>−</mi><mi>a</mi></mrow><annotation encoding="application/x-tex">-a</annotation></semantics></math>,
+sedemikian sehingga
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>+</mo><mo stretchy="false" form="prefix">(</mo><mi>−</mi><mi>a</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>0</mn><mi>.</mi></mrow><annotation encoding="application/x-tex">\begin{equation}
+a+(-a)=0.
+\end{equation}</annotation></semantics></math> Untuk perkalian, bilangan
+bulat yang mempunyai <span><strong>invers multiplikatif</strong></span>
+hanyalah
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>1</mn><annotation encoding="application/x-tex">1</annotation></semantics></math>
+dan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>−</mi><mn>1</mn></mrow><annotation encoding="application/x-tex">-1</annotation></semantics></math>.
+Untuk kedua bilangan tersebut, invers multiplikatif yang dinotasikan
+dengan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>a</mi><mrow><mi>−</mi><mn>1</mn></mrow></msup><annotation encoding="application/x-tex">a^{-1}</annotation></semantics></math>
+atau
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mi>/</mi><mi>a</mi></mrow><annotation encoding="application/x-tex">1/a</annotation></semantics></math>
+sama dengan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>a</mi><annotation encoding="application/x-tex">a</annotation></semantics></math>
+itu sendiri, sehingga
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>⋅</mo><msup><mi>a</mi><mrow><mi>−</mi><mn>1</mn></mrow></msup><mo>=</mo><mn>1</mn><mi>.</mi></mrow><annotation encoding="application/x-tex">\begin{equation}
+a\cdot a^{-1}=1.
+\end{equation}</annotation></semantics></math></p>
+<p>Dari operasi penjumlahan dan perkalian, kita dapat mendefinisikan dua
+operasi lain pada
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="double-struck">ℤ</mi><annotation encoding="application/x-tex">{\mathbb Z}</annotation></semantics></math>,
+yaitu <span><strong>pengurangan</strong></span> (dinotasikan dengan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>−</mi><annotation encoding="application/x-tex">-</annotation></semantics></math>)
+dan <span> <strong>pembagian</strong></span> (dinotasikan dengan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>/</mi><annotation encoding="application/x-tex">/</annotation></semantics></math>).
+Pengurangan merupakan operasi biner pada
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="double-struck">ℤ</mi><annotation encoding="application/x-tex">{\mathbb Z}</annotation></semantics></math>,
+yakni didefinisikan untuk setiap pasangan bilangan bulat dalam
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="double-struck">ℤ</mi><annotation encoding="application/x-tex">{\mathbb Z}</annotation></semantics></math>.
+Sebaliknya, pembagian bukan operasi biner pada
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="double-struck">ℤ</mi><annotation encoding="application/x-tex">{\mathbb Z}</annotation></semantics></math>
+sehingga hanya didefinisikan untuk pasangan bilangan bulat tertentu.
+Pengurangan dan pembagian didefinisikan sebagai berikut:</p>
+<ol>
+<li><p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>∀</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo>∈</mo><mi mathvariant="double-struck">ℤ</mi></mrow><annotation encoding="application/x-tex">\forall a,b\in{\mathbb Z}</annotation></semantics></math>,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>−</mo><mi>b</mi></mrow><annotation encoding="application/x-tex">a-b</annotation></semantics></math>
+didefinisikan sebagai
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>+</mo><mo stretchy="false" form="prefix">(</mo><mi>−</mi><mi>b</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">a+(-b)</annotation></semantics></math>.</p></li>
+<li><p>Diberikan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>,</mo><mi>b</mi><mo>∈</mo><mi mathvariant="double-struck">ℤ</mi></mrow><annotation encoding="application/x-tex">a,b\in{\mathbb Z}</annotation></semantics></math>
+dengan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>b</mi><mo>≠</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">b\neq 0</annotation></semantics></math>.
+Jika
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>∃</mo><mi>c</mi><mo>∈</mo><mi mathvariant="double-struck">ℤ</mi></mrow><annotation encoding="application/x-tex">\exists c\in{\mathbb Z}</annotation></semantics></math>
+sedemikian sehingga
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>=</mo><mi>b</mi><mo>⋅</mo><mi>c</mi></mrow><annotation encoding="application/x-tex">a=b\cdot c</annotation></semantics></math>,
+maka
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mi>/</mi><mi>b</mi></mrow><annotation encoding="application/x-tex">a/b</annotation></semantics></math>
+didefinisikan sebagai
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>c</mi><annotation encoding="application/x-tex">c</annotation></semantics></math>.</p></li>
+</ol>
+</section>
+<section id="sec-DaDA" class="level2" data-number="1.3">
+<h2 data-number="1.3"><span class="header-section-number">1.3</span>
+Keterbagian dan Algoritma Pembagian</h2>
+<div class="discussion">
+<p>Sekarang kita membahas konsep keterbagian beserta sifat-sifatnya.</p>
+</div>
+<section id="keterbagian-bilangan-bulat" class="level3"
+data-number="1.3.1">
+<h3 data-number="1.3.1"><span class="header-section-number">1.3.1</span>
+Keterbagian Bilangan Bulat</h3>
+<div class="definition">
+<p><strong>Definisi 1.7</strong>. <em>Jika
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>a</mi><annotation encoding="application/x-tex">a</annotation></semantics></math>
+dan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>b</mi><annotation encoding="application/x-tex">b</annotation></semantics></math>
+adalah bilangan bulat dengan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>≠</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">a\neq 0</annotation></semantics></math>,
+kita mengatakan bahwa
+<span><strong><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>a</mi><annotation encoding="application/x-tex">a</annotation></semantics></math>
+membagi
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>b</mi><annotation encoding="application/x-tex">b</annotation></semantics></math></strong></span>
+dan menulis
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>∣</mo><mi>b</mi></mrow><annotation encoding="application/x-tex">a\mid b</annotation></semantics></math>
+apabila terdapat bilangan bulat
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>k</mi><annotation encoding="application/x-tex">k</annotation></semantics></math>
+sedemikian sehingga
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>b</mi><mo>=</mo><mi>k</mi><mi>a</mi></mrow><annotation encoding="application/x-tex">b=ka</annotation></semantics></math>.
+Dengan kata lain, untuk
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>,</mo><mi>b</mi><mo>∈</mo><mi mathvariant="double-struck">ℤ</mi></mrow><annotation encoding="application/x-tex">a,b\in{\mathbb Z}</annotation></semantics></math>
+dengan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>≠</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">a\neq 0</annotation></semantics></math>,
+kita menulis
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>∣</mo><mi>b</mi></mrow><annotation encoding="application/x-tex">a\mid b</annotation></semantics></math>
+apabila
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>∃</mo><mi>k</mi><mo>∈</mo><mi mathvariant="double-struck">ℤ</mi></mrow><annotation encoding="application/x-tex">\exists k\in{\mathbb Z}</annotation></semantics></math>
+sedemikian sehingga
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>b</mi><mo>=</mo><mi>k</mi><mi>a</mi></mrow><annotation encoding="application/x-tex">b=ka</annotation></semantics></math>.</em></p>
+<p><em>Jika
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>a</mi><annotation encoding="application/x-tex">a</annotation></semantics></math>
+membagi
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>b</mi><annotation encoding="application/x-tex">b</annotation></semantics></math>,
+kita juga mengatakan bahwa
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>a</mi><annotation encoding="application/x-tex">a</annotation></semantics></math>
+adalah <span><strong>faktor</strong></span> [atau
+<span><strong>pembagi</strong></span>] dari
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>b</mi><annotation encoding="application/x-tex">b</annotation></semantics></math>,
+dan bahwa
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>b</mi><annotation encoding="application/x-tex">b</annotation></semantics></math>
+adalah <span><strong>kelipatan</strong></span> dari
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>a</mi><annotation encoding="application/x-tex">a</annotation></semantics></math>.
+Jika
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>a</mi><annotation encoding="application/x-tex">a</annotation></semantics></math>
+tidak membagi
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>b</mi><annotation encoding="application/x-tex">b</annotation></semantics></math>,
+kita menulis
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>∤</mo><mi>b</mi></mrow><annotation encoding="application/x-tex">a\nmid b</annotation></semantics></math>.</em></p>
+</div>
+<div class="example">
+<p><strong>Contoh 1.8</strong>. <em>Sebagai contoh,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn><mo>∣</mo><mn>4</mn></mrow><annotation encoding="application/x-tex">2\mid 4</annotation></semantics></math>
+dan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>7</mn><mo>∣</mo><mn>63</mn></mrow><annotation encoding="application/x-tex">7\mid 63</annotation></semantics></math>,
+sedangkan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>5</mn><mo>∤</mo><mn>26</mn></mrow><annotation encoding="application/x-tex">5\nmid 26</annotation></semantics></math>.</em></p>
+</div>
+<div class="definition">
+<p><strong>Definisi 1.9</strong>. <em>Untuk
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>∈</mo><mi mathvariant="double-struck">ℤ</mi></mrow><annotation encoding="application/x-tex">a\in{\mathbb Z}</annotation></semantics></math>,
+kita mengatakan bahwa
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>a</mi><annotation encoding="application/x-tex">a</annotation></semantics></math>
+adalah bilangan <span><strong>genap</strong></span> jika
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn><mo>∣</mo><mi>a</mi></mrow><annotation encoding="application/x-tex">2\mid a</annotation></semantics></math>,
+yaitu jika
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>∃</mo><mi>k</mi><mo>∈</mo><mi mathvariant="double-struck">ℤ</mi></mrow><annotation encoding="application/x-tex">\exists k\in{\mathbb Z}</annotation></semantics></math>
+sedemikian sehingga
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>=</mo><mn>2</mn><mi>k</mi></mrow><annotation encoding="application/x-tex">a=2k</annotation></semantics></math>.
+Sebaliknya, untuk
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>∈</mo><mi mathvariant="double-struck">ℤ</mi></mrow><annotation encoding="application/x-tex">a\in{\mathbb Z}</annotation></semantics></math>,
+kita mengatakan bahwa
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>a</mi><annotation encoding="application/x-tex">a</annotation></semantics></math>
+adalah bilangan <span><strong>ganjil</strong></span> jika
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn><mo>∤</mo><mi>a</mi></mrow><annotation encoding="application/x-tex">2\nmid a</annotation></semantics></math>.</em></p>
+</div>
+<div class="discussion">
+<p>Sebagai konsekuensi dari Algoritma Pembagian di bawah ini, jika
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>a</mi><annotation encoding="application/x-tex">a</annotation></semantics></math>
+ganjil maka
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>∃</mo><mi>k</mi><mo>∈</mo><mi mathvariant="double-struck">ℤ</mi></mrow><annotation encoding="application/x-tex">\exists k\in{\mathbb Z}</annotation></semantics></math>
+sedemikian sehingga
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>=</mo><mn>2</mn><mi>k</mi><mo>+</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">a=2k+1</annotation></semantics></math>.</p>
+</div>
+<div class="proposition">
+<p><strong>Proposisi 1.10</strong>. <em>Untuk setiap
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>∈</mo><mi mathvariant="double-struck">ℤ</mi><mo>\</mo><mo stretchy="false" form="prefix">{</mo><mn>0</mn><mo stretchy="false" form="postfix">}</mo></mrow><annotation encoding="application/x-tex">a\in{\mathbb Z}\setminus\{0\}</annotation></semantics></math>
+berlaku
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>∣</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">a\mid 0</annotation></semantics></math>.</em></p>
+</div>
+<div class="proposition">
+<p><strong>Proposisi 1.11</strong>. <em>Jika
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>,</mo><mi>b</mi><mo>∈</mo><mi mathvariant="double-struck">ℤ</mi></mrow><annotation encoding="application/x-tex">a,b\in{\mathbb Z}</annotation></semantics></math>
+memenuhi
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">|</mo><mi>b</mi><mo stretchy="false" form="prefix">|</mo><mo>&lt;</mo><mi>a</mi></mrow><annotation encoding="application/x-tex">|b|&lt;a</annotation></semantics></math>
+dan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>b</mi><mo>≠</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">b\neq 0</annotation></semantics></math>,
+maka
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>∤</mo><mi>b</mi></mrow><annotation encoding="application/x-tex">a\nmid b</annotation></semantics></math>.</em></p>
+</div>
+<div class="proposition">
+<p><strong>Proposisi 1.12</strong>. <em>Untuk
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>,</mo><mi>b</mi><mo>∈</mo><mi mathvariant="double-struck">ℤ</mi></mrow><annotation encoding="application/x-tex">a,b\in{\mathbb Z}</annotation></semantics></math>
+dengan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>≠</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">a\neq 0</annotation></semantics></math>,
+berlaku
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>∣</mo><mi>b</mi><mo>⇔</mo><mi>a</mi><mo>∣</mo><mo stretchy="false" form="prefix">|</mo><mi>b</mi><mo stretchy="false" form="prefix">|</mo></mrow><annotation encoding="application/x-tex">a\mid b\Leftrightarrow a\mid|b|</annotation></semantics></math>.</em></p>
+</div>
+<div class="theorem">
+<p><strong>Teorema 1.13</strong>. <em>Jika
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>a</mi><annotation encoding="application/x-tex">a</annotation></semantics></math>,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>b</mi><annotation encoding="application/x-tex">b</annotation></semantics></math>,
+dan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>c</mi><annotation encoding="application/x-tex">c</annotation></semantics></math>
+adalah bilangan bulat yang memenuhi
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>∣</mo><mi>b</mi></mrow><annotation encoding="application/x-tex">a\mid b</annotation></semantics></math>
+dan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>b</mi><mo>∣</mo><mi>c</mi></mrow><annotation encoding="application/x-tex">b\mid c</annotation></semantics></math>,
+maka
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>∣</mo><mi>c</mi></mrow><annotation encoding="application/x-tex">a\mid c</annotation></semantics></math>.</em></p>
+</div>
+<div class="proof">
+<p><em>Bukti.</em> Karena
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>∣</mo><mi>b</mi></mrow><annotation encoding="application/x-tex">a\mid b</annotation></semantics></math>
+dan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>b</mi><mo>∣</mo><mi>c</mi></mrow><annotation encoding="application/x-tex">b\mid c</annotation></semantics></math>,
+terdapat
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>k</mi><mn>1</mn></msub><mo>,</mo><msub><mi>k</mi><mn>2</mn></msub><mo>∈</mo><mi mathvariant="double-struck">ℤ</mi></mrow><annotation encoding="application/x-tex">k_1,k_2\in{\mathbb Z}</annotation></semantics></math>
+sedemikian sehingga
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>b</mi><mo>=</mo><msub><mi>k</mi><mn>1</mn></msub><mi>a</mi></mrow><annotation encoding="application/x-tex">b=k_1a</annotation></semantics></math>
+dan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>c</mi><mo>=</mo><msub><mi>k</mi><mn>2</mn></msub><mi>b</mi></mrow><annotation encoding="application/x-tex">c=k_2b</annotation></semantics></math>.
+Oleh karena itu,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>c</mi><mo>=</mo><msub><mi>k</mi><mn>1</mn></msub><msub><mi>k</mi><mn>2</mn></msub><mi>a</mi></mrow><annotation encoding="application/x-tex">c=k_1k_2a</annotation></semantics></math>,
+sehingga
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>∣</mo><mi>c</mi></mrow><annotation encoding="application/x-tex">a\mid c</annotation></semantics></math>. ◻</p>
+</div>
+<div id="eg-divisibility" class="example">
+<p><strong>Contoh 1.14</strong>. <em>Karena
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>6</mn><mo>∣</mo><mn>18</mn></mrow><annotation encoding="application/x-tex">6\mid 18</annotation></semantics></math>
+dan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>18</mn><mo>∣</mo><mn>36</mn></mrow><annotation encoding="application/x-tex">18\mid 36</annotation></semantics></math>,
+maka
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>6</mn><mo>∣</mo><mn>36</mn></mrow><annotation encoding="application/x-tex">6\mid 36</annotation></semantics></math>.</em></p>
+</div>
+<div class="discussion">
+<p>Teorema berikut menyatakan bahwa jika suatu bilangan bulat membagi
+dua bilangan bulat lain, bilangan tersebut juga membagi setiap kombinasi
+linear keduanya.</p>
+</div>
+<div id="thm-divisibilitylincombs" class="theorem">
+<p><strong>Teorema 1.15</strong>. <em>Untuk setiap
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>,</mo><mi>b</mi><mo>,</mo><mi>c</mi><mo>,</mo><mi>m</mi><mo>,</mo><mi>n</mi><mo>∈</mo><mi mathvariant="double-struck">ℤ</mi></mrow><annotation encoding="application/x-tex">a,b,c,m,n\in{\mathbb Z}</annotation></semantics></math>,
+jika
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>c</mi><mo>∣</mo><mi>a</mi></mrow><annotation encoding="application/x-tex">c\mid a</annotation></semantics></math>
+dan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>c</mi><mo>∣</mo><mi>b</mi></mrow><annotation encoding="application/x-tex">c\mid b</annotation></semantics></math>,
+maka
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>c</mi><mo>∣</mo><mo stretchy="false" form="prefix">(</mo><mi>m</mi><mi>a</mi><mo>+</mo><mi>n</mi><mi>b</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">c\mid (ma+nb)</annotation></semantics></math>.</em></p>
+</div>
+<div class="proof">
+<p><em>Bukti.</em> Karena
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>c</mi><mo>∣</mo><mi>a</mi></mrow><annotation encoding="application/x-tex">c\mid a</annotation></semantics></math>
+dan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>c</mi><mo>∣</mo><mi>b</mi></mrow><annotation encoding="application/x-tex">c\mid b</annotation></semantics></math>,
+terdapat
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>k</mi><mn>1</mn></msub><mo>,</mo><msub><mi>k</mi><mn>2</mn></msub><mo>∈</mo><mi mathvariant="double-struck">ℤ</mi></mrow><annotation encoding="application/x-tex">k_1,k_2\in{\mathbb Z}</annotation></semantics></math>
+sedemikian sehingga
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>=</mo><msub><mi>k</mi><mn>1</mn></msub><mi>c</mi></mrow><annotation encoding="application/x-tex">a=k_1c</annotation></semantics></math>
+dan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>b</mi><mo>=</mo><msub><mi>k</mi><mn>2</mn></msub><mi>c</mi></mrow><annotation encoding="application/x-tex">b=k_2c</annotation></semantics></math>.
+Dengan demikian,
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi><mi>a</mi><mo>+</mo><mi>n</mi><mi>b</mi><mo>=</mo><mi>m</mi><msub><mi>k</mi><mn>1</mn></msub><mi>c</mi><mo>+</mo><mi>n</mi><msub><mi>k</mi><mn>2</mn></msub><mi>c</mi><mo>=</mo><mi>c</mi><mo stretchy="false" form="prefix">(</mo><mi>m</mi><msub><mi>k</mi><mn>1</mn></msub><mo>+</mo><mi>n</mi><msub><mi>k</mi><mn>2</mn></msub><mo stretchy="false" form="postfix">)</mo><mo>,</mo></mrow><annotation encoding="application/x-tex">\begin{equation*}
+ma+nb=mk_1c+nk_2c=c(mk_1+nk_2),
+\end{equation*}</annotation></semantics></math> dan karena itu
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>c</mi><mo>∣</mo><mo stretchy="false" form="prefix">(</mo><mi>m</mi><mi>a</mi><mo>+</mo><mi>n</mi><mi>b</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">c\mid (ma+nb)</annotation></semantics></math>. ◻</p>
+</div>
+<div class="discussion">
+<p>Teorema <a href="1-chap-WOaD.html#thm-divisibilitylincombs"
+data-reference-type="ref"
+data-reference="thm-divisibilitylincombs">1.15</a> dapat diperumum ke
+setiap kombinasi linear berhingga sebagai berikut. Jika
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>∈</mo><mi mathvariant="double-struck">ℕ</mi><mo>,</mo><mspace width="0.222em"></mspace><mi>a</mi><mo>,</mo><msub><mi>b</mi><mn>1</mn></msub><mo>,</mo><mi>…</mi><mo>,</mo><msub><mi>b</mi><mi>n</mi></msub><mo>∈</mo><mi mathvariant="double-struck">ℤ</mi><mrow><mspace width="0.333em"></mspace><mtext mathvariant="normal"> dan </mtext><mspace width="0.333em"></mspace></mrow><mi>a</mi><mo>∣</mo><msub><mi>b</mi><mn>1</mn></msub><mo>,</mo><mi>a</mi><mo>∣</mo><msub><mi>b</mi><mn>2</mn></msub><mo>,</mo><mi>…</mi><mo>,</mo><mi>a</mi><mo>∣</mo><msub><mi>b</mi><mi>n</mi></msub><mo>,</mo></mrow><annotation encoding="application/x-tex">\begin{equation*}
+n\in{\mathbb N},\ a,b_1,\dots,b_n\in{\mathbb Z}\text{\ dan\ }a\mid b_1, a\mid b_2,\dots,a\mid b_n,
+\end{equation*}</annotation></semantics></math> maka, untuk setiap
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>k</mi><mn>1</mn></msub><mo>,</mo><mi>…</mi><mo>,</mo><msub><mi>k</mi><mi>n</mi></msub><mo>∈</mo><mi mathvariant="double-struck">ℤ</mi></mrow><annotation encoding="application/x-tex">k_1,\dots,k_n\in{\mathbb Z}</annotation></semantics></math>,
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>∣</mo><munderover><mo>∑</mo><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><msub><mi>k</mi><mi>j</mi></msub><msub><mi>b</mi><mi>j</mi></msub></mrow><annotation encoding="application/x-tex">\begin{equation}
+a\mid \sum_{j=1}^nk_jb_j
+\end{equation}</annotation></semantics></math> Pembuktian perumuman ini
+dengan induksi merupakan latihan yang baik.</p>
+</div>
+</section>
+<section id="algoritma-pembagian" class="level3" data-number="1.3.2">
+<h3 data-number="1.3.2"><span class="header-section-number">1.3.2</span>
+Algoritma Pembagian</h3>
+<div id="thm-theDA" class="theorem">
+<p><strong>Teorema 1.16</strong>. <em><strong>Algoritma
+Pembagian</strong> Diberikan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>,</mo><mi>b</mi><mo>∈</mo><mi mathvariant="double-struck">ℤ</mi></mrow><annotation encoding="application/x-tex">a,b\in{\mathbb Z}</annotation></semantics></math>
+dengan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>b</mi><mo>&gt;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">b&gt;0</annotation></semantics></math>,
+terdapat pasangan tunggal
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>q</mi><mo>,</mo><mi>r</mi><mo>∈</mo><mi mathvariant="double-struck">ℤ</mi></mrow><annotation encoding="application/x-tex">q,r\in{\mathbb Z}</annotation></semantics></math>
+sedemikian sehingga
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>=</mo><mi>q</mi><mi>b</mi><mo>+</mo><mi>r</mi></mrow><annotation encoding="application/x-tex">a=qb+r</annotation></semantics></math>
+dan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn><mo>≤</mo><mi>r</mi><mo>&lt;</mo><mi>b</mi></mrow><annotation encoding="application/x-tex">0\leq r&lt;b</annotation></semantics></math>.
+Bilangan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>q</mi><annotation encoding="application/x-tex">q</annotation></semantics></math>
+disebut <span><strong>hasil bagi</strong></span>, sedangkan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>r</mi><annotation encoding="application/x-tex">r</annotation></semantics></math>
+disebut <span><strong>sisa pembagian
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>a</mi><annotation encoding="application/x-tex">a</annotation></semantics></math>
+oleh
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>b</mi><annotation encoding="application/x-tex">b</annotation></semantics></math></strong></span>.</em></p>
+</div>
+<div class="proof">
+<p><em>Bukti.</em> Perhatikan himpunan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>=</mo><mo stretchy="false" form="prefix">{</mo><mi>a</mi><mo>−</mo><mi>b</mi><mi>k</mi><mo>∣</mo><mi>k</mi><mo>∈</mo><mi mathvariant="double-struck">ℤ</mi><mo>,</mo><mspace width="0.222em"></mspace><mi>a</mi><mo>−</mo><mi>b</mi><mi>k</mi><mo>≥</mo><mn>0</mn><mo stretchy="false" form="postfix">}</mo></mrow><annotation encoding="application/x-tex">A=\{a-bk\mid k\in{\mathbb Z},\ a-bk\geq 0\}</annotation></semantics></math>.
+Himpunan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>
+tidak kosong karena untuk
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi><mo>&lt;</mo><mi>a</mi><mi>/</mi><mi>b</mi></mrow><annotation encoding="application/x-tex">k&lt;a/b</annotation></semantics></math>
+berlaku
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>−</mo><mi>b</mi><mi>k</mi><mo>&gt;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">a-bk&gt;0</annotation></semantics></math>.
+Menurut prinsip keterurutan baik,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>
+memiliki elemen terkecil
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>r</mi><mo>=</mo><mi>a</mi><mo>−</mo><mi>q</mi><mi>b</mi></mrow><annotation encoding="application/x-tex">r=a-qb</annotation></semantics></math>
+untuk suatu
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>q</mi><mo>∈</mo><mi mathvariant="double-struck">ℤ</mi></mrow><annotation encoding="application/x-tex">q\in{\mathbb Z}</annotation></semantics></math>.
+Berdasarkan konstruksinya,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>r</mi><mo>≥</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">r\geq 0</annotation></semantics></math>.
+Sekarang, jika
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>r</mi><mo>≥</mo><mi>b</mi></mrow><annotation encoding="application/x-tex">r\geq b</annotation></semantics></math>,
+maka (karena
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>b</mi><mo>&gt;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">b&gt;0</annotation></semantics></math>)
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>r</mi><mo>&gt;</mo><mi>r</mi><mo>−</mo><mi>b</mi><mo>=</mo><mi>a</mi><mo>−</mo><mi>q</mi><mi>b</mi><mo>−</mo><mi>b</mi><mo>=</mo><mi>a</mi><mo>−</mo><mo stretchy="false" form="prefix">(</mo><mi>q</mi><mo>+</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo><mi>b</mi><mo>≥</mo><mn>0</mn><mi>.</mi></mrow><annotation encoding="application/x-tex">\begin{equation*}
+r&gt;r-b=a-qb-b=a-(q+1)b\geq 0.
+\end{equation*}</annotation></semantics></math> Hal ini menghasilkan
+kontradiksi karena
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>r</mi><annotation encoding="application/x-tex">r</annotation></semantics></math>
+diasumsikan sebagai elemen terkecil
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>.
+Oleh karena itu,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn><mo>≤</mo><mi>r</mi><mo>&lt;</mo><mi>b</mi></mrow><annotation encoding="application/x-tex">0\leq r&lt;b</annotation></semantics></math>.</p>
+<p>Selanjutnya kita tunjukkan bahwa
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>q</mi><annotation encoding="application/x-tex">q</annotation></semantics></math>
+dan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>r</mi><annotation encoding="application/x-tex">r</annotation></semantics></math>
+tunggal. Misalkan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>=</mo><msub><mi>q</mi><mn>1</mn></msub><mi>b</mi><mo>+</mo><msub><mi>r</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">a=q_1b+r_1</annotation></semantics></math>
+dan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>=</mo><msub><mi>q</mi><mn>2</mn></msub><mi>b</mi><mo>+</mo><msub><mi>r</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">a=q_2b+r_2</annotation></semantics></math>,
+dengan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn><mo>≤</mo><msub><mi>r</mi><mn>1</mn></msub><mo>&lt;</mo><mi>b</mi></mrow><annotation encoding="application/x-tex">0\leq r_1&lt;b</annotation></semantics></math>
+dan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn><mo>≤</mo><msub><mi>r</mi><mn>2</mn></msub><mo>&lt;</mo><mi>b</mi></mrow><annotation encoding="application/x-tex">0\leq r_2&lt;b</annotation></semantics></math>.
+Maka
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>−</mo><mi>a</mi><mo>=</mo><msub><mi>q</mi><mn>1</mn></msub><mi>b</mi><mo>+</mo><msub><mi>r</mi><mn>1</mn></msub><mo>−</mo><mo stretchy="false" form="prefix">(</mo><msub><mi>q</mi><mn>2</mn></msub><mi>b</mi><mo>+</mo><msub><mi>r</mi><mn>2</mn></msub><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mo stretchy="false" form="prefix">(</mo><msub><mi>q</mi><mn>1</mn></msub><mo>−</mo><msub><mi>q</mi><mn>2</mn></msub><mo stretchy="false" form="postfix">)</mo><mi>b</mi><mo>+</mo><mo stretchy="false" form="prefix">(</mo><msub><mi>r</mi><mn>1</mn></msub><mo>−</mo><msub><mi>r</mi><mn>2</mn></msub><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>0</mn><mi>.</mi></mrow><annotation encoding="application/x-tex">\begin{equation*}
+a-a=q_1b+r_1-(q_2b+r_2)=(q_1-q_2)b+(r_1-r_2)=0.
+\end{equation*}</annotation></semantics></math> Akibatnya,
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><msub><mi>q</mi><mn>1</mn></msub><mo>−</mo><msub><mi>q</mi><mn>2</mn></msub><mo stretchy="false" form="postfix">)</mo><mi>b</mi><mo>=</mo><msub><mi>r</mi><mn>2</mn></msub><mo>−</mo><msub><mi>r</mi><mn>1</mn></msub><mi>.</mi></mrow><annotation encoding="application/x-tex">\begin{equation*}
+(q_1-q_2)b=r_2-r_1.
+\end{equation*}</annotation></semantics></math> Jadi,
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>b</mi><mo>∣</mo><mo stretchy="false" form="prefix">(</mo><msub><mi>r</mi><mn>2</mn></msub><mo>−</mo><msub><mi>r</mi><mn>1</mn></msub><mo stretchy="false" form="postfix">)</mo><mi>.</mi></mrow><annotation encoding="application/x-tex">\begin{equation*}
+b\mid (r_2-r_1).
+\end{equation*}</annotation></semantics></math> Karena
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn><mo>≤</mo><mo stretchy="false" form="prefix">|</mo><msub><mi>r</mi><mn>2</mn></msub><mo>−</mo><msub><mi>r</mi><mn>1</mn></msub><mo stretchy="false" form="prefix">|</mo><mo>≤</mo><mrow><mi mathvariant="normal">max</mi><mo>&#8289;</mo></mrow><mo stretchy="false" form="prefix">(</mo><msub><mi>r</mi><mn>1</mn></msub><mo>,</mo><msub><mi>r</mi><mn>2</mn></msub><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">0\leq|r_2-r_1|\leq\max(r_1,r_2)</annotation></semantics></math>
+dan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>b</mi><mo>&gt;</mo><mrow><mi mathvariant="normal">max</mi><mo>&#8289;</mo></mrow><mo stretchy="false" form="prefix">(</mo><msub><mi>r</mi><mn>1</mn></msub><mo>,</mo><msub><mi>r</mi><mn>2</mn></msub><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">b&gt;\max(r_1,r_2)</annotation></semantics></math>,
+maka
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>r</mi><mn>2</mn></msub><mo>−</mo><msub><mi>r</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">r_2-r_1</annotation></semantics></math>
+harus sama dengan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>0</mn><annotation encoding="application/x-tex">0</annotation></semantics></math>,
+yaitu
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>r</mi><mn>2</mn></msub><mo>=</mo><msub><mi>r</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">r_2=r_1</annotation></semantics></math>.
+Karena
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>b</mi><msub><mi>q</mi><mn>1</mn></msub><mo>+</mo><msub><mi>r</mi><mn>1</mn></msub><mo>=</mo><mi>b</mi><msub><mi>q</mi><mn>2</mn></msub><mo>+</mo><msub><mi>r</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">bq_1+r_1=bq_2+r_2</annotation></semantics></math>,
+kita juga memperoleh
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>q</mi><mn>1</mn></msub><mo>=</mo><msub><mi>q</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">q_1=q_2</annotation></semantics></math>.
+Hal ini membuktikan ketunggalan. ◻</p>
+</div>
+<div id="eg-arithmetic" class="example">
+<p><strong>Contoh 1.17</strong>. <em>Jika
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>=</mo><mn>71</mn></mrow><annotation encoding="application/x-tex">a=71</annotation></semantics></math>
+dan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>b</mi><mo>=</mo><mn>6</mn></mrow><annotation encoding="application/x-tex">b=6</annotation></semantics></math>,
+maka
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>71</mn><mo>=</mo><mn>6</mn><mo>⋅</mo><mn>11</mn><mo>+</mo><mn>5</mn></mrow><annotation encoding="application/x-tex">71=6\cdot 11+5</annotation></semantics></math>.
+Di sini
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>q</mi><mo>=</mo><mn>11</mn></mrow><annotation encoding="application/x-tex">q=11</annotation></semantics></math>
+dan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>r</mi><mo>=</mo><mn>5</mn></mrow><annotation encoding="application/x-tex">r=5</annotation></semantics></math>.</em></p>
+</div>
+</section>
+<section id="latihan-untuk-sec-dada" class="level3 unnumbered">
+<h3 class="unnumbered">Latihan untuk §<a
+href="1-chap-WOaD.html#sec-DaDA" data-reference-type="ref"
+data-reference="sec-DaDA">1.3</a></h3>
+<div class="exercise">
+<p><strong>Latihan 1.8</strong>. <em>Tunjukkan bahwa
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>5</mn><mo>∣</mo><mn>25</mn></mrow><annotation encoding="application/x-tex">5\mid 25</annotation></semantics></math>,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>19</mn><mo>∣</mo><mn>38</mn></mrow><annotation encoding="application/x-tex">19\mid38</annotation></semantics></math>,
+dan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn><mo>∣</mo><mn>98</mn></mrow><annotation encoding="application/x-tex">2\mid 98</annotation></semantics></math>.</em></p>
+</div>
+<div class="exercise">
+<p><strong>Latihan 1.9</strong>. <em>Gunakan Algoritma Pembagian untuk
+menentukan hasil bagi dan sisa ketika 76 dibagi oleh 13.</em></p>
+</div>
+<div class="exercise">
+<p><strong>Latihan 1.10</strong>. <em>Gunakan Algoritma Pembagian untuk
+menentukan hasil bagi dan sisa ketika -100 dibagi oleh 13.</em></p>
+</div>
+<div class="exercise">
+<p><strong>Latihan 1.11</strong>. <em>Tunjukkan bahwa jika
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>,</mo><mi>b</mi><mo>,</mo><mi>c</mi></mrow><annotation encoding="application/x-tex">a,b,c</annotation></semantics></math>,
+dan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>d</mi><annotation encoding="application/x-tex">d</annotation></semantics></math>
+adalah bilangan bulat, dengan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>a</mi><annotation encoding="application/x-tex">a</annotation></semantics></math>
+dan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>c</mi><annotation encoding="application/x-tex">c</annotation></semantics></math>
+tidak nol, serta
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>∣</mo><mi>b</mi></mrow><annotation encoding="application/x-tex">a\mid b</annotation></semantics></math>
+dan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>c</mi><mo>∣</mo><mi>d</mi></mrow><annotation encoding="application/x-tex">c\mid d</annotation></semantics></math>,
+maka
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mi>c</mi><mo>∣</mo><mi>b</mi><mi>d</mi></mrow><annotation encoding="application/x-tex">ac\mid bd</annotation></semantics></math>.</em></p>
+</div>
+<div id="exer-sizeofdivisors" class="exercise">
+<p><strong>Latihan 1.12</strong>. <em>Tunjukkan bahwa jika
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>a</mi><annotation encoding="application/x-tex">a</annotation></semantics></math>
+dan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>b</mi><annotation encoding="application/x-tex">b</annotation></semantics></math>
+adalah bilangan bulat positif dan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>∣</mo><mi>b</mi></mrow><annotation encoding="application/x-tex">a\mid b</annotation></semantics></math>,
+maka
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>≤</mo><mi>b</mi></mrow><annotation encoding="application/x-tex">a\leq b</annotation></semantics></math>.</em></p>
+</div>
+<div class="exercise">
+<p><strong>Latihan 1.13</strong>. <em>Buktikan bahwa jumlah dua bilangan
+bulat genap adalah genap, jumlah dua bilangan bulat ganjil adalah genap,
+dan jumlah sebuah bilangan bulat genap dengan sebuah bilangan bulat
+ganjil adalah ganjil.</em></p>
+</div>
+<div class="exercise">
+<p><strong>Latihan 1.14</strong>. <em>Tunjukkan bahwa hasil kali dua
+bilangan bulat genap adalah genap, hasil kali dua bilangan bulat ganjil
+adalah ganjil, dan hasil kali sebuah bilangan bulat genap dengan sebuah
+bilangan bulat ganjil adalah genap.</em></p>
+</div>
+<div class="exercise">
+<p><strong>Latihan 1.15</strong>. <em>Tunjukkan bahwa jika
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>m</mi><annotation encoding="application/x-tex">m</annotation></semantics></math>
+adalah bilangan bulat, maka
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>3</mn><annotation encoding="application/x-tex">3</annotation></semantics></math>
+membagi
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>m</mi><mn>3</mn></msup><mo>−</mo><mi>m</mi></mrow><annotation encoding="application/x-tex">m^3-m</annotation></semantics></math>.</em></p>
+</div>
+<div class="exercise">
+<p><strong>Latihan 1.16</strong>. <em>Tunjukkan bahwa kuadrat setiap
+bilangan bulat ganjil berbentuk
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>8</mn><mi>m</mi><mo>+</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">8m+1</annotation></semantics></math>
+untuk suatu
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi><mo>∈</mo><mi mathvariant="double-struck">ℤ</mi></mrow><annotation encoding="application/x-tex">m\in{\mathbb Z}</annotation></semantics></math>.</em></p>
+</div>
+<div class="exercise">
+<p><strong>Latihan 1.17</strong>. <em>Tunjukkan bahwa untuk setiap
+bilangan bulat
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math>,
+kuadrat
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math>
+berbentuk
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>3</mn><mi>m</mi></mrow><annotation encoding="application/x-tex">3m</annotation></semantics></math>
+atau
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>3</mn><mi>m</mi><mo>+</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">3m+1</annotation></semantics></math>
+untuk suatu
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi><mo>∈</mo><mi mathvariant="double-struck">ℤ</mi></mrow><annotation encoding="application/x-tex">m\in{\mathbb Z}</annotation></semantics></math>,
+tetapi tidak pernah berbentuk
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>3</mn><mi>m</mi><mo>+</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">3m+2</annotation></semantics></math>
+untuk
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi><mo>∈</mo><mi mathvariant="double-struck">ℤ</mi></mrow><annotation encoding="application/x-tex">m\in{\mathbb Z}</annotation></semantics></math>.</em></p>
+</div>
+<div class="exercise">
+<p><strong>Latihan 1.18</strong>. <em>Tunjukkan bahwa jika
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mi>c</mi><mo>∣</mo><mi>b</mi><mi>c</mi></mrow><annotation encoding="application/x-tex">ac\mid bc</annotation></semantics></math>,
+maka
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>∣</mo><mi>b</mi></mrow><annotation encoding="application/x-tex">a\mid b</annotation></semantics></math>.</em></p>
+</div>
+<div class="exercise">
+<p><strong>Latihan 1.19</strong>. <em>Tunjukkan bahwa jika
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>∣</mo><mi>b</mi></mrow><annotation encoding="application/x-tex">a\mid b</annotation></semantics></math>
+dan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>b</mi><mo>∣</mo><mi>a</mi></mrow><annotation encoding="application/x-tex">b\mid a</annotation></semantics></math>,
+maka
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>=</mo><mi>±</mi><mi>b</mi></mrow><annotation encoding="application/x-tex">a=\pm b</annotation></semantics></math>.</em></p>
+</div>
+</section>
+</section>
+<section id="sec-RoIiDB" class="level2" data-number="1.4">
+<h2 data-number="1.4"><span class="header-section-number">1.4</span>
+Representasi Bilangan Bulat dalam Berbagai Basis</h2>
+<div class="discussion">
+<p>Pada bagian ini, kita menunjukkan bahwa setiap bilangan bulat positif
+dapat dituliskan secara unik dalam ekspansi pada sebarang basis bilangan
+bulat yang lebih besar dari
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>1</mn><annotation encoding="application/x-tex">1</annotation></semantics></math>.
+Biasanya kita menggunakan notasi desimal untuk merepresentasikan
+bilangan bulat. Kita akan menunjukkan cara mengubah bilangan bulat dari
+notasi desimal ke notasi dengan sebarang basis bilangan bulat lain, dan
+sebaliknya. Notasi desimal mungkin menjadi tradisi dalam kehidupan
+sehari-hari semata-mata karena kita memiliki sepuluh jari tangan. (“Lalu
+bagaimana dengan jari kaki kita?” protes Anda. Saya tidak tahu. Dan
+tampaknya bangsa Babilonia memiliki
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>30</mn><annotation encoding="application/x-tex">30</annotation></semantics></math>
+jari pada setiap tangan, atau
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>15</mn><annotation encoding="application/x-tex">15</annotation></semantics></math>
+jari pada setiap tangan dan kaki, sebab mereka menggunakan basis
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>60</mn><annotation encoding="application/x-tex">60</annotation></semantics></math>.)</p>
+</div>
+<p><strong>Notasi</strong> Bilangan bulat
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>a</mi><annotation encoding="application/x-tex">a</annotation></semantics></math>
+yang ditulis dalam ekspansi basis
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>b</mi><annotation encoding="application/x-tex">b</annotation></semantics></math>
+dilambangkan dengan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>a</mi><msub><mo stretchy="false" form="postfix">)</mo><mi>b</mi></msub></mrow><annotation encoding="application/x-tex">(a)_b</annotation></semantics></math>.</p>
+<div id="thm-basebexpansion" class="theorem">
+<p><strong>Teorema 1.18</strong>. <em>Misalkan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>b</mi><mo>∈</mo><mi mathvariant="double-struck">ℤ</mi></mrow><annotation encoding="application/x-tex">b\in{\mathbb Z}</annotation></semantics></math>
+memenuhi
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>b</mi><mo>&gt;</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">b&gt;1</annotation></semantics></math>.
+Maka, untuk setiap
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi><mo>∈</mo><mi mathvariant="double-struck">ℕ</mi></mrow><annotation encoding="application/x-tex">m\in{\mathbb N}</annotation></semantics></math>,
+terdapat tepat satu
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>l</mi><mo>∈</mo><msub><mi mathvariant="double-struck">ℤ</mi><mrow><mo>≥</mo><mn>0</mn></mrow></msub></mrow><annotation encoding="application/x-tex">l\in{\mathbb Z}_{\geq 0}</annotation></semantics></math>
+beserta digit-digit
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mn>0</mn></msub><mo>,</mo><msub><mi>a</mi><mn>1</mn></msub><mo>,</mo><mi>…</mi><mo>,</mo><msub><mi>a</mi><mi>l</mi></msub><mo>∈</mo><mi mathvariant="double-struck">ℤ</mi></mrow><annotation encoding="application/x-tex">a_0,a_1,\dots,a_l\in{\mathbb Z}</annotation></semantics></math>
+sedemikian sehingga
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mtable><mtr><mtd columnalign="right" style="text-align: right"><mi>m</mi><mo>=</mo><munderover><mo>∑</mo><mrow><mi>j</mi><mo>=</mo><mn>0</mn></mrow><mi>l</mi></munderover><msub><mi>a</mi><mi>j</mi></msub><msup><mi>b</mi><mi>j</mi></msup><mo>,</mo></mtd></mtr><mtr><mtd columnalign="right" style="text-align: right"><mn>0</mn><mo>≤</mo><msub><mi>a</mi><mi>j</mi></msub><mo>&lt;</mo><mi>b</mi><mrow><mspace width="0.333em"></mspace><mtext mathvariant="normal"> untuk </mtext><mspace width="0.333em"></mspace></mrow><mi>j</mi><mo>=</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo>,</mo><mi>…</mi><mo>,</mo><mi>l</mi><mo>,</mo><mrow><mspace width="0.333em"></mspace><mtext mathvariant="normal"> dan</mtext></mrow><mspace width="0.222em"></mspace><mspace width="0.222em"></mspace><mspace width="0.222em"></mspace></mtd></mtr><mtr><mtd columnalign="right" style="text-align: right"><msub><mi>a</mi><mi>l</mi></msub><mo>≠</mo><mn>0</mn><mi>.</mi></mtd></mtr></mtable><annotation encoding="application/x-tex">\begin{align*}
+m=\sum_{j=0}^{l}a_jb^j,\\
+0\leq a_j&lt;b\text{\ untuk\ }j=0,1,\dots,l,\text{\ dan}\ \ \ \\
+a_l\neq 0.
+\end{align*}</annotation></semantics></math></em></p>
+</div>
+<div class="proof">
+<p><em>Bukti.</em> Ambil sebarang
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi><mo>∈</mo><mi mathvariant="double-struck">ℕ</mi></mrow><annotation encoding="application/x-tex">m\in{\mathbb N}</annotation></semantics></math>.
+Mula-mula kita membagi
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>m</mi><annotation encoding="application/x-tex">m</annotation></semantics></math>
+dengan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>b</mi><annotation encoding="application/x-tex">b</annotation></semantics></math>
+menggunakan Algoritma Pembagian, sehingga diperoleh
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi><mo>=</mo><msub><mi>q</mi><mn>0</mn></msub><mi>b</mi><mo>+</mo><msub><mi>a</mi><mn>0</mn></msub><mo>,</mo><mspace width="0.222em"></mspace><mspace width="0.222em"></mspace><mspace width="0.222em"></mspace><mn>0</mn><mo>≤</mo><msub><mi>a</mi><mn>0</mn></msub><mo>&lt;</mo><mi>b</mi><mi>.</mi></mrow><annotation encoding="application/x-tex">\begin{equation*}
+m=q_0b+a_0, \ \ \ 0\leq a_0 &lt;b.
+\end{equation*}</annotation></semantics></math> Jika
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>q</mi><mn>0</mn></msub><mo>≠</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">q_0\neq 0</annotation></semantics></math>,
+selanjutnya kita membagi
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>q</mi><mn>0</mn></msub><annotation encoding="application/x-tex">q_0</annotation></semantics></math>
+dengan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>b</mi><annotation encoding="application/x-tex">b</annotation></semantics></math>
+dan memperoleh
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>q</mi><mn>0</mn></msub><mo>=</mo><msub><mi>q</mi><mn>1</mn></msub><mi>b</mi><mo>+</mo><msub><mi>a</mi><mn>1</mn></msub><mo>,</mo><mspace width="0.222em"></mspace><mspace width="0.222em"></mspace><mspace width="0.222em"></mspace><mn>0</mn><mo>≤</mo><msub><mi>a</mi><mn>1</mn></msub><mo>&lt;</mo><mi>b</mi><mi>.</mi></mrow><annotation encoding="application/x-tex">\begin{equation*}
+q_0=q_1b+a_1, \ \ \ 0\leq a_1&lt;b.
+\end{equation*}</annotation></semantics></math> Jika
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>q</mi><mn>0</mn></msub><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">q_0=0</annotation></semantics></math>,
+ambil
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>l</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">l=0</annotation></semantics></math>
+dan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mn>0</mn></msub><mo>=</mo><mi>m</mi></mrow><annotation encoding="application/x-tex">a_0=m</annotation></semantics></math>;
+bagian eksistensi selesai. Selanjutnya, anggap
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>q</mi><mn>0</mn></msub><mo>&gt;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">q_0&gt;0</annotation></semantics></math>.
+Karena setiap hasil bagi positif berikutnya lebih kecil daripada hasil
+bagi sebelumnya, untuk suatu
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>l</mi><mo>≥</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">l\geq1</annotation></semantics></math>
+proses ini pertama kali berakhir pada
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>q</mi><mi>l</mi></msub><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">q_l=0</annotation></semantics></math>.
+Dengan demikian,
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mtable><mtr><mtd columnalign="right" style="text-align: right; padding-right: 0"><msub><mi>q</mi><mrow><mi>j</mi><mo>−</mo><mn>1</mn></mrow></msub></mtd><mtd columnalign="left" style="text-align: left; padding-left: 0"><mo>=</mo><msub><mi>q</mi><mi>j</mi></msub><mi>b</mi><mo>+</mo><msub><mi>a</mi><mi>j</mi></msub><mo>,</mo><mspace width="2.0em"></mspace><mn>0</mn><mo>≤</mo><msub><mi>a</mi><mi>j</mi></msub><mo>&lt;</mo><mi>b</mi><mspace width="1.0em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>j</mi><mo>=</mo><mn>1</mn><mo>,</mo><mi>…</mi><mo>,</mo><mi>l</mi><mo stretchy="false" form="postfix">)</mo><mo>,</mo></mtd></mtr><mtr><mtd columnalign="right" style="text-align: right; padding-right: 0"><msub><mi>q</mi><mi>l</mi></msub></mtd><mtd columnalign="left" style="text-align: left; padding-left: 0"><mo>=</mo><mn>0</mn><mo>,</mo><mspace width="2.0em"></mspace><msub><mi>a</mi><mi>l</mi></msub><mo>=</mo><msub><mi>q</mi><mrow><mi>l</mi><mo>−</mo><mn>1</mn></mrow></msub><mo>≠</mo><mn>0</mn><mi>.</mi></mtd></mtr></mtable><annotation encoding="application/x-tex">\begin{align*}
+q_{j-1}&amp;=q_jb+a_j, \qquad 0\leq a_j&lt;b \quad (j=1,\dots,l),\\
+q_l&amp;=0, \qquad a_l=q_{l-1}\neq0.
+\end{align*}</annotation></semantics></math></p>
+<p>Sekarang, dengan menyubstitusikan persamaan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>q</mi><mn>0</mn></msub><mo>=</mo><msub><mi>q</mi><mn>1</mn></msub><mi>b</mi><mo>+</mo><msub><mi>a</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">q_0=q_1b+a_1</annotation></semantics></math>
+ke dalam
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi><mo>=</mo><msub><mi>q</mi><mn>0</mn></msub><mi>b</mi><mo>+</mo><msub><mi>a</mi><mn>0</mn></msub></mrow><annotation encoding="application/x-tex">m=q_0b+a_0</annotation></semantics></math>,
+diperoleh
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi><mo>=</mo><mo stretchy="false" form="prefix">(</mo><msub><mi>q</mi><mn>1</mn></msub><mi>b</mi><mo>+</mo><msub><mi>a</mi><mn>1</mn></msub><mo stretchy="false" form="postfix">)</mo><mi>b</mi><mo>+</mo><msub><mi>a</mi><mn>0</mn></msub><mo>=</mo><msub><mi>q</mi><mn>1</mn></msub><msup><mi>b</mi><mn>2</mn></msup><mo>+</mo><msub><mi>a</mi><mn>1</mn></msub><mi>b</mi><mo>+</mo><msub><mi>a</mi><mn>0</mn></msub><mi>.</mi></mrow><annotation encoding="application/x-tex">\begin{equation*}
+m=(q_1b+a_1)b+a_0=q_1b^2+a_1b+a_0.
+\end{equation*}</annotation></semantics></math> Dengan menyubstitusikan
+persamaan-persamaan tersebut secara berturut-turut (atau dengan induksi
+pada
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>j</mi><annotation encoding="application/x-tex">j</annotation></semantics></math>),
+diperoleh
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mtable><mtr><mtd columnalign="right" style="text-align: right; padding-right: 0"><mi>m</mi></mtd><mtd columnalign="left" style="text-align: left; padding-left: 0"><mo>=</mo><msub><mi>q</mi><mrow><mi>j</mi><mo>−</mo><mn>1</mn></mrow></msub><msup><mi>b</mi><mi>j</mi></msup><mo>+</mo><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>0</mn></mrow><mrow><mi>j</mi><mo>−</mo><mn>1</mn></mrow></munderover><msub><mi>a</mi><mi>i</mi></msub><msup><mi>b</mi><mi>i</mi></msup><mspace width="2.0em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>j</mi><mo>=</mo><mn>1</mn><mo>,</mo><mi>…</mi><mo>,</mo><mi>l</mi><mo stretchy="false" form="postfix">)</mo><mo>,</mo></mtd></mtr><mtr><mtd columnalign="right" style="text-align: right; padding-right: 0"></mtd><mtd columnalign="left" style="text-align: left; padding-left: 0"><mo>=</mo><msub><mi>a</mi><mi>l</mi></msub><msup><mi>b</mi><mi>l</mi></msup><mo>+</mo><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>0</mn></mrow><mrow><mi>l</mi><mo>−</mo><mn>1</mn></mrow></munderover><msub><mi>a</mi><mi>i</mi></msub><msup><mi>b</mi><mi>i</mi></msup><mo>=</mo><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>0</mn></mrow><mi>l</mi></munderover><msub><mi>a</mi><mi>i</mi></msub><msup><mi>b</mi><mi>i</mi></msup><mi>.</mi></mtd></mtr></mtable><annotation encoding="application/x-tex">\begin{align*}
+m&amp;=q_{j-1}b^j+\sum_{i=0}^{j-1}a_ib^i \qquad (j=1,\dots,l),\\
+ &amp;=a_lb^l+\sum_{i=0}^{l-1}a_ib^i
+ =\sum_{i=0}^{l}a_ib^i.
+\end{align*}</annotation></semantics></math> Yang masih harus dibuktikan
+ialah bahwa representasi tersebut tunggal. Sekarang misalkan
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi><mo>=</mo><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>0</mn></mrow><mi>l</mi></munderover><msub><mi>a</mi><mi>i</mi></msub><msup><mi>b</mi><mi>i</mi></msup><mo>=</mo><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>0</mn></mrow><mi>s</mi></munderover><msub><mi>c</mi><mi>i</mi></msub><msup><mi>b</mi><mi>i</mi></msup><mi>.</mi></mrow><annotation encoding="application/x-tex">\begin{equation*}
+m=\sum_{i=0}^{l}a_ib^i=\sum_{i=0}^{s}c_ib^i.
+\end{equation*}</annotation></semantics></math> Ambil
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>L</mi><mo>=</mo><mrow><mi mathvariant="normal">max</mi><mo>&#8289;</mo></mrow><mo stretchy="false" form="prefix">{</mo><mi>l</mi><mo>,</mo><mi>s</mi><mo stretchy="false" form="postfix">}</mo></mrow><annotation encoding="application/x-tex">L=\max\{l,s\}</annotation></semantics></math>
+dan tambahkan koefisien nol pada ekspansi yang lebih pendek. Dengan
+mengurangkan kedua ekspansi tersebut, diperoleh
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>0</mn></mrow><mi>L</mi></munderover><mo stretchy="false" form="prefix">(</mo><msub><mi>a</mi><mi>i</mi></msub><mo>−</mo><msub><mi>c</mi><mi>i</mi></msub><mo stretchy="false" form="postfix">)</mo><msup><mi>b</mi><mi>i</mi></msup><mo>=</mo><mn>0</mn><mi>.</mi></mrow><annotation encoding="application/x-tex">\begin{equation*}
+\sum_{i=0}^{L}(a_i-c_i)b^i=0.
+\end{equation*}</annotation></semantics></math> Jika kedua ekspansi
+berbeda, ambil indeks terkecil
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn><mo>≤</mo><mi>j</mi><mo>≤</mo><mi>L</mi></mrow><annotation encoding="application/x-tex">0\leq j\leq L</annotation></semantics></math>
+sedemikian sehingga
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>c</mi><mi>j</mi></msub><mo>≠</mo><msub><mi>a</mi><mi>j</mi></msub></mrow><annotation encoding="application/x-tex">c_j\neq a_j</annotation></semantics></math>.
+Semua suku berindeks lebih kecil daripada
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>j</mi><annotation encoding="application/x-tex">j</annotation></semantics></math>
+lenyap, sehingga diperoleh
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>b</mi><mi>j</mi></msup><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mi>j</mi></mrow><mi>L</mi></munderover><mo stretchy="false" form="prefix">(</mo><msub><mi>a</mi><mi>i</mi></msub><mo>−</mo><msub><mi>c</mi><mi>i</mi></msub><mo stretchy="false" form="postfix">)</mo><msup><mi>b</mi><mrow><mi>i</mi><mo>−</mo><mi>j</mi></mrow></msup><mo>=</mo><mn>0</mn><mo>,</mo></mrow><annotation encoding="application/x-tex">\begin{equation*}
+b^j\sum_{i=j}^{L}(a_i-c_i)b^{i-j}=0,
+\end{equation*}</annotation></semantics></math> dan karena
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>b</mi><mo>≠</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">b\neq 0</annotation></semantics></math>,
+diperoleh
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mi>j</mi></mrow><mi>L</mi></munderover><mo stretchy="false" form="prefix">(</mo><msub><mi>a</mi><mi>i</mi></msub><mo>−</mo><msub><mi>c</mi><mi>i</mi></msub><mo stretchy="false" form="postfix">)</mo><msup><mi>b</mi><mrow><mi>i</mi><mo>−</mo><mi>j</mi></mrow></msup><mo>=</mo><mn>0</mn><mi>.</mi></mrow><annotation encoding="application/x-tex">\begin{equation*}
+\sum_{i=j}^{L}(a_i-c_i)b^{i-j}=0.
+\end{equation*}</annotation></semantics></math> Oleh karena itu,
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mi>j</mi></msub><mo>−</mo><msub><mi>c</mi><mi>j</mi></msub><mo>=</mo><mi>−</mi><mi>b</mi><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mi>j</mi><mo>+</mo><mn>1</mn></mrow><mi>L</mi></munderover><mo stretchy="false" form="prefix">(</mo><msub><mi>a</mi><mi>i</mi></msub><mo>−</mo><msub><mi>c</mi><mi>i</mi></msub><mo stretchy="false" form="postfix">)</mo><msup><mi>b</mi><mrow><mi>i</mi><mo>−</mo><mi>j</mi><mo>−</mo><mn>1</mn></mrow></msup><mo>,</mo></mrow><annotation encoding="application/x-tex">\begin{equation*}
+a_j-c_j=-b\sum_{i=j+1}^{L}(a_i-c_i)b^{i-j-1},
+\end{equation*}</annotation></semantics></math> sehingga
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>b</mi><mo>∣</mo><mo stretchy="false" form="prefix">(</mo><msub><mi>a</mi><mi>j</mi></msub><mo>−</mo><msub><mi>c</mi><mi>j</mi></msub><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">b\mid (a_j-c_j)</annotation></semantics></math>.
+Karena
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn><mo>≤</mo><msub><mi>a</mi><mi>j</mi></msub><mo>&lt;</mo><mi>b</mi></mrow><annotation encoding="application/x-tex">0\leq a_j&lt;b</annotation></semantics></math>
+dan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn><mo>≤</mo><msub><mi>c</mi><mi>j</mi></msub><mo>&lt;</mo><mi>b</mi></mrow><annotation encoding="application/x-tex">0\leq c_j&lt;b</annotation></semantics></math>,
+berlaku
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">|</mo><msub><mi>a</mi><mi>j</mi></msub><mo>−</mo><msub><mi>c</mi><mi>j</mi></msub><mo stretchy="false" form="prefix">|</mo><mo>&lt;</mo><mi>b</mi></mrow><annotation encoding="application/x-tex">|a_j-c_j|&lt;b</annotation></semantics></math>.
+Dengan demikian,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mi>j</mi></msub><mo>=</mo><msub><mi>c</mi><mi>j</mi></msub></mrow><annotation encoding="application/x-tex">a_j=c_j</annotation></semantics></math>.
+Ini bertentangan dengan pemilihan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>j</mi><annotation encoding="application/x-tex">j</annotation></semantics></math>,
+sehingga ekspansi tersebut tunggal. ◻</p>
+</div>
+<div id="def-baseb" class="definition">
+<p><strong>Definisi 1.19</strong>. <em>Misalkan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>b</mi><mo>∈</mo><mi mathvariant="double-struck">ℤ</mi></mrow><annotation encoding="application/x-tex">b\in{\mathbb Z}</annotation></semantics></math>
+memenuhi
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>b</mi><mo>&gt;</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">b&gt;1</annotation></semantics></math>.
+Untuk
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi><mo>∈</mo><mi mathvariant="double-struck">ℕ</mi></mrow><annotation encoding="application/x-tex">m\in{\mathbb N}</annotation></semantics></math>,
+misalkan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ℓ</mi><mo>∈</mo><msub><mi mathvariant="double-struck">ℤ</mi><mrow><mo>≥</mo><mn>0</mn></mrow></msub></mrow><annotation encoding="application/x-tex">\ell\in{\mathbb Z}_{\geq 0}</annotation></semantics></math>
+dan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mn>0</mn></msub><mo>,</mo><msub><mi>a</mi><mn>1</mn></msub><mo>,</mo><mi>…</mi><mo>,</mo><msub><mi>a</mi><mi>ℓ</mi></msub><mo>∈</mo><mi mathvariant="double-struck">ℤ</mi></mrow><annotation encoding="application/x-tex">a_0,a_1,\dots,a_\ell\in{\mathbb Z}</annotation></semantics></math>
+sebagaimana dalam teorema di atas (<a
+href="1-chap-WOaD.html#thm-basebexpansion" data-reference-type="ref"
+data-reference="thm-basebexpansion">1.18</a>). Maka
+<span><strong>representasi basis
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>b</mi><annotation encoding="application/x-tex">b</annotation></semantics></math>
+dari
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>m</mi><annotation encoding="application/x-tex">m</annotation></semantics></math></strong></span>
+adalah rangkaian digit
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>m</mi><msub><mo stretchy="false" form="postfix">)</mo><mi>b</mi></msub><mo>=</mo><msub><mi>a</mi><mi>ℓ</mi></msub><mi>…</mi><msub><mi>a</mi><mn>1</mn></msub><msub><mi>a</mi><mn>0</mn></msub></mrow><annotation encoding="application/x-tex">(m)_b=a_\ell\dots a_1a_0</annotation></semantics></math>.
+Jika
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>b</mi><mo>≥</mo><mn>10</mn></mrow><annotation encoding="application/x-tex">b\ge10</annotation></semantics></math>,
+kita sering menggunakan simbol tunggal lain untuk merepresentasikan
+nilai-nilai
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>a</mi><mi>i</mi></msub><annotation encoding="application/x-tex">a_i</annotation></semantics></math>
+yang mungkin, dari
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>10</mn><annotation encoding="application/x-tex">10</annotation></semantics></math>
+sampai
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>b</mi><mo>−</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">b-1</annotation></semantics></math>.
+Sebagai contoh,
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mtable><mtr><mtd columnalign="right" style="text-align: right; padding-right: 0"><mn>10</mn></mtd><mtd columnalign="left" style="text-align: left; padding-left: 0"><mo>↭</mo><mi>A</mi></mtd></mtr><mtr><mtd columnalign="right" style="text-align: right; padding-right: 0"><mn>11</mn></mtd><mtd columnalign="left" style="text-align: left; padding-left: 0"><mo>↭</mo><mi>B</mi></mtd></mtr><mtr><mtd columnalign="right" style="text-align: right; padding-right: 0"><mn>12</mn></mtd><mtd columnalign="left" style="text-align: left; padding-left: 0"><mo>↭</mo><mi>C</mi></mtd></mtr><mtr><mtd columnalign="right" style="text-align: right; padding-right: 0"></mtd><mtd columnalign="left" style="text-align: left; padding-left: 0"><mtext mathvariant="normal">dst.</mtext></mtd></mtr></mtable><annotation encoding="application/x-tex">\begin{align*}
+10&amp;\leftrightsquigarrow A\\
+11&amp;\leftrightsquigarrow B\\
+12&amp;\leftrightsquigarrow C\\
+&amp;\text{dst.}
+\end{align*}</annotation></semantics></math> Representasi bilangan bulat
+dalam basis 2 disebut <span><strong>representasi biner</strong></span>.
+Representasi biner berguna bagi komputer: semua koefisien
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mn>0</mn></msub><mo>,</mo><mi>…</mi><mo>,</mo><msub><mi>a</mi><mi>ℓ</mi></msub></mrow><annotation encoding="application/x-tex">a_0,\dots,a_\ell</annotation></semantics></math>
+dalam representasi biner memenuhi
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn><mo>≤</mo><msub><mi>a</mi><mi>j</mi></msub><mo>&lt;</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">0\leq a_j&lt;2</annotation></semantics></math>,
+sehingga nilainya 0 atau 1. Jadi, untuk merepresentasikan bilangan bulat
+melalui
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ℓ</mi><mo>+</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">\ell+1</annotation></semantics></math>
+kawat, setiap kawat dapat diberi tegangan (1) atau tidak (0). (Istilah
+<span><em>bit</em></span> berasal dari frasa bahasa Inggris
+<span><em>binary digit</em></span>, yang berarti “digit
+biner”.)</em></p>
+<p><em>Pemrogram komputer juga sering menggunakan basis 8 dan basis 16,
+yang masing-masing disebut <span><strong>oktal</strong></span> dan
+<span><strong>heksadesimal</strong></span>, atau
+<span><strong>heks</strong></span>. Bangsa Babilonia menggunakan basis
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>60</mn><annotation encoding="application/x-tex">60</annotation></semantics></math>,
+yang disebut <span><strong>seksagesimal</strong></span>.</em></p>
+</div>
+<div id="eg-basetwo" class="example">
+<p><strong>Contoh 1.20</strong>. <em>Untuk mencari ekspansi basis 3 dari
+214, kita melakukan pembagian berikut:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mtable><mtr><mtd columnalign="right" style="text-align: right; padding-right: 0"><mn>214</mn></mtd><mtd columnalign="left" style="text-align: left; padding-left: 0"><mo>=</mo><mn>3</mn><mo>⋅</mo><mn>71</mn><mo>+</mo><mn>1</mn></mtd></mtr><mtr><mtd columnalign="right" style="text-align: right; padding-right: 0"><mn>71</mn></mtd><mtd columnalign="left" style="text-align: left; padding-left: 0"><mo>=</mo><mn>3</mn><mo>⋅</mo><mn>23</mn><mo>+</mo><mn>2</mn></mtd></mtr><mtr><mtd columnalign="right" style="text-align: right; padding-right: 0"><mn>23</mn></mtd><mtd columnalign="left" style="text-align: left; padding-left: 0"><mo>=</mo><mn>3</mn><mo>⋅</mo><mn>7</mn><mo>+</mo><mn>2</mn></mtd></mtr><mtr><mtd columnalign="right" style="text-align: right; padding-right: 0"><mn>7</mn></mtd><mtd columnalign="left" style="text-align: left; padding-left: 0"><mo>=</mo><mn>3</mn><mo>⋅</mo><mn>2</mn><mo>+</mo><mn>1</mn></mtd></mtr><mtr><mtd columnalign="right" style="text-align: right; padding-right: 0"><mn>2</mn></mtd><mtd columnalign="left" style="text-align: left; padding-left: 0"><mo>=</mo><mn>3</mn><mo>⋅</mo><mn>0</mn><mo>+</mo><mn>2</mn></mtd></mtr><mtr><mtd columnalign="right" style="text-align: right; padding-right: 0"></mtd></mtr></mtable><annotation encoding="application/x-tex">\begin{align*}
+214&amp;=3\cdot 71+1\\
+71&amp;= 3\cdot 23+2\\
+23&amp;= 3\cdot 7+2\\
+7&amp;= 3\cdot 2+1\\
+2&amp;= 3\cdot 0+2\\
+\end{align*}</annotation></semantics></math> Untuk memperoleh ekspansi
+basis 3 dari 214, kita membaca sisa-sisa pembagian tersebut dari bawah
+ke atas, sehingga
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mn>214</mn><msub><mo stretchy="false" form="postfix">)</mo><mn>10</mn></msub><mo>=</mo><mo stretchy="false" form="prefix">(</mo><mn>21221</mn><msub><mo stretchy="false" form="postfix">)</mo><mn>3</mn></msub></mrow><annotation encoding="application/x-tex">(214)_{10}=(21221)_3</annotation></semantics></math>.</em></p>
+</div>
+<div id="eg-changebase" class="example">
+<p><strong>Contoh 1.21</strong>. <em>Untuk mencari ekspansi basis
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>10</mn><annotation encoding="application/x-tex">10</annotation></semantics></math>,
+yaitu ekspansi desimal, dari
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mn>364</mn><msub><mo stretchy="false" form="postfix">)</mo><mn>7</mn></msub></mrow><annotation encoding="application/x-tex">(364)_7</annotation></semantics></math>,
+kita menghitung
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>4</mn><mo>⋅</mo><msup><mn>7</mn><mn>0</mn></msup><mo>+</mo><mn>6</mn><mo>⋅</mo><msup><mn>7</mn><mn>1</mn></msup><mo>+</mo><mn>3</mn><mo>⋅</mo><msup><mn>7</mn><mn>2</mn></msup><mo>=</mo><mn>4</mn><mo>+</mo><mn>42</mn><mo>+</mo><mn>147</mn><mo>=</mo><mn>193</mn></mrow><annotation encoding="application/x-tex">4\cdot 7^0+6\cdot 7^1+3\cdot 7^2=4+42+147=193</annotation></semantics></math>.</em></p>
+</div>
+<section id="latihan-untuk-sec-roiidb" class="level3"
+data-number="1.4.1">
+<h3 data-number="1.4.1"><span class="header-section-number">1.4.1</span>
+Latihan untuk §<a href="1-chap-WOaD.html#sec-RoIiDB"
+data-reference-type="ref" data-reference="sec-RoIiDB">1.4</a></h3>
+<div class="exercise">
+<p><strong>Latihan 1.20</strong>. <em>Ubah
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mn>7482</mn><msub><mo stretchy="false" form="postfix">)</mo><mn>10</mn></msub></mrow><annotation encoding="application/x-tex">(7482)_{10}</annotation></semantics></math>
+ke notasi basis 6.</em></p>
+</div>
+<div class="exercise">
+<p><strong>Latihan 1.21</strong>. <em>Ubah
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mn>98156</mn><msub><mo stretchy="false" form="postfix">)</mo><mn>10</mn></msub></mrow><annotation encoding="application/x-tex">(98156)_{10}</annotation></semantics></math>
+ke notasi basis 8.</em></p>
+</div>
+<div class="exercise">
+<p><strong>Latihan 1.22</strong>. <em>Ubah
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mn>101011101</mn><msub><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">(101011101)_2</annotation></semantics></math>
+ke notasi desimal.</em></p>
+</div>
+<div class="exercise">
+<p><strong>Latihan 1.23</strong>. <em>Ubah
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mi>B</mi><mn>6</mn><mi>C</mi><mn>7</mn><mi>D</mi><msub><mo stretchy="false" form="postfix">)</mo><mn>16</mn></msub></mrow><annotation encoding="application/x-tex">(AB6C7D)_{16}</annotation></semantics></math>
+ke notasi desimal.</em></p>
+</div>
+<div class="exercise">
+<p><strong>Latihan 1.24</strong>. <em>Ubah
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mn>9</mn><mi>A</mi><mn>0</mn><mi>B</mi><msub><mo stretchy="false" form="postfix">)</mo><mn>16</mn></msub></mrow><annotation encoding="application/x-tex">(9A0B)_{16}</annotation></semantics></math>
+ke notasi biner.</em></p>
+</div>
+</section>
+</section>
+<section id="gcd" class="level2" data-number="1.5">
+<h2 data-number="1.5"><span class="header-section-number">1.5</span>
+Faktor Persekutuan Terbesar</h2>
+<div class="discussion">
+<p>Pada bagian ini kita mendefinisikan faktor persekutuan terbesar (FPB)
+dari dua bilangan bulat dan membahas sifat-sifatnya. Kita juga
+membuktikan bahwa FPB dua bilangan bulat merupakan kombinasi linear dari
+kedua bilangan tersebut.</p>
+<p>Jika dua bilangan bulat
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>a</mi><annotation encoding="application/x-tex">a</annotation></semantics></math>
+dan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>b</mi><annotation encoding="application/x-tex">b</annotation></semantics></math>
+tidak keduanya
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>0</mn><annotation encoding="application/x-tex">0</annotation></semantics></math>,
+setidaknya salah satunya taknol dan hanya mempunyai berhingga banyak
+pembagi (lihat Latihan <a href="1-chap-WOaD.html#exer-sizeofdivisors"
+data-reference-type="ref"
+data-reference="exer-sizeofdivisors">1.12</a>). Karena itu,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>a</mi><annotation encoding="application/x-tex">a</annotation></semantics></math>
+dan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>b</mi><annotation encoding="application/x-tex">b</annotation></semantics></math>
+hanya mempunyai berhingga banyak pembagi bersama. Pada bagian ini kita
+membahas pembagi terbesar di antara pembagi-pembagi bersama
+tersebut.</p>
+</div>
+<div class="definition">
+<p><strong>Definisi 1.22</strong>. <em>Untuk
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>,</mo><mi>b</mi><mo>∈</mo><mi mathvariant="double-struck">ℤ</mi></mrow><annotation encoding="application/x-tex">a,b\in{\mathbb Z}</annotation></semantics></math>
+yang tidak keduanya nol, <span><strong>faktor persekutuan
+terbesar</strong></span> adalah bilangan bulat terbesar yang membagi
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>a</mi><annotation encoding="application/x-tex">a</annotation></semantics></math>
+sekaligus
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>b</mi><annotation encoding="application/x-tex">b</annotation></semantics></math>,
+dan ditulis
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">gcd</mi><mo>&#8289;</mo></mrow><mo stretchy="false" form="prefix">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\gcd(a,b)</annotation></semantics></math>
+(atau kadang-kadang cukup
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(a,b)</annotation></semantics></math>).</em></p>
+<p><em>Jika hal ini menyederhanakan suatu rumus, kita menetapkan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">gcd</mi><mo>&#8289;</mo></mrow><mo stretchy="false" form="prefix">(</mo><mn>0</mn><mo>,</mo><mn>0</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\gcd(0,0)=0</annotation></semantics></math>.</em></p>
+</div>
+<div id="eg-gcda" class="example">
+<p><strong>Contoh 1.23</strong>. <em>Faktor persekutuan terbesar dari 24
+dan 18 adalah 6. Dengan kata lain,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">gcd</mi><mo>&#8289;</mo></mrow><mo stretchy="false" form="prefix">(</mo><mn>24</mn><mo>,</mo><mn>18</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>6</mn></mrow><annotation encoding="application/x-tex">\gcd(24,18)=6</annotation></semantics></math>.</em></p>
+</div>
+<div class="definition">
+<p><strong>Definisi 1.24</strong>. <em>Bilangan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>,</mo><mi>b</mi><mo>∈</mo><mi mathvariant="double-struck">ℤ</mi></mrow><annotation encoding="application/x-tex">a,b\in{\mathbb Z}</annotation></semantics></math>
+disebut <span><strong>relatif prima</strong></span> jika
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">gcd</mi><mo>&#8289;</mo></mrow><mo stretchy="false" form="prefix">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">\gcd(a,b)=1</annotation></semantics></math>.</em></p>
+</div>
+<div id="eg-gcdb" class="example">
+<p><strong>Contoh 1.25</strong>. <em>Faktor persekutuan terbesar dari 9
+dan 16 adalah 1; jadi, kedua bilangan tersebut relatif prima.</em></p>
+</div>
+<div class="discussion">
+<p>Perhatikan bahwa setiap bilangan bulat mempunyai pembagi positif dan
+negatif. Jika
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>a</mi><annotation encoding="application/x-tex">a</annotation></semantics></math>
+adalah pembagi positif dari
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>m</mi><annotation encoding="application/x-tex">m</annotation></semantics></math>,
+maka
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>−</mi><mi>a</mi></mrow><annotation encoding="application/x-tex">-a</annotation></semantics></math>
+juga merupakan pembagi dari
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>m</mi><annotation encoding="application/x-tex">m</annotation></semantics></math>.
+Karena itu, dari definisi faktor persekutuan terbesar terlihat bahwa
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">gcd</mi><mo>&#8289;</mo></mrow><mo stretchy="false" form="prefix">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mrow><mi mathvariant="normal">gcd</mi><mo>&#8289;</mo></mrow><mo stretchy="false" form="prefix">(</mo><mo stretchy="false" form="prefix">|</mo><mi>a</mi><mo stretchy="false" form="prefix">|</mo><mo>,</mo><mo stretchy="false" form="prefix">|</mo><mi>b</mi><mo stretchy="false" form="prefix">|</mo><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\gcd(a,b)=\gcd(|a|, |b|)</annotation></semantics></math>.</p>
+<p>Kita dapat menggunakan FPB dua bilangan bulat untuk membentuk
+bilangan-bilangan yang relatif prima:</p>
+</div>
+<div id="thm-dividebygcd" class="theorem">
+<p><strong>Teorema 1.26</strong>. <em>Jika
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>,</mo><mi>b</mi><mo>∈</mo><mi mathvariant="double-struck">ℤ</mi></mrow><annotation encoding="application/x-tex">a,b\in{\mathbb Z}</annotation></semantics></math>
+tidak keduanya nol dan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">gcd</mi><mo>&#8289;</mo></mrow><mo stretchy="false" form="prefix">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>d</mi></mrow><annotation encoding="application/x-tex">\gcd(a,b)=d</annotation></semantics></math>,
+maka<br />
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">gcd</mi><mo>&#8289;</mo></mrow><mo stretchy="false" form="prefix">(</mo><mi>a</mi><mi>/</mi><mi>d</mi><mo>,</mo><mi>b</mi><mi>/</mi><mi>d</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">\gcd(a/d,b/d)=1</annotation></semantics></math>.</em></p>
+</div>
+<div class="proof">
+<p><em>Bukti.</em> Ambil
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>,</mo><mi>b</mi><mo>∈</mo><mi mathvariant="double-struck">ℤ</mi></mrow><annotation encoding="application/x-tex">a,b\in{\mathbb Z}</annotation></semantics></math>.
+Kita akan menunjukkan bahwa
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mi>/</mi><mi>d</mi></mrow><annotation encoding="application/x-tex">a/d</annotation></semantics></math>
+dan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>b</mi><mi>/</mi><mi>d</mi></mrow><annotation encoding="application/x-tex">b/d</annotation></semantics></math>
+tidak mempunyai pembagi bersama positif selain
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>1</mn><annotation encoding="application/x-tex">1</annotation></semantics></math>.
+Misalkan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi><mo>∈</mo><mi mathvariant="double-struck">ℕ</mi></mrow><annotation encoding="application/x-tex">k\in{\mathbb N}</annotation></semantics></math>
+membagi
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mi>/</mi><mi>d</mi></mrow><annotation encoding="application/x-tex">a/d</annotation></semantics></math>
+sekaligus
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>b</mi><mi>/</mi><mi>d</mi></mrow><annotation encoding="application/x-tex">b/d</annotation></semantics></math>.
+Maka
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>∃</mo><mi>m</mi><mo>,</mo><mi>n</mi><mo>∈</mo><mi mathvariant="double-struck">ℤ</mi></mrow><annotation encoding="application/x-tex">\exists m,n\in{\mathbb Z}</annotation></semantics></math>
+sedemikian sehingga
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mi>/</mi><mi>d</mi><mo>=</mo><mi>k</mi><mi>m</mi><mspace width="0.714em"></mspace><mtext mathvariant="normal">dan</mtext><mspace width="0.222em"></mspace><mspace width="0.222em"></mspace><mi>b</mi><mi>/</mi><mi>d</mi><mo>=</mo><mi>k</mi><mi>n</mi></mrow><annotation encoding="application/x-tex">\begin{equation*}
+a/d=km \hspace{0.3cm}\mbox{dan} \ \  b/d=kn
+\end{equation*}</annotation></semantics></math> Dengan demikian,
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>=</mo><mi>k</mi><mi>m</mi><mi>d</mi><mspace width="0.714em"></mspace><mtext mathvariant="normal">dan</mtext><mspace width="0.222em"></mspace><mspace width="0.222em"></mspace><mi>b</mi><mo>=</mo><mi>k</mi><mi>n</mi><mi>d</mi><mi>.</mi></mrow><annotation encoding="application/x-tex">\begin{equation*}
+a=kmd \hspace{0.3cm}\mbox{dan} \ \  b=knd.
+\end{equation*}</annotation></semantics></math> Jadi,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi><mi>d</mi></mrow><annotation encoding="application/x-tex">kd</annotation></semantics></math>
+merupakan pembagi bersama dari
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>a</mi><annotation encoding="application/x-tex">a</annotation></semantics></math>
+dan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>b</mi><annotation encoding="application/x-tex">b</annotation></semantics></math>.
+Selain itu,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi><mi>d</mi><mo>≥</mo><mi>d</mi></mrow><annotation encoding="application/x-tex">kd\geq d</annotation></semantics></math>.
+Namun,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>d</mi><annotation encoding="application/x-tex">d</annotation></semantics></math>
+adalah faktor persekutuan terbesar dari
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>a</mi><annotation encoding="application/x-tex">a</annotation></semantics></math>
+dan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>b</mi><annotation encoding="application/x-tex">b</annotation></semantics></math>,
+sehingga
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi><mi>d</mi><mo>≤</mo><mi>d</mi></mrow><annotation encoding="application/x-tex">kd\leq d</annotation></semantics></math>.
+Oleh karena itu,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">k=1</annotation></semantics></math>. ◻</p>
+</div>
+<div class="discussion">
+<p>Teorema berikut menunjukkan bahwa faktor persekutuan terbesar dari
+dua bilangan bulat tidak berubah ketika suatu kelipatan dari salah
+satunya ditambahkan pada bilangan yang lain.</p>
+</div>
+<div class="theorem">
+<p><strong>Teorema 1.27</strong>. <em>Misalkan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>,</mo><mi>b</mi><mo>,</mo><mi>c</mi><mo>∈</mo><mi mathvariant="double-struck">ℤ</mi></mrow><annotation encoding="application/x-tex">a,b,c\in{\mathbb Z}</annotation></semantics></math>.
+Maka
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">gcd</mi><mo>&#8289;</mo></mrow><mo stretchy="false" form="prefix">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mrow><mi mathvariant="normal">gcd</mi><mo>&#8289;</mo></mrow><mo stretchy="false" form="prefix">(</mo><mi>a</mi><mo>+</mo><mi>c</mi><mi>b</mi><mo>,</mo><mi>b</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\gcd(a,b)=\gcd(a+cb,b)</annotation></semantics></math>.</em></p>
+</div>
+<div class="proof">
+<p><em>Bukti.</em> Kita akan menunjukkan bahwa setiap pembagi bersama
+dari
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>a</mi><annotation encoding="application/x-tex">a</annotation></semantics></math>
+dan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>b</mi><annotation encoding="application/x-tex">b</annotation></semantics></math>
+juga merupakan pembagi bersama dari
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>+</mo><mi>c</mi><mi>b</mi></mrow><annotation encoding="application/x-tex">a+cb</annotation></semantics></math>
+dan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>b</mi><annotation encoding="application/x-tex">b</annotation></semantics></math>,
+demikian pula sebaliknya. Jadi, kedua pasangan itu mempunyai himpunan
+pembagi bersama yang persis sama. Karena itu, faktor persekutuan
+terbesar dari
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>a</mi><annotation encoding="application/x-tex">a</annotation></semantics></math>
+dan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>b</mi><annotation encoding="application/x-tex">b</annotation></semantics></math>
+juga menjadi faktor persekutuan terbesar dari
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>+</mo><mi>c</mi><mi>b</mi></mrow><annotation encoding="application/x-tex">a+cb</annotation></semantics></math>
+dan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>b</mi><annotation encoding="application/x-tex">b</annotation></semantics></math>.
+Misalkan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>k</mi><annotation encoding="application/x-tex">k</annotation></semantics></math>
+adalah pembagi bersama dari
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>a</mi><annotation encoding="application/x-tex">a</annotation></semantics></math>
+dan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>b</mi><annotation encoding="application/x-tex">b</annotation></semantics></math>.
+Menurut Teorema <a href="1-chap-WOaD.html#thm-divisibilitylincombs"
+data-reference-type="ref"
+data-reference="thm-divisibilitylincombs">1.15</a>,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi><mo>∣</mo><mo stretchy="false" form="prefix">(</mo><mi>a</mi><mo>+</mo><mi>c</mi><mi>b</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">k \mid (a+cb)</annotation></semantics></math>,
+sehingga
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>k</mi><annotation encoding="application/x-tex">k</annotation></semantics></math>
+membagi
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>+</mo><mi>c</mi><mi>b</mi></mrow><annotation encoding="application/x-tex">a+cb</annotation></semantics></math>.
+Sekarang misalkan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>l</mi><annotation encoding="application/x-tex">l</annotation></semantics></math>
+adalah pembagi bersama dari
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>+</mo><mi>c</mi><mi>b</mi></mrow><annotation encoding="application/x-tex">a+cb</annotation></semantics></math>
+dan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>b</mi><annotation encoding="application/x-tex">b</annotation></semantics></math>.
+Sekali lagi, menurut Teorema <a
+href="1-chap-WOaD.html#thm-divisibilitylincombs"
+data-reference-type="ref"
+data-reference="thm-divisibilitylincombs">1.15</a>,
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>l</mi><mo>∣</mo><mo stretchy="false" form="prefix">(</mo><mo stretchy="false" form="prefix">(</mo><mi>a</mi><mo>+</mo><mi>c</mi><mi>b</mi><mo stretchy="false" form="postfix">)</mo><mo>−</mo><mi>c</mi><mi>b</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>a</mi><mi>.</mi></mrow><annotation encoding="application/x-tex">\begin{equation*}
+l\mid ((a+cb)-cb)=a.
+\end{equation*}</annotation></semantics></math> Jadi,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>l</mi><annotation encoding="application/x-tex">l</annotation></semantics></math>
+merupakan pembagi bersama dari
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>a</mi><annotation encoding="application/x-tex">a</annotation></semantics></math>
+dan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>b</mi><annotation encoding="application/x-tex">b</annotation></semantics></math>,
+dan hasil yang dimaksud pun terbukti. ◻</p>
+</div>
+<div id="eg-gcdc" class="example">
+<p><strong>Contoh 1.28</strong>. <em>Perhatikan bahwa
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">gcd</mi><mo>&#8289;</mo></mrow><mo stretchy="false" form="prefix">(</mo><mn>4</mn><mo>,</mo><mn>14</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mrow><mi mathvariant="normal">gcd</mi><mo>&#8289;</mo></mrow><mo stretchy="false" form="prefix">(</mo><mn>4</mn><mo>,</mo><mn>14</mn><mo>−</mo><mn>3</mn><mo>⋅</mo><mn>4</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mrow><mi mathvariant="normal">gcd</mi><mo>&#8289;</mo></mrow><mo stretchy="false" form="prefix">(</mo><mn>4</mn><mo>,</mo><mn>2</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">\gcd(4,14)=\gcd(4,14-3\cdot 4)=\gcd(4,2)=2</annotation></semantics></math>.</em></p>
+</div>
+<div class="discussion">
+<p>Sekarang kita menyajikan teorema yang membuktikan bahwa faktor
+persekutuan terbesar dari dua bilangan bulat dapat ditulis sebagai
+kombinasi linear dari kedua bilangan tersebut.</p>
+</div>
+<div id="thm-gcdislincomb" class="theorem">
+<p><strong>Teorema 1.29</strong>. <em></em></p>
+<p><em>Misalkan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>,</mo><mi>b</mi><mo>∈</mo><mi mathvariant="double-struck">ℤ</mi></mrow><annotation encoding="application/x-tex">a,b\in{\mathbb Z}</annotation></semantics></math>
+tidak keduanya nol. Maka
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">gcd</mi><mo>&#8289;</mo></mrow><mo stretchy="false" form="prefix">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\gcd(a,b)</annotation></semantics></math>
+adalah bilangan asli terkecil yang berbentuk
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi><mo>=</mo><mi>m</mi><mi>a</mi><mo>+</mo><mi>n</mi><mi>b</mi></mrow><annotation encoding="application/x-tex">d=ma+nb</annotation></semantics></math>
+untuk suatu
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi><mo>,</mo><mi>n</mi><mo>∈</mo><mi mathvariant="double-struck">ℤ</mi></mrow><annotation encoding="application/x-tex">m,n\in{\mathbb Z}</annotation></semantics></math>.</em></p>
+</div>
+<div class="proof">
+<p><em>Bukti.</em> Dengan mengganti
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>a</mi><annotation encoding="application/x-tex">a</annotation></semantics></math>
+dan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>b</mi><annotation encoding="application/x-tex">b</annotation></semantics></math>
+masing-masing oleh
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">|</mo><mi>a</mi><mo stretchy="false" form="prefix">|</mo></mrow><annotation encoding="application/x-tex">|a|</annotation></semantics></math>
+dan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">|</mo><mi>b</mi><mo stretchy="false" form="prefix">|</mo></mrow><annotation encoding="application/x-tex">|b|</annotation></semantics></math>
+serta menyerap tandanya ke dalam koefisien, tanpa mengurangi keumuman
+kita dapat menganggap
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>,</mo><mi>b</mi><mo>≥</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">a,b\geq 0</annotation></semantics></math>
+dan tidak keduanya nol. Tinjau himpunan
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>S</mi><mo>=</mo><mo stretchy="false" form="prefix">{</mo><mi>d</mi><mo>∈</mo><mi mathvariant="double-struck">ℕ</mi><mo>∣</mo><mi>d</mi><mo>=</mo><mi>m</mi><mi>a</mi><mo>+</mo><mi>n</mi><mi>b</mi><mrow><mspace width="0.333em"></mspace><mtext mathvariant="normal"> untuk suatu </mtext><mspace width="0.333em"></mspace></mrow><mi>m</mi><mo>,</mo><mi>n</mi><mo>∈</mo><mi mathvariant="double-struck">ℤ</mi><mo stretchy="false" form="postfix">}</mo><mspace width="0.222em"></mspace><mi>.</mi></mrow><annotation encoding="application/x-tex">\begin{equation*}
+S=\{d\in{\mathbb N}\mid d=ma+nb\text{\ untuk suatu\ }m,n\in{\mathbb Z}\}\ .
+\end{equation*}</annotation></semantics></math>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>S</mi><annotation encoding="application/x-tex">S</annotation></semantics></math>
+tidak kosong karena setidaknya salah satu dari
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>a</mi><annotation encoding="application/x-tex">a</annotation></semantics></math>
+dan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>b</mi><annotation encoding="application/x-tex">b</annotation></semantics></math>
+positif. Jika
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>&gt;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">a&gt;0</annotation></semantics></math>,
+maka
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>=</mo><mn>1</mn><mo>⋅</mo><mi>a</mi><mo>+</mo><mn>0</mn><mo>⋅</mo><mi>b</mi><mo>∈</mo><mi>S</mi></mrow><annotation encoding="application/x-tex">a=1\cdot a+0\cdot b\in S</annotation></semantics></math>;
+jika
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>b</mi><mo>&gt;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">b&gt;0</annotation></semantics></math>,
+maka
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>b</mi><mo>=</mo><mn>0</mn><mo>⋅</mo><mi>a</mi><mo>+</mo><mn>1</mn><mo>⋅</mo><mi>b</mi><mo>∈</mo><mi>S</mi></mrow><annotation encoding="application/x-tex">b=0\cdot a+1\cdot b\in S</annotation></semantics></math>.
+Misalkan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi><mo>∈</mo><mi mathvariant="double-struck">ℕ</mi></mrow><annotation encoding="application/x-tex">d\in{\mathbb N}</annotation></semantics></math>
+adalah elemen terkecil dari
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>S</mi><annotation encoding="application/x-tex">S</annotation></semantics></math>;
+keberadaannya dijamin oleh Prinsip Keterurutan Baik. Karena
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi><mo>∈</mo><mi>S</mi></mrow><annotation encoding="application/x-tex">d\in S</annotation></semantics></math>,
+terdapat
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi><mo>,</mo><mi>n</mi><mo>∈</mo><mi mathvariant="double-struck">ℤ</mi></mrow><annotation encoding="application/x-tex">m,n\in{\mathbb Z}</annotation></semantics></math>
+sedemikian sehingga
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi><mo>=</mo><mi>m</mi><mi>a</mi><mo>+</mo><mi>n</mi><mi>b</mi></mrow><annotation encoding="application/x-tex">d=ma+nb</annotation></semantics></math>.
+Kita masih harus membuktikan bahwa
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>d</mi><annotation encoding="application/x-tex">d</annotation></semantics></math>
+membagi
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>a</mi><annotation encoding="application/x-tex">a</annotation></semantics></math>
+sekaligus
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>b</mi><annotation encoding="application/x-tex">b</annotation></semantics></math>
+dan bahwa
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>d</mi><annotation encoding="application/x-tex">d</annotation></semantics></math>
+adalah pembagi bersama terbesar dengan sifat tersebut.</p>
+<p>Menurut Algoritma Pembagian,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>∃</mo><mi>q</mi><mo>,</mo><mi>r</mi><mo>∈</mo><mi mathvariant="double-struck">ℤ</mi></mrow><annotation encoding="application/x-tex">\exists q,r\in{\mathbb Z}</annotation></semantics></math>
+sedemikian sehingga
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>=</mo><mi>q</mi><mi>d</mi><mo>+</mo><mi>r</mi><mo>,</mo><mspace width="0.222em"></mspace><mspace width="0.222em"></mspace><mspace width="0.222em"></mspace><mn>0</mn><mo>≤</mo><mi>r</mi><mo>&lt;</mo><mi>d</mi><mi>.</mi></mrow><annotation encoding="application/x-tex">\begin{equation*}
+a=qd+r, \ \ \ 0\leq r&lt;d.
+\end{equation*}</annotation></semantics></math> Dengan demikian,
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>r</mi><mo>=</mo><mi>a</mi><mo>−</mo><mi>q</mi><mi>d</mi><mo>=</mo><mi>a</mi><mo>−</mo><mi>q</mi><mo stretchy="false" form="prefix">(</mo><mi>m</mi><mi>a</mi><mo>+</mo><mi>n</mi><mi>b</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>−</mo><mi>q</mi><mi>m</mi><mo stretchy="false" form="postfix">)</mo><mi>a</mi><mo>−</mo><mi>q</mi><mi>n</mi><mi>b</mi><mi>.</mi></mrow><annotation encoding="application/x-tex">\begin{equation*}
+r=a-qd=a-q(ma+nb)=(1-qm)a-qnb.
+\end{equation*}</annotation></semantics></math> Jadi,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>r</mi><annotation encoding="application/x-tex">r</annotation></semantics></math>
+merupakan kombinasi linear dari
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>a</mi><annotation encoding="application/x-tex">a</annotation></semantics></math>
+dan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>b</mi><annotation encoding="application/x-tex">b</annotation></semantics></math>.
+Karena
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn><mo>≤</mo><mi>r</mi><mo>&lt;</mo><mi>d</mi></mrow><annotation encoding="application/x-tex">0\leq r&lt;d</annotation></semantics></math>
+dan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>d</mi><annotation encoding="application/x-tex">d</annotation></semantics></math>
+adalah bilangan bulat positif terkecil yang merupakan kombinasi linear
+dari
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>a</mi><annotation encoding="application/x-tex">a</annotation></semantics></math>
+dan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>b</mi><annotation encoding="application/x-tex">b</annotation></semantics></math>,
+haruslah
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>r</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">r=0</annotation></semantics></math>,
+sehingga
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>=</mo><mi>q</mi><mi>d</mi></mrow><annotation encoding="application/x-tex">a=qd</annotation></semantics></math>.
+Jadi,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi><mo>∣</mo><mi>a</mi></mrow><annotation encoding="application/x-tex">d\mid a</annotation></semantics></math>.</p>
+<p>Argumen yang sama menunjukkan bahwa
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi><mo>∣</mo><mi>b</mi></mrow><annotation encoding="application/x-tex">d\mid b</annotation></semantics></math>.</p>
+<p>Sekarang, misalkan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>c</mi><annotation encoding="application/x-tex">c</annotation></semantics></math>
+membagi
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>a</mi><annotation encoding="application/x-tex">a</annotation></semantics></math>
+sekaligus
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>b</mi><annotation encoding="application/x-tex">b</annotation></semantics></math>.
+Menurut Teorema <a href="1-chap-WOaD.html#thm-divisibilitylincombs"
+data-reference-type="ref"
+data-reference="thm-divisibilitylincombs">1.15</a>,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>c</mi><annotation encoding="application/x-tex">c</annotation></semantics></math>
+membagi setiap kombinasi linear dari
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>a</mi><annotation encoding="application/x-tex">a</annotation></semantics></math>
+dan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>b</mi><annotation encoding="application/x-tex">b</annotation></semantics></math>.
+Jadi,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>c</mi><mo>∣</mo><mi>d</mi></mrow><annotation encoding="application/x-tex">c\mid d</annotation></semantics></math>.
+Hal ini membuktikan bahwa setiap pembagi bersama dari
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>a</mi><annotation encoding="application/x-tex">a</annotation></semantics></math>
+dan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>b</mi><annotation encoding="application/x-tex">b</annotation></semantics></math>
+membagi
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>d</mi><annotation encoding="application/x-tex">d</annotation></semantics></math>.
+Karena itu,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>c</mi><mo>≤</mo><mi>d</mi></mrow><annotation encoding="application/x-tex">c\leq d</annotation></semantics></math>,
+dan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>d</mi><annotation encoding="application/x-tex">d</annotation></semantics></math>
+adalah faktor persekutuan terbesar. ◻</p>
+</div>
+<div class="discussion">
+<p>Berikut suatu penerapan sederhana yang akan sangat berguna kelak:</p>
+</div>
+<div id="cor-intlincombrelprime" class="corollary">
+<p><strong>Akibat 1.30</strong>. <em>Jika
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>,</mo><mi>b</mi><mo>∈</mo><mi mathvariant="double-struck">ℤ</mi></mrow><annotation encoding="application/x-tex">a,b\in{\mathbb Z}</annotation></semantics></math>
+relatif prima, maka
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>∃</mo><mi>m</mi><mo>,</mo><mi>n</mi><mo>∈</mo><mi mathvariant="double-struck">ℤ</mi></mrow><annotation encoding="application/x-tex">\exists m,n\in{\mathbb Z}</annotation></semantics></math>
+sedemikian sehingga
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi><mi>a</mi><mo>+</mo><mi>n</mi><mi>b</mi><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">ma+nb=1</annotation></semantics></math>.</em></p>
+</div>
+<div class="definition">
+<p><strong>Definisi 1.31</strong>. <em>Untuk suatu
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>∈</mo><mi mathvariant="double-struck">ℕ</mi></mrow><annotation encoding="application/x-tex">n\in{\mathbb N}</annotation></semantics></math>,
+misalkan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>,</mo><msub><mi>a</mi><mn>2</mn></msub><mo>,</mo><mi>…</mi><mo>,</mo><msub><mi>a</mi><mi>n</mi></msub><mo>∈</mo><mi mathvariant="double-struck">ℤ</mi></mrow><annotation encoding="application/x-tex">a_1,a_2,\dots,a_n\in{\mathbb Z}</annotation></semantics></math>
+tidak semuanya
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>0</mn><annotation encoding="application/x-tex">0</annotation></semantics></math>.
+<span><strong>Faktor persekutuan terbesar</strong></span> dari
+bilangan-bilangan tersebut adalah bilangan bulat terbesar yang membagi
+semuanya, dan dilambangkan dengan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">gcd</mi><mo>&#8289;</mo></mrow><mo stretchy="false" form="prefix">(</mo><msub><mi>a</mi><mn>1</mn></msub><mo>,</mo><mi>…</mi><mo>,</mo><msub><mi>a</mi><mi>n</mi></msub><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\gcd(a_1,\dots,a_n)</annotation></semantics></math>.</em></p>
+</div>
+<div class="definition">
+<p><strong>Definisi 1.32</strong>. <em>Untuk suatu
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>∈</mo><mi mathvariant="double-struck">ℕ</mi></mrow><annotation encoding="application/x-tex">n\in{\mathbb N}</annotation></semantics></math>,
+bilangan-bilangan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>,</mo><msub><mi>a</mi><mn>2</mn></msub><mo>,</mo><mi>…</mi><mo>,</mo><msub><mi>a</mi><mi>n</mi></msub><mo>∈</mo><mi mathvariant="double-struck">ℤ</mi></mrow><annotation encoding="application/x-tex">a_1,a_2,\dots,a_n\in{\mathbb Z}</annotation></semantics></math>
+disebut <span><strong>relatif prima secara bersama-sama</strong></span>
+jika
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">gcd</mi><mo>&#8289;</mo></mrow><mo stretchy="false" form="prefix">(</mo><msub><mi>a</mi><mn>1</mn></msub><mo>,</mo><msub><mi>a</mi><mn>2</mn></msub><mo>,</mo><mi>…</mi><mo>,</mo><msub><mi>a</mi><mi>n</mi></msub><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">\gcd(a_1,a_2,\dots,a_n)=1</annotation></semantics></math>.</em></p>
+</div>
+<div id="eg-mutrelprime" class="example">
+<p><strong>Contoh 1.33</strong>. <em>Bilangan-bilangan bulat
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>3</mn><mo>,</mo><mn>6</mn><mo>,</mo><mn>7</mn></mrow><annotation encoding="application/x-tex">3, 6, 7</annotation></semantics></math>
+relatif prima secara bersama-sama karena
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mn>3</mn><mo>,</mo><mn>6</mn><mo>,</mo><mn>7</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">(3,6,7)=1</annotation></semantics></math>,
+meskipun
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mn>3</mn><mo>,</mo><mn>6</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>3</mn></mrow><annotation encoding="application/x-tex">(3,6)=3</annotation></semantics></math>.</em></p>
+</div>
+<div class="definition">
+<p><strong>Definisi 1.34</strong>. <em>Untuk suatu
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>∈</mo><mi mathvariant="double-struck">ℕ</mi></mrow><annotation encoding="application/x-tex">n\in{\mathbb N}</annotation></semantics></math>,
+bilangan-bilangan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>,</mo><msub><mi>a</mi><mn>2</mn></msub><mo>,</mo><mi>…</mi><mo>,</mo><msub><mi>a</mi><mi>n</mi></msub><mo>∈</mo><mi mathvariant="double-struck">ℤ</mi></mrow><annotation encoding="application/x-tex">a_1,a_2,\dots,a_n\in{\mathbb Z}</annotation></semantics></math>
+disebut <span><strong>relatif prima berpasangan</strong></span> jika
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>∀</mo><mi>i</mi><mo>,</mo><mi>j</mi><mo>∈</mo><mi mathvariant="double-struck">ℕ</mi></mrow><annotation encoding="application/x-tex">\forall i,j\in{\mathbb N}</annotation></semantics></math>
+dengan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>i</mi><mo>≤</mo><mi>n</mi></mrow><annotation encoding="application/x-tex">i\le n</annotation></semantics></math>,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>j</mi><mo>≤</mo><mi>n</mi></mrow><annotation encoding="application/x-tex">j\le n</annotation></semantics></math>,
+dan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>i</mi><mo>≠</mo><mi>j</mi></mrow><annotation encoding="application/x-tex">i\neq j</annotation></semantics></math>,
+berlaku
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">gcd</mi><mo>&#8289;</mo></mrow><mo stretchy="false" form="prefix">(</mo><msub><mi>a</mi><mi>i</mi></msub><mo>,</mo><msub><mi>a</mi><mi>j</mi></msub><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">\gcd(a_i,a_j)=1</annotation></semantics></math>.</em></p>
+</div>
+<div id="eg-pairwiserelprime" class="example">
+<p><strong>Contoh 1.35</strong>. <em>Bilangan-bilangan bulat
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>3</mn><mo>,</mo><mn>14</mn><mo>,</mo><mn>25</mn></mrow><annotation encoding="application/x-tex">3,14,25</annotation></semantics></math>
+relatif prima berpasangan. Perhatikan pula bahwa bilangan-bilangan
+tersebut relatif prima secara bersama-sama.</em></p>
+</div>
+<div class="proposition">
+<p><strong>Proposisi 1.36</strong>. <em>Untuk
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>∈</mo><mi mathvariant="double-struck">ℕ</mi></mrow><annotation encoding="application/x-tex">n\in{\mathbb N}</annotation></semantics></math>
+dengan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>≥</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">n\geq 2</annotation></semantics></math>
+dan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>,</mo><mi>…</mi><mo>,</mo><msub><mi>a</mi><mi>n</mi></msub><mo>∈</mo><mi mathvariant="double-struck">ℤ</mi></mrow><annotation encoding="application/x-tex">a_1,\dots,a_n\in{\mathbb Z}</annotation></semantics></math>,
+jika
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>,</mo><msub><mi>a</mi><mn>2</mn></msub><mo>,</mo><mi>…</mi><mo>,</mo><msub><mi>a</mi><mi>n</mi></msub></mrow><annotation encoding="application/x-tex">a_1,a_2,\dots,a_n</annotation></semantics></math>
+relatif prima berpasangan, maka bilangan-bilangan tersebut relatif prima
+secara bersama-sama.</em></p>
+</div>
+<section id="latihan-untuk-gcd" class="level3 unnumbered">
+<h3 class="unnumbered">Latihan untuk §<a href="1-chap-WOaD.html#gcd"
+data-reference-type="ref" data-reference="gcd">1.5</a></h3>
+<div class="exercise">
+<p><strong>Latihan 1.25</strong>. <em>Tentukan faktor persekutuan
+terbesar dari 15 dan 35.</em></p>
+</div>
+<div class="exercise">
+<p><strong>Latihan 1.26</strong>. <em>Tentukan faktor persekutuan
+terbesar dari 100 dan 104.</em></p>
+</div>
+<div class="exercise">
+<p><strong>Latihan 1.27</strong>. <em>Tentukan faktor persekutuan
+terbesar dari -30 dan 95.</em></p>
+</div>
+<div class="exercise">
+<p><strong>Latihan 1.28</strong>. <em>Misalkan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi><mo>∈</mo><mi mathvariant="double-struck">ℕ</mi></mrow><annotation encoding="application/x-tex">m\in{\mathbb N}</annotation></semantics></math>.
+Tentukan faktor persekutuan terbesar dari
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>m</mi><annotation encoding="application/x-tex">m</annotation></semantics></math>
+dan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi><mo>+</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">m+1</annotation></semantics></math>.</em></p>
+</div>
+<div class="exercise">
+<p><strong>Latihan 1.29</strong>. <em>Misalkan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi><mo>∈</mo><mi mathvariant="double-struck">ℕ</mi></mrow><annotation encoding="application/x-tex">m\in{\mathbb N}</annotation></semantics></math>.
+Tentukan faktor persekutuan terbesar dari
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>m</mi><annotation encoding="application/x-tex">m</annotation></semantics></math>
+dan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi><mo>+</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">m+2</annotation></semantics></math>.</em></p>
+</div>
+<div class="exercise">
+<p><strong>Latihan 1.30</strong>. <em>Tunjukkan bahwa jika
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi><mo>,</mo><mi>n</mi><mo>∈</mo><mi mathvariant="double-struck">ℤ</mi></mrow><annotation encoding="application/x-tex">m,n\in{\mathbb Z}</annotation></semantics></math>
+memenuhi
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">gcd</mi><mo>&#8289;</mo></mrow><mo stretchy="false" form="prefix">(</mo><mi>m</mi><mo>,</mo><mi>n</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">\gcd(m,n)=1</annotation></semantics></math>,
+maka
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">gcd</mi><mo>&#8289;</mo></mrow><mo stretchy="false" form="prefix">(</mo><mi>m</mi><mo>+</mo><mi>n</mi><mo>,</mo><mi>m</mi><mo>−</mo><mi>n</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">\gcd(m+n,m-n)=1</annotation></semantics></math>
+atau
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>2</mn><annotation encoding="application/x-tex">2</annotation></semantics></math>.</em></p>
+</div>
+<div class="exercise">
+<p><strong>Latihan 1.31</strong>. <em>Tunjukkan bahwa jika
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi><mo>∈</mo><mi mathvariant="double-struck">ℕ</mi></mrow><annotation encoding="application/x-tex">m\in{\mathbb N}</annotation></semantics></math>,
+maka
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>3</mn><mi>m</mi><mo>+</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">3m+2</annotation></semantics></math>
+dan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>5</mn><mi>m</mi><mo>+</mo><mn>3</mn></mrow><annotation encoding="application/x-tex">5m+3</annotation></semantics></math>
+relatif prima.</em></p>
+</div>
+<div class="exercise">
+<p><strong>Latihan 1.32</strong>. <em>Tunjukkan bahwa jika
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>,</mo><mi>b</mi><mo>∈</mo><mi mathvariant="double-struck">ℤ</mi></mrow><annotation encoding="application/x-tex">a,b\in{\mathbb Z}</annotation></semantics></math>
+relatif prima, maka
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">gcd</mi><mo>&#8289;</mo></mrow><mo stretchy="false" form="prefix">(</mo><mi>a</mi><mo>+</mo><mn>2</mn><mi>b</mi><mo>,</mo><mn>2</mn><mi>a</mi><mo>+</mo><mi>b</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">\gcd(a+2b,2a+b)=1</annotation></semantics></math>
+atau
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>3</mn><annotation encoding="application/x-tex">3</annotation></semantics></math>.</em></p>
+</div>
+<div class="exercise">
+<p><strong>Latihan 1.33</strong>. <em>Tunjukkan bahwa jika
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>,</mo><msub><mi>a</mi><mn>2</mn></msub><mo>,</mo><mi>…</mi><mo>,</mo><msub><mi>a</mi><mi>n</mi></msub><mo>∈</mo><mi mathvariant="double-struck">ℤ</mi></mrow><annotation encoding="application/x-tex">a_1,a_2,\dots,a_n\in{\mathbb Z}</annotation></semantics></math>
+tidak semuanya
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>0</mn><annotation encoding="application/x-tex">0</annotation></semantics></math>
+dan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>c</mi><mo>∈</mo><mi mathvariant="double-struck">ℕ</mi></mrow><annotation encoding="application/x-tex">c\in{\mathbb N}</annotation></semantics></math>,
+maka</em></p>
+<p><em><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">gcd</mi><mo>&#8289;</mo></mrow><mo stretchy="false" form="prefix">(</mo><mi>c</mi><msub><mi>a</mi><mn>1</mn></msub><mo>,</mo><mi>c</mi><msub><mi>a</mi><mn>2</mn></msub><mo>,</mo><mi>…</mi><mo>,</mo><mi>c</mi><msub><mi>a</mi><mi>n</mi></msub><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>c</mi><mo>⋅</mo><mrow><mi mathvariant="normal">gcd</mi><mo>&#8289;</mo></mrow><mo stretchy="false" form="prefix">(</mo><msub><mi>a</mi><mn>1</mn></msub><mo>,</mo><msub><mi>a</mi><mn>2</mn></msub><mo>,</mo><mi>…</mi><mo>,</mo><msub><mi>a</mi><mi>n</mi></msub><mo stretchy="false" form="postfix">)</mo><mi>.</mi></mrow><annotation encoding="application/x-tex">\gcd(ca_1,ca_2,\dots,ca_n)=c\cdot\gcd(a_1,a_2,\dots,a_n).</annotation></semantics></math></em></p>
+</div>
+</section>
+</section>
+<section id="sec-EA" class="level2" data-number="1.6">
+<h2 data-number="1.6"><span class="header-section-number">1.6</span>
+Algoritma Euklides</h2>
+<div class="discussion">
+<p>Pada bagian ini kita menjelaskan metode sistematis untuk menentukan
+faktor persekutuan terbesar dari dua bilangan bulat. Metode ini berasal
+dari Euklides dan karena itu disebut Algoritma Euklides.</p>
+</div>
+<div id="lem-gcdafterdivision" class="lemma">
+<p><strong>Lema 1.37</strong>. <em>Jika
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>,</mo><mi>b</mi><mo>,</mo><mi>q</mi><mo>,</mo><mi>r</mi><mo>∈</mo><mi mathvariant="double-struck">ℤ</mi></mrow><annotation encoding="application/x-tex">a,b,q,r\in{\mathbb Z}</annotation></semantics></math>
+dan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>=</mo><mi>q</mi><mi>b</mi><mo>+</mo><mi>r</mi></mrow><annotation encoding="application/x-tex">a=qb+r</annotation></semantics></math>,
+maka
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">gcd</mi><mo>&#8289;</mo></mrow><mo stretchy="false" form="prefix">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mrow><mi mathvariant="normal">gcd</mi><mo>&#8289;</mo></mrow><mo stretchy="false" form="prefix">(</mo><mi>r</mi><mo>,</mo><mi>b</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\gcd(a,b)=\gcd(r,b)</annotation></semantics></math>.</em></p>
+</div>
+<div class="proof">
+<p><em>Bukti.</em> Menurut sifat invariansi FPB terhadap penambahan
+kelipatan yang dibuktikan pada bagian sebelumnya,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">gcd</mi><mo>&#8289;</mo></mrow><mo stretchy="false" form="prefix">(</mo><mi>b</mi><mi>q</mi><mo>+</mo><mi>r</mi><mo>,</mo><mi>b</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mrow><mi mathvariant="normal">gcd</mi><mo>&#8289;</mo></mrow><mo stretchy="false" form="prefix">(</mo><mi>b</mi><mo>,</mo><mi>r</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\gcd(bq+r,b)=\gcd(b,r)</annotation></semantics></math>. ◻</p>
+</div>
+<div class="discussion">
+<p>Sekarang kita beralih ke bentuk umum Algoritma Euklides. Pada
+dasarnya, algoritma ini menyatakan bahwa faktor persekutuan terbesar
+dari dua bilangan bulat adalah sisa taknol terakhir dalam pembagian
+berulang.</p>
+</div>
+<div id="thm-euclideanalg" class="theorem">
+<p><strong>Teorema 1.38</strong>. <em>Misalkan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>,</mo><mi>b</mi><mo>∈</mo><mi mathvariant="double-struck">ℕ</mi></mrow><annotation encoding="application/x-tex">a,b\in{\mathbb N}</annotation></semantics></math>
+dan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>≥</mo><mi>b</mi></mrow><annotation encoding="application/x-tex">a\geq b</annotation></semantics></math>.
+Tetapkan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>r</mi><mn>0</mn></msub><mo>=</mo><mi>a</mi></mrow><annotation encoding="application/x-tex">r_0=a</annotation></semantics></math>,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>r</mi><mn>1</mn></msub><mo>=</mo><mi>b</mi></mrow><annotation encoding="application/x-tex">r_1=b</annotation></semantics></math>,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>s</mi><mn>0</mn></msub><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">s_0=1</annotation></semantics></math>,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>s</mi><mn>1</mn></msub><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">s_1=0</annotation></semantics></math>,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>t</mi><mn>0</mn></msub><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">t_0=0</annotation></semantics></math>,
+dan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>t</mi><mn>1</mn></msub><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">t_1=1</annotation></semantics></math>.
+Terapkan Algoritma Pembagian secara berulang: selama
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>r</mi><mrow><mi>j</mi><mo>+</mo><mn>1</mn></mrow></msub><mo>≠</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">r_{j+1}\neq 0</annotation></semantics></math>,
+tentukan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>q</mi><mrow><mi>j</mi><mo>+</mo><mn>1</mn></mrow></msub><mo>∈</mo><mi mathvariant="double-struck">ℕ</mi></mrow><annotation encoding="application/x-tex">q_{j+1}\in{\mathbb N}</annotation></semantics></math>
+dan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>r</mi><mrow><mi>j</mi><mo>+</mo><mn>2</mn></mrow></msub><mo>∈</mo><msub><mi mathvariant="double-struck">ℤ</mi><mrow><mo>≥</mo><mn>0</mn></mrow></msub></mrow><annotation encoding="application/x-tex">r_{j+2}\in{\mathbb Z}_{\geq 0}</annotation></semantics></math>
+sedemikian sehingga
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>r</mi><mi>j</mi></msub><mo>=</mo><msub><mi>r</mi><mrow><mi>j</mi><mo>+</mo><mn>1</mn></mrow></msub><msub><mi>q</mi><mrow><mi>j</mi><mo>+</mo><mn>1</mn></mrow></msub><mo>+</mo><msub><mi>r</mi><mrow><mi>j</mi><mo>+</mo><mn>2</mn></mrow></msub></mrow><annotation encoding="application/x-tex">r_j=r_{j+1}q_{j+1}+r_{j+2}</annotation></semantics></math>
+dan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn><mo>≤</mo><msub><mi>r</mi><mrow><mi>j</mi><mo>+</mo><mn>2</mn></mrow></msub><mo>&lt;</mo><msub><mi>r</mi><mrow><mi>j</mi><mo>+</mo><mn>1</mn></mrow></msub></mrow><annotation encoding="application/x-tex">0\leq r_{j+2}&lt;r_{j+1}</annotation></semantics></math>.
+Berhentilah pada indeks
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math>
+yang memenuhi
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>r</mi><mi>n</mi></msub><mo>&gt;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">r_n&gt;0</annotation></semantics></math>
+dan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>r</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msub><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">r_{n+1}=0</annotation></semantics></math>.
+Pada setiap langkah, tetapkan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>s</mi><mrow><mi>j</mi><mo>+</mo><mn>2</mn></mrow></msub><mo>=</mo><msub><mi>s</mi><mi>j</mi></msub><mo>−</mo><msub><mi>q</mi><mrow><mi>j</mi><mo>+</mo><mn>1</mn></mrow></msub><msub><mi>s</mi><mrow><mi>j</mi><mo>+</mo><mn>1</mn></mrow></msub></mrow><annotation encoding="application/x-tex">s_{j+2}=s_j-q_{j+1}s_{j+1}</annotation></semantics></math>
+dan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>t</mi><mrow><mi>j</mi><mo>+</mo><mn>2</mn></mrow></msub><mo>=</mo><msub><mi>t</mi><mi>j</mi></msub><mo>−</mo><msub><mi>q</mi><mrow><mi>j</mi><mo>+</mo><mn>1</mn></mrow></msub><msub><mi>t</mi><mrow><mi>j</mi><mo>+</mo><mn>1</mn></mrow></msub></mrow><annotation encoding="application/x-tex">t_{j+2}=t_j-q_{j+1}t_{j+1}</annotation></semantics></math>.
+Maka
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">gcd</mi><mo>&#8289;</mo></mrow><mo stretchy="false" form="prefix">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><msub><mi>r</mi><mi>n</mi></msub><mo>=</mo><msub><mi>s</mi><mi>n</mi></msub><mi>a</mi><mo>+</mo><msub><mi>t</mi><mi>n</mi></msub><mi>b</mi></mrow><annotation encoding="application/x-tex">\gcd(a,b)=r_n=s_na+t_nb</annotation></semantics></math>.</em></p>
+</div>
+<div class="proof">
+<p><em>Bukti.</em> Dengan menerapkan Algoritma Pembagian, diperoleh
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mtable><mtr><mtd columnalign="right" style="text-align: right; padding-right: 0"><msub><mi>r</mi><mi>j</mi></msub></mtd><mtd columnalign="left" style="text-align: left; padding-left: 0"><mo>=</mo><msub><mi>q</mi><mrow><mi>j</mi><mo>+</mo><mn>1</mn></mrow></msub><msub><mi>r</mi><mrow><mi>j</mi><mo>+</mo><mn>1</mn></mrow></msub><mo>+</mo><msub><mi>r</mi><mrow><mi>j</mi><mo>+</mo><mn>2</mn></mrow></msub><mo>,</mo></mtd><mtd columnalign="right" style="text-align: right; padding-right: 0"></mtd><mtd columnalign="left" style="text-align: left; padding-left: 0"><mn>0</mn><mo>≤</mo><msub><mi>r</mi><mrow><mi>j</mi><mo>+</mo><mn>2</mn></mrow></msub><mo>&lt;</mo><msub><mi>r</mi><mrow><mi>j</mi><mo>+</mo><mn>1</mn></mrow></msub><mspace width="1.0em"></mspace><mo stretchy="false" form="prefix">(</mo><mi>j</mi><mo>=</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo>,</mo><mi>…</mi><mo>,</mo><mi>n</mi><mo>−</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo><mi>.</mi></mtd></mtr></mtable><annotation encoding="application/x-tex">\begin{align*}
+r_j&amp;=q_{j+1}r_{j+1}+r_{j+2},
+    &amp;&amp;0\leq r_{j+2}&lt;r_{j+1}\quad (j=0,1,\dots,n-1).
+\end{align*}</annotation></semantics></math> Proses ini akhirnya
+menghasilkan sisa
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>0</mn><annotation encoding="application/x-tex">0</annotation></semantics></math>,
+sebab selama sisanya taknol, sisa-sisa tersebut membentuk barisan
+menurun ketat dari bilangan bulat taknegatif. Menurut Lema <a
+href="1-chap-WOaD.html#lem-gcdafterdivision" data-reference-type="ref"
+data-reference="lem-gcdafterdivision">1.37</a>,
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">gcd</mi><mo>&#8289;</mo></mrow><mo stretchy="false" form="prefix">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mrow><mi mathvariant="normal">gcd</mi><mo>&#8289;</mo></mrow><mo stretchy="false" form="prefix">(</mo><msub><mi>r</mi><mn>0</mn></msub><mo>,</mo><msub><mi>r</mi><mn>1</mn></msub><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mrow><mi mathvariant="normal">gcd</mi><mo>&#8289;</mo></mrow><mo stretchy="false" form="prefix">(</mo><msub><mi>r</mi><mi>n</mi></msub><mo>,</mo><msub><mi>r</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msub><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mrow><mi mathvariant="normal">gcd</mi><mo>&#8289;</mo></mrow><mo stretchy="false" form="prefix">(</mo><msub><mi>r</mi><mi>n</mi></msub><mo>,</mo><mn>0</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><msub><mi>r</mi><mi>n</mi></msub><mi>.</mi></mrow><annotation encoding="application/x-tex">\begin{equation*}
+\gcd(a,b)=\gcd(r_0,r_1)=\gcd(r_n,r_{n+1})=\gcd(r_n,0)=r_n.
+\end{equation*}</annotation></semantics></math> ◻</p>
+</div>
+<p>Versi lengkap teorema ini, yang menyertakan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>s</mi><mi>j</mi></msub><annotation encoding="application/x-tex">s_j</annotation></semantics></math>
+dan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>t</mi><mi>j</mi></msub><annotation encoding="application/x-tex">t_j</annotation></semantics></math>,
+disebut <span><strong>Algoritma Euklides diperluas</strong></span>,
+sedangkan versi yang lebih sederhana tanpa koefisien-koefisien tersebut
+disebut <span><strong>Algoritma Euklides</strong></span>.</p>
+<div class="discussion">
+<p>Pembaca yang teliti akan melihat bahwa kita belum membuktikan klaim
+bahwa
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>s</mi><mi>j</mi></msub><annotation encoding="application/x-tex">s_j</annotation></semantics></math>
+dan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>t</mi><mi>j</mi></msub><annotation encoding="application/x-tex">t_j</annotation></semantics></math>
+dapat digunakan untuk menuliskan FPB sebagai kombinasi linear dari
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>a</mi><annotation encoding="application/x-tex">a</annotation></semantics></math>
+dan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>b</mi><annotation encoding="application/x-tex">b</annotation></semantics></math>.
+Bukti tersebut diserahkan sebagai latihan di bawah ini.</p>
+</div>
+<div id="eg-EA" class="example">
+<p><strong>Contoh 1.39</strong>. <em>Kita akan menentukan faktor
+persekutuan terbesar dari
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>4147</mn><annotation encoding="application/x-tex">4147</annotation></semantics></math>
+dan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>10672</mn><annotation encoding="application/x-tex">10672</annotation></semantics></math>.
+Perhatikan bahwa
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mtable><mtr><mtd columnalign="right" style="text-align: right; padding-right: 0"><mn>10672</mn></mtd><mtd columnalign="left" style="text-align: left; padding-left: 0"><mo>=</mo><mn>4147</mn><mo>⋅</mo><mn>2</mn><mo>+</mo><mn>2378</mn><mo>,</mo></mtd></mtr><mtr><mtd columnalign="right" style="text-align: right; padding-right: 0"><mn>4147</mn></mtd><mtd columnalign="left" style="text-align: left; padding-left: 0"><mo>=</mo><mn>2378</mn><mo>⋅</mo><mn>1</mn><mo>+</mo><mn>1769</mn><mo>,</mo></mtd></mtr><mtr><mtd columnalign="right" style="text-align: right; padding-right: 0"><mn>2378</mn></mtd><mtd columnalign="left" style="text-align: left; padding-left: 0"><mo>=</mo><mn>1769</mn><mo>⋅</mo><mn>1</mn><mo>+</mo><mn>609</mn><mo>,</mo></mtd></mtr><mtr><mtd columnalign="right" style="text-align: right; padding-right: 0"><mn>1769</mn></mtd><mtd columnalign="left" style="text-align: left; padding-left: 0"><mo>=</mo><mn>609</mn><mo>⋅</mo><mn>2</mn><mo>+</mo><mn>551</mn><mo>,</mo></mtd></mtr><mtr><mtd columnalign="right" style="text-align: right; padding-right: 0"><mn>609</mn></mtd><mtd columnalign="left" style="text-align: left; padding-left: 0"><mo>=</mo><mn>551</mn><mo>⋅</mo><mn>1</mn><mo>+</mo><mn>58</mn><mo>,</mo></mtd></mtr><mtr><mtd columnalign="right" style="text-align: right; padding-right: 0"><mn>551</mn></mtd><mtd columnalign="left" style="text-align: left; padding-left: 0"><mo>=</mo><mn>58</mn><mo>⋅</mo><mn>9</mn><mo>+</mo><mn>29</mn><mo>,</mo></mtd></mtr><mtr><mtd columnalign="right" style="text-align: right; padding-right: 0"><mn>58</mn></mtd><mtd columnalign="left" style="text-align: left; padding-left: 0"><mo>=</mo><mn>29</mn><mo>⋅</mo><mn>2</mn><mo>,</mo></mtd></mtr><mtr><mtd columnalign="right" style="text-align: right; padding-right: 0"></mtd></mtr></mtable><annotation encoding="application/x-tex">\begin{align*}
+10672&amp;=4147\cdot 2+2378,\\
+ 4147&amp;=2378\cdot 1+1769,\\
+ 2378&amp;=1769\cdot 1+609,\\
+ 1769&amp;=609\cdot 2 +551,\\
+  609&amp;=551\cdot 1+58, \\
+  551&amp;=58\cdot 9+ 29,\\
+   58&amp;=29\cdot 2,\\
+\end{align*}</annotation></semantics></math> Jadi,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">gcd</mi><mo>&#8289;</mo></mrow><mo stretchy="false" form="prefix">(</mo><mn>4147</mn><mo>,</mo><mn>10672</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>29</mn></mrow><annotation encoding="application/x-tex">\gcd(4147,10672)=29</annotation></semantics></math>.</em></p>
+</div>
+<section id="latihan-untuk-sec-ea" class="level3 unnumbered">
+<h3 class="unnumbered">Latihan untuk §<a href="1-chap-WOaD.html#sec-EA"
+data-reference-type="ref" data-reference="sec-EA">1.6</a></h3>
+<div class="exercise">
+<p><strong>Latihan 1.34</strong>. <em>Gunakan Algoritma Euklides untuk
+menentukan faktor persekutuan terbesar dari 412 dan 32, lalu nyatakan
+hasilnya sebagai kombinasi linear kedua bilangan tersebut.</em></p>
+</div>
+<div class="exercise">
+<p><strong>Latihan 1.35</strong>. <em>Gunakan Algoritma Euklides untuk
+menentukan faktor persekutuan terbesar dari 780 dan 150, lalu nyatakan
+hasilnya sebagai kombinasi linear kedua bilangan tersebut.</em></p>
+</div>
+<div class="exercise">
+<p><strong>Latihan 1.36</strong>. <em>Tentukan faktor persekutuan
+terbesar dari
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>70</mn><mo>,</mo><mn>98</mn><mo>,</mo><mn>108</mn></mrow><annotation encoding="application/x-tex">70,98,108</annotation></semantics></math>.</em></p>
+</div>
+<div class="exercise">
+<p><strong>Latihan 1.37</strong>. <em>Misalkan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>,</mo><mi>b</mi><mo>∈</mo><mi mathvariant="double-struck">ℕ</mi></mrow><annotation encoding="application/x-tex">a,b\in{\mathbb N}</annotation></semantics></math>
+genap. Buktikan bahwa
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">gcd</mi><mo>&#8289;</mo></mrow><mo stretchy="false" form="prefix">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>2</mn><mrow><mi mathvariant="normal">gcd</mi><mo>&#8289;</mo></mrow><mo stretchy="false" form="prefix">(</mo><mi>a</mi><mi>/</mi><mn>2</mn><mo>,</mo><mi>b</mi><mi>/</mi><mn>2</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\gcd(a,b)=2\gcd(a/2,b/2)</annotation></semantics></math>.</em></p>
+</div>
+<div class="exercise">
+<p><strong>Latihan 1.38</strong>. <em>Tunjukkan bahwa jika
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>∈</mo><mi mathvariant="double-struck">ℕ</mi></mrow><annotation encoding="application/x-tex">a\in{\mathbb N}</annotation></semantics></math>
+genap dan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>b</mi><mo>∈</mo><mi mathvariant="double-struck">ℕ</mi></mrow><annotation encoding="application/x-tex">b\in{\mathbb N}</annotation></semantics></math>
+ganjil, maka
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">gcd</mi><mo>&#8289;</mo></mrow><mo stretchy="false" form="prefix">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mrow><mi mathvariant="normal">gcd</mi><mo>&#8289;</mo></mrow><mo stretchy="false" form="prefix">(</mo><mi>a</mi><mi>/</mi><mn>2</mn><mo>,</mo><mi>b</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\gcd(a,b)=\gcd(a/2,b)</annotation></semantics></math>.</em></p>
+</div>
+<div class="exercise">
+<p><strong>Latihan 1.39</strong>. <em>Buktikan klaim mengenai koefisien
+dalam Algoritma Euklides diperluas.</em></p>
+</div>
+</section>
+</section>
+</section>
+</main>
+
+<script src="../reader.js"></script>
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="id-ID" xml:lang="id-ID">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Jonathan A. Poritz; berdasarkan karya Wissam Raji" />
+  <title>Catatan Rilis</title>
+  <style>
+    div.sitenav { display: flex; flex-direction: row; flex-wrap: wrap; }
+    span.navlink { flex: 1; }
+    span.navlink-label { display: inline-block; min-width: 4em; }
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+  <link rel="stylesheet" href="../site.css" />
+  <meta name="description" content="Edisi lengkap bahasa Indonesia yang dapat di-reflow dari buku pengantar teori bilangan dan kriptologi." />
+  <link rel="canonical" href="https://kokunoyumeto.github.io/yet-another-introductory-number-theory-textbook-id/reader/-catatan-rilis.html" />
+  <meta property="og:title" content="Catatan Rilis" />
+  <meta property="og:type" content="book" />
+</head>
+<body>
+<nav id="sitenav" aria-label="Navigasi bab">
+<div class="sitenav">
+<span class="navlink">
+<span class="navlink-label">Induk:</span> <a href="index.html" accesskey="u" rel="up">Satu Lagi Buku Teks Pengantar Teori Bilangan</a>
+</span>
+<span class="navlink">
+<span class="navlink-label">Awal:</span> <a href="index.html" accesskey="t" rel="top">Satu Lagi Buku Teks Pengantar Teori Bilangan</a>
+</span>
+</div>
+<div class="sitenav">
+<span class="navlink">
+<span class="navlink-label">Berikutnya:</span> <a href="1-chap-WOaD.html" accesskey="n" rel="next">Keterurutan Baik dan Pembagian</a>
+</span>
+<span class="navlink">
+<span class="navlink-label">Sebelumnya:</span> <a href="-prakata.html" accesskey="p" rel="previous">Prakata</a>
+</span>
+</div>
+</nav>
+
+<main id="reader-content" tabindex="-1">
+<section id="catatan-rilis" class="level1 unnumbered releasenotes">
+<h1 class="unnumbered">Catatan Rilis</h1>
+<p>Versi <span><em>YAINTT</em></span> ini memberikan penekanan khusus
+pada hubungan dengan kriptologi. Materi kriptologi terdapat dalam Bab <a
+href="4-chap-Crypto.html#chap-Crypto" data-reference-type="ref"
+data-reference="chap-Crypto">4</a> serta §§ <a
+href="5-chap-IeqDL.html#sec-DHKE" data-reference-type="ref"
+data-reference="sec-DHKE">5.5</a> dan <a
+href="5-chap-IeqDL.html#sec-tEGC" data-reference-type="ref"
+data-reference="sec-tEGC">5.6</a>; materi tersebut muncul secara alami
+(demikian harapan saya) dari teori bilangan yang melingkupinya. Aplikasi
+utama kriptologi – yaitu kriptosistem RSA, pertukaran kunci
+Diffie–Hellman, dan kriptosistem ElGamal – muncul begitu alami dari
+pembahasan Teorema Euler, akar primitif, dan indeks sehingga pernyataan
+G.H. Hardy <span class="citation"
+data-cites="hardy2005mathematician">(<a
+href="-bibliography.html#ref-hardy2005mathematician">Hardy
+2005</a>)</span> mengenai kemurnian dan ketakterterapan abadi teori
+bilangan menjadi cukup ironis.</p>
+<p>Namun, setelah mulai membahas algoritma kriptologi tersebut, kita
+meluangkan waktu untuk mendefinisikan banyak konsep kriptologi secara
+cermat dan mengembangkan beberapa gagasan terkait yang hubungannya
+dengan teori bilangan jauh lebih longgar. Karena itu, materi ini terasa
+agak berbeda dari bagian lain buku – sebagaimana semua karya ilmiah
+dalam kriptologi (dan mungkin dalam seluruh ilmu komputer), suatu
+disiplin yang jelas memiliki budaya berbeda dari matematika “murni”.
+Bagian-bagian tersebut tentu dapat dilewati oleh pembaca yang tidak
+berminat, atau dihapus oleh pengajar ketika meramu buku ini sesuai
+pendekatan kelasnya.</p>
+<figure>
+<div class="center">
+<img src="assets/dbend.png" alt="Tanda peringatan untuk bagian dengan penalaran rumit" />
+</div>
+</figure>
+<p>Sebagaimana lazimnya dalam gaya Bourbaki<a href="#fn1"
+class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>,
+kemunculan simbol ini dalam teks menandai bagian dengan penalaran yang
+rumit dan sulit diikuti, atau mengingatkan pembaca pada kesalahpahaman
+umum mengenai suatu hal.</p>
+<p>Versi sumber dalam format PDF tersedia melalui <a
+href="https://www.poritz.net/jonathan/share/yaintt.pdf">tautan PDF
+resmi</a>, sedangkan seluruh berkas untuk membuat versi khusus tersedia
+melalui <a href="https://poritz.net/jonathan/share/yaintt/">direktori
+sumber resmi</a> – silakan berkreasi; itulah tujuan Creative
+Commons!</p>
+</section>
+<section id="footnotes" class="footnotes footnotes-end-of-document"
+role="doc-endnotes">
+<hr />
+<ol>
+<li id="fn1"><p>Seorang matematikawan fiktif dan penulis banyak buku
+matematika bermutu yang tidak fiktif – buku-buku itu benar-benar ada –
+seperti <span class="citation" data-cites="bourbaki2004theory">(<a
+href="-bibliography.html#ref-bourbaki2004theory">Bourbaki
+2004</a>)</span><a href="#fnref1" class="footnote-back"
+role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
+</main>
+
+<script src="../reader.js"></script>
+</body>
+</html>

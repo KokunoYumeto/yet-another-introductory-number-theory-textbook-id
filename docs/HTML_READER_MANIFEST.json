@@ -1,0 +1,166 @@
+{
+  "schema": "r014.html_reader_manifest",
+  "schema_version": "1.0.0",
+  "work_id": "ttp.r014.yaintt",
+  "locale": "id-ID",
+  "status": "complete",
+  "build": {
+    "command": "node scripts/build_html_reader.mjs",
+    "source": {
+      "path": "source/yaintt-id.tex",
+      "canonical_lf_bytes": 269464,
+      "canonical_lf_sha256": "b1dd2926dc8bfdb84c6a3b4605490a8d96b14c44d89653867160d701fa0f17db"
+    },
+    "html_pages": 10,
+    "chapters": 5,
+    "index_entries": 407,
+    "math_format": "MathML"
+  },
+  "files": [
+    {
+      "path": "docs/.nojekyll",
+      "bytes": 1,
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "path": "docs/BUILD.md",
+      "bytes": 1375,
+      "sha256": "190eda8b3ce8ed32070c526ff1741ea287806b63be187b92d4f3a77ab60d1202"
+    },
+    {
+      "path": "docs/index.html",
+      "bytes": 7814,
+      "sha256": "10eb9f12902df8e8f51eca2024962523c98d3f37642fd6999e29eca506862420"
+    },
+    {
+      "path": "docs/reader/-bibliography.html",
+      "bytes": 7352,
+      "sha256": "0546d37e8be0e240255ab10c8e553e0318cc0c7e676e54bbaea5134c46a0309d"
+    },
+    {
+      "path": "docs/reader/-catatan-rilis.html",
+      "bytes": 5565,
+      "sha256": "15261a2a64ca0a6faa078271e42cf569cb85a1f706adfe7047876d1336493fdf"
+    },
+    {
+      "path": "docs/reader/-indeks-web.html",
+      "bytes": 55496,
+      "sha256": "7e83020d006443adb04684ca6ae49d312d4ce4f176ac11463b1e1c1eafb27e88"
+    },
+    {
+      "path": "docs/reader/-prakata.html",
+      "bytes": 6193,
+      "sha256": "ba8f21949838e7e7c0ff37419799a1451a86a33340bf0bb05617c8c8b0f0348b"
+    },
+    {
+      "path": "docs/reader/1-chap-WOaD.html",
+      "bytes": 190972,
+      "sha256": "338bad10e1ad84a5b9e6ac56e33675755e6be8374fbed4335ba9cd483c5bcfe1"
+    },
+    {
+      "path": "docs/reader/2-chap-Cs.html",
+      "bytes": 244837,
+      "sha256": "e15fdd28fb2171c9ae44052387fd1f8ddd86ebd663074f204081e950e52da6d4"
+    },
+    {
+      "path": "docs/reader/3-chap-PNs.html",
+      "bytes": 156793,
+      "sha256": "6f9bb7bf0874ab60f449f82c1b0b5c7f82b52a7188a847c78849e5a3c79b7c13"
+    },
+    {
+      "path": "docs/reader/4-chap-Crypto.html",
+      "bytes": 213050,
+      "sha256": "37616708960827bd4ebe827a497c5e30686828927937bbce172fa100f53c73f9"
+    },
+    {
+      "path": "docs/reader/5-chap-IeqDL.html",
+      "bytes": 329723,
+      "sha256": "43b1489ae59644556c71605bf99a85eafb8901f4d8e4ed0191239e89d8cd7efe"
+    },
+    {
+      "path": "docs/reader/assets/cover_art.png",
+      "bytes": 53010,
+      "sha256": "e4896f58107e45871afaa7d88cdcf4273e35e840c68ce122e6434a107998fa75"
+    },
+    {
+      "path": "docs/reader/assets/dbend.png",
+      "bytes": 10788,
+      "sha256": "b6400f916690708bad4c67a7a680717bcba16e16bd6bb265604256a733b0d3f8"
+    },
+    {
+      "path": "docs/reader/assets/eng_freq_hist.png",
+      "bytes": 136741,
+      "sha256": "ddc1611b6f7060e9decc17cae6a3c34072e204399234bf7ddb35ec716e2e538d"
+    },
+    {
+      "path": "docs/reader/assets/hamhip_freqs.png",
+      "bytes": 29779,
+      "sha256": "c4a5ca35df875a04214798a8163c731a665030d6616fa023b731a2cc68cde0cb"
+    },
+    {
+      "path": "docs/reader/assets/samp_Cct_hist.png",
+      "bytes": 29680,
+      "sha256": "63402186c06a1364f38d1f97e3f8068baf304da1c79c2367d3893e4856ef61bc"
+    },
+    {
+      "path": "docs/reader/assets/Scytale.png",
+      "bytes": 304782,
+      "sha256": "fc5d3dc54edd36ed3da85b06b39bc5b959d8f076c936b2ee7aa8ed60d446e7cc"
+    },
+    {
+      "path": "docs/reader/assets/seadk_Cct.png",
+      "bytes": 42365,
+      "sha256": "ee0684699662e69a0a71807814ac1f2cf64d0d018c8ba38e45e95bd476150082"
+    },
+    {
+      "path": "docs/reader/assets/seadk_hamhip.png",
+      "bytes": 36885,
+      "sha256": "202d4c0a483b1f0f85a0c740eff30976737b88b5d163f07d1dbb772bc852d4d3"
+    },
+    {
+      "path": "docs/reader/assets/seadk_rkkrt.png",
+      "bytes": 53244,
+      "sha256": "71890d52295e4f9683e5822643560331262979051d6362a476170189cba84fa2"
+    },
+    {
+      "path": "docs/reader/chapters.json",
+      "bytes": 463,
+      "sha256": "b22f6070756874ce91055e3582e505c41db93e6b8a24ac8c79d36becabe9a37b"
+    },
+    {
+      "path": "docs/reader/index.html",
+      "bytes": 11613,
+      "sha256": "59bf257234975ccad7314ce442da296cedaaa347fc80aae1e63bf17c2d01d77b"
+    },
+    {
+      "path": "docs/reader/sitemap.json",
+      "bytes": 10373,
+      "sha256": "36d4be53646bb48a4f5f3d715aaeb35f65b6fd33e0711ac5ad468e16847e7c04"
+    },
+    {
+      "path": "docs/reader.js",
+      "bytes": 3544,
+      "sha256": "1b5c9790a6af13a21294cb234f618886b143254daa64743fe8f48ceb65c812c1"
+    },
+    {
+      "path": "docs/robots.txt",
+      "bytes": 127,
+      "sha256": "e7a52be42574aa08eb8b6109986cbed0a366f84ff4c7f608763cb3cca1c90bda"
+    },
+    {
+      "path": "docs/site.css",
+      "bytes": 14064,
+      "sha256": "7efb05aee9bfeb98714784e551314dceafb0836d2eda83753c48511b819d8772"
+    },
+    {
+      "path": "docs/sitemap.xml",
+      "bytes": 1513,
+      "sha256": "0e4d7a970dac099da4fa83b848328468c12d7f0b99dc8fd75dda5360c63626d6"
+    },
+    {
+      "path": "docs/YAINTT_ID.pdf",
+      "bytes": 962527,
+      "sha256": "1ded3c6844b656347259b464bf21526fdc32dc2246c73ac58ab76ed28688eefc"
+    }
+  ]
+}

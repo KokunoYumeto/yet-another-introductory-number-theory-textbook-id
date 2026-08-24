@@ -9,11 +9,20 @@ dan penekanan pada kriptologi.
 Ini adalah edisi turunan, bukan terbitan resmi Jonathan A. Poritz, Wissam Raji,
 atau Colorado State University—Pueblo, dan tidak menyiratkan dukungan mereka.
 Terjemahan serta integrasi teknisnya dibuat dengan OpenAI Codex atas permintaan
-Floris.
+pengguna.
 
 Identifikasi model untuk provenance edisi ini: **OpenAI Codex gpt-5.6-sol, Ultra.**
 Seluruh kredit penulis sumber dan kontributor manusia tetap berlaku
 sebagaimana dinyatakan dalam `ATTRIBUTION.md`.
+
+## Baca langsung
+
+- Pembaca HTML reflow: <https://kokunoyumeto.github.io/yet-another-introductory-number-theory-textbook-id/>
+- PDF 138 halaman: <https://kokunoyumeto.github.io/yet-another-introductory-number-theory-textbook-id/YAINTT_ID.pdf>
+
+Pembaca HTML dapat menyesuaikan lebar layar dan ukuran huruf, memuat matematika
+sebagai MathML, dan menyediakan navigasi per bab. Seluruh berkas pembaca berada
+di `docs/` dan tidak bergantung pada CDN atau JavaScript pihak ketiga.
 
 ## Isi repositori
 
@@ -25,12 +34,16 @@ sebagaimana dinyatakan dalam `ATTRIBUTION.md`.
 - `authority/` — pembekuan sumber resmi, hash, hubungan dependensi, dan hak per
   komponen.
 - `qa/` — bukti pemeriksaan struktur, bahasa, matematika, build, dan tampilan.
-- `publication/RELEASE_MANIFEST.json` — satu-satunya daftar kanonik artefak
-  rilis dan identitas byte-nya.
+- `docs/` — pembaca HTML langsung, PDF, aset lokal, manifes, dan petunjuk build.
+- `publication/RELEASE_MANIFEST.json` — daftar kanonik artefak rilis arsip dan
+  identitas byte-nya.
+- `docs/HTML_READER_MANIFEST.json` — inventaris serta hash turunan web yang
+  diterbitkan melalui GitHub Pages.
 
-Artefak hanya merupakan bagian rilis jika tercantum sebagai `verified` dalam
-manifes rilis dengan ukuran byte dan SHA-256. PDF batas produksi atau berkas
-berlabel `candidate` bukan artefak rilis.
+Artefak arsip hanya merupakan bagian rilis jika tercantum sebagai `verified`
+dalam manifes rilis dengan ukuran byte dan SHA-256. Turunan pembaca web harus
+tercantum dalam manifes HTML. PDF batas produksi atau berkas berlabel
+`candidate` bukan artefak rilis.
 
 ## Sumber dan keterlacakan
 

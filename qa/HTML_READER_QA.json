@@ -1,0 +1,150 @@
+{
+  "schema": "r014.html_reader_qa",
+  "schema_version": "1.2.0",
+  "work_id": "ttp.r014.yaintt",
+  "locale": "id-ID",
+  "status": "passed",
+  "metrics": {
+    "total_files": 30,
+    "html_files": 11,
+    "html_bytes": 1229408,
+    "local_links": 657,
+    "missing_files": 0,
+    "missing_anchors": 0,
+    "mathml_elements": 2791,
+    "exercise_markers": 248,
+    "semantic_environment_counts_match": true,
+    "semantic_environment_expected": {
+      "discussion": 123,
+      "exercise": 101,
+      "proof": 54,
+      "definition": 50,
+      "theorem": 44,
+      "example": 33,
+      "examples": 1,
+      "lemma": 3,
+      "proposition": 11,
+      "corollary": 5,
+      "remark": 1,
+      "WOprinciple": 1
+    },
+    "semantic_environment_observed": {
+      "discussion": 123,
+      "exercise": 101,
+      "proof": 54,
+      "definition": 50,
+      "theorem": 44,
+      "example": 33,
+      "examples": 1,
+      "lemma": 3,
+      "proposition": 11,
+      "corollary": 5,
+      "remark": 1,
+      "WOprinciple": 1
+    },
+    "image_elements": 9,
+    "images_missing_nonempty_alt": 0,
+    "main_landmarks": 10,
+    "labeled_chapter_navigation_landmarks": 10,
+    "canonical_links": 10,
+    "description_metadata": 10,
+    "numbered_sections": 27,
+    "page_structure_matches": true,
+    "duplicate_ids": 0,
+    "source_labels": 157,
+    "missing_source_label_targets": 0,
+    "manifest_integrity_passed": true,
+    "unresolved_citation_markers": 0,
+    "unresolved_reference_markers": 0,
+    "raw_latex_environment_markers": 0
+  },
+  "required_text": {
+    "Keterurutan Baik dan Pembagian": true,
+    "Kongruensi": true,
+    "Bilangan Prima": true,
+    "Kriptologi": true,
+    "Indeks = Logaritma Diskret": true,
+    "Daftar Pustaka": true,
+    "Indeks": true
+  },
+  "pdf": {
+    "path": "docs/YAINTT_ID.pdf",
+    "pages": 138,
+    "bytes": 962527,
+    "sha256": "1ded3c6844b656347259b464bf21526fdc32dc2246c73ac58ab76ed28688eefc"
+  },
+  "findings": {
+    "missing_files": [],
+    "missing_anchors": [],
+    "images_missing_nonempty_alt": [],
+    "duplicate_ids": [],
+    "missing_source_label_targets": [],
+    "page_structure": [
+      {
+        "file": "reader/-bibliography.html",
+        "h1": 1,
+        "title": "Daftar Pustaka",
+        "lang_id_id": true
+      },
+      {
+        "file": "reader/-catatan-rilis.html",
+        "h1": 1,
+        "title": "Catatan Rilis",
+        "lang_id_id": true
+      },
+      {
+        "file": "reader/-indeks-web.html",
+        "h1": 1,
+        "title": "Indeks",
+        "lang_id_id": true
+      },
+      {
+        "file": "reader/-prakata.html",
+        "h1": 1,
+        "title": "Prakata",
+        "lang_id_id": true
+      },
+      {
+        "file": "reader/1-chap-WOaD.html",
+        "h1": 1,
+        "title": "Keterurutan Baik dan Pembagian",
+        "lang_id_id": true
+      },
+      {
+        "file": "reader/2-chap-Cs.html",
+        "h1": 1,
+        "title": "Kongruensi",
+        "lang_id_id": true
+      },
+      {
+        "file": "reader/3-chap-PNs.html",
+        "h1": 1,
+        "title": "Bilangan Prima",
+        "lang_id_id": true
+      },
+      {
+        "file": "reader/4-chap-Crypto.html",
+        "h1": 1,
+        "title": "Kriptologi",
+        "lang_id_id": true
+      },
+      {
+        "file": "reader/5-chap-IeqDL.html",
+        "h1": 1,
+        "title": "Indeks = Logaritma Diskret",
+        "lang_id_id": true
+      },
+      {
+        "file": "reader/index.html",
+        "h1": 1,
+        "title": "Satu Lagi Buku Teks Pengantar Teori Bilangan",
+        "lang_id_id": true
+      }
+    ],
+    "manifest": {
+      "unlisted_files": [],
+      "unexpected_files": [],
+      "hash_mismatches": []
+    }
+  }
+}
