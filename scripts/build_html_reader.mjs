@@ -462,6 +462,15 @@ try {
 
   await writeFile(path.join(readerDir, 'chapters.json'), `${JSON.stringify(chapters, null, 2)}\n`, 'utf8');
 
+  // Keep every generated learner-facing HTML document connected to both
+  // language views of the curriculum and to the authoritative original.
+  // The byte-level postprocessor is idempotent and verifies preservation of
+  // all pre-existing content outside its two explicitly delimited additions.
+  run(
+    process.env.PYTHON || (process.platform === 'win32' ? 'python' : 'python3'),
+    ['-B', path.join('scripts', 'apply_federated_navigation.py'), '--write'],
+  );
+
   const manifestName = 'HTML_READER_MANIFEST.json';
   const manifestFiles = (await listFiles(docsDir))
     .filter((relative) => toPosix(relative) !== manifestName);

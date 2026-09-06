@@ -1,0 +1,43 @@
+{
+  "after_manifest_sha256": "69e2b9bc51aa008077af17fb52d4e00986262688ca8a43b7c4103fc4c509d973",
+  "authoritative_originals": [
+    {
+      "label": "Sumber asli / Authoritative original",
+      "url": "https://www.poritz.net/jonathan/share/yaintt.pdf"
+    }
+  ],
+  "before_manifest_sha256": "96bad97aeac3bf9fc1bb3588718a26c16271dfbe3fedddfc93b27960a025481b",
+  "central_links": [
+    {
+      "label": "Program (Bahasa Indonesia)",
+      "locale": "id",
+      "url": "https://kokunoyumeto.github.io/program-matematika-indonesia/id/#course-C60"
+    },
+    {
+      "label": "Program (English)",
+      "locale": "en",
+      "url": "https://kokunoyumeto.github.io/program-matematika-indonesia/en/#course-C60"
+    }
+  ],
+  "checks": {
+    "all_central_and_original_links_present_once_per_document": true,
+    "exactly_one_navigation_landmark_per_document": true,
+    "exactly_one_stylesheet_reference_per_document": true,
+    "idempotent_transform": true,
+    "roundtrip_content_preservation": true
+  },
+  "content_language": "id",
+  "course_id": "C60",
+  "documents_with_navigation": 11,
+  "generated_by": "scripts/apply_federated_navigation.py",
+  "html_bytes_after": 1251577,
+  "html_documents": 11,
+  "published_roots": [
+    "docs"
+  ],
+  "repository": "yet-another-introductory-number-theory-textbook-id",
+  "schema": "program-matematika.federated-navigation.local-receipt.v1",
+  "status": "passed",
+  "stylesheet_sha256": "3c88e12efe746142c009e55762f12619c45a1c384718b990507502fcfd78f5bb",
+  "surface_url": "https://kokunoyumeto.github.io/yet-another-introductory-number-theory-textbook-id/"
+}

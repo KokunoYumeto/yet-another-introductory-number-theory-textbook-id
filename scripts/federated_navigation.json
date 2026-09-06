@@ -1,0 +1,15 @@
+{
+  "schema": "program-matematika.federated-navigation.config.v1",
+  "repository": "yet-another-introductory-number-theory-textbook-id",
+  "course_id": "C60",
+  "content_language": "id",
+  "surface_url": "https://kokunoyumeto.github.io/yet-another-introductory-number-theory-textbook-id/",
+  "published_roots": ["docs"],
+  "central_links": [
+    {"locale": "id", "label": "Program (Bahasa Indonesia)", "url": "https://kokunoyumeto.github.io/program-matematika-indonesia/id/#course-C60"},
+    {"locale": "en", "label": "Program (English)", "url": "https://kokunoyumeto.github.io/program-matematika-indonesia/en/#course-C60"}
+  ],
+  "authoritative_originals": [
+    {"label": "Sumber asli / Authoritative original", "url": "https://www.poritz.net/jonathan/share/yaintt.pdf"}
+  ]
+}

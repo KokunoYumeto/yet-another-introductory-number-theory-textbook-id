@@ -5,10 +5,10 @@
   "locale": "id-ID",
   "status": "passed",
   "metrics": {
-    "total_files": 30,
+    "total_files": 31,
     "html_files": 11,
-    "html_bytes": 1229408,
-    "local_links": 657,
+    "html_bytes": 1251577,
+    "local_links": 668,
     "missing_files": 0,
     "missing_anchors": 0,
     "mathml_elements": 2791,
